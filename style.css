@@ -4,23 +4,39 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  margin: 0 20px;
+}
+.main .main__bg-asset {
+  z-index: -1;
+  position: absolute;
+  top: -2px;
+  left: -35%;
 }
 .main .grid {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: auto;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
+  margin: 40px 0px;
 }
 .main .grid .title {
   font-family: JetBrains Mono;
   font-size: 58px;
-  color: white;
+  color: transparent;
   text-transform: uppercase;
   margin-top: 50px;
 }
@@ -38,12 +54,102 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
+  cursor: pointer;
   border: 1px solid #6612EF;
-  justify-self: end;
+  transition: border 0.3s ease, background-color 0.3s ease;
 }
 .main .grid .theme-selector-box .theme-selector-box__circle:hover {
-  content: "+";
-  font-size: 20px;
+  background-color: #FF0000;
+}
+.main .grid .theme-selector-box .theme-selector-box__circle:hover::before {
+  opacity: 1;
+}
+.main .grid .theme-selector-box .theme-selector-box__circle.themme-selector-box__circle--active {
+  background-color: #FF0000;
+}
+.main .grid .projects-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+.main .grid .projects-list .projects-list__title {
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: white;
+  text-transform: uppercase;
+  text-align: right;
+  margin-bottom: 10px;
+}
+.main .grid .projects-list .projects-list__title--red {
+  -webkit-text-stroke: 1px #FF0000;
+}
+.main .grid .projects-list .projects-list__project-button {
+  font-family: sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: white;
+  text-transform: uppercase;
+  text-align: right;
+  margin-bottom: 10px;
   cursor: pointer;
-  border: none;
+  transition: all 0.5s ease;
+  -webkit-text-stroke: 1px #6612EF;
+  transform-origin: right; /* Set the transform origin */
+}
+.main .grid .projects-list .projects-list__project-button:hover {
+  scale: 1.5;
+  align-self: flex-end;
+}
+.main .grid .projects-list .project-button--active {
+  color: #FF0000;
+  -webkit-text-stroke: 1px #FF0000;
+}
+.main .grid .bio {
+  margin: 120px 40px 60px 40px;
+  justify-self: center;
+  align-self: center;
+}
+.main .grid .bio .bio__text {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FF0000;
+  letter-spacing: 1.12px;
+  text-align: justify;
+}
+.main .footer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 40px;
+}
+.main .footer .footer__text {
+  color: #6612EF;
+  font-family: JetBrains Mono;
+  font-size: 16px;
+}
+.main .footer .footer__here-btn {
+  color: #FF0000;
+  text-decoration: underline;
+}
+.main .footer .footer__here-btn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.main .footer .footer__social-link {
+  align-self: center;
+  justify-self: center;
+  height: 25px;
+}
+.main .footer .footer__social-link .social-link__icon {
+  font-size: 25px;
+  fill: #6612EF;
+  transition: fill 0.3s ease;
 }/*# sourceMappingURL=style.css.map */
