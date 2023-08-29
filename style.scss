@@ -1,14 +1,34 @@
-$highlight-color: #FF0000;
-$primary-color: #6612EF;
+// $highlight-color: #FF0000;
+// $primary-color: #6612EF;
+
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
     font-family: sans-serif;
+    --primary-color: #6612EF;
+    --highlight-color: #FF0000;
+    --title-fill-color: #FFF;
+    --text-color: #FF0000;
+    --active-project-button-color: #6612EF; 
+    --active-project-button-color: #FF0000;
+    --bio-text-color: #FF0000;
+    --contact-here-color: #FF0000;
+}
+
+.body-wave-theme {
+    --highlight-color: #BDFF01;
+    --title-fill-color: #BDFF01;
+    --text-color: #6612EF;
+    --active-project-button-color: #6612EF;
+    --bio-text-color: #6612EF;
+    --contact-here-color: #6612EF;
 }
 
 a{
@@ -42,6 +62,7 @@ a{
             font-family:JetBrains Mono;
             font-size: 58px;
             color: transparent;
+            -webkit-text-stroke: 2px var(--highlight-color);
             // text-shadow: 0 0 2px $highlight-color;
             // -webkit-text-stroke: 2px $highlight-color;
             text-transform: uppercase;
@@ -50,9 +71,7 @@ a{
             margin-top: 50px;
             
         }
-        .title--red {
-            -webkit-text-stroke: 2px $highlight-color;
-        }
+     
         
         .theme-selector-box {
             display: flex;
@@ -66,7 +85,7 @@ a{
                 height: 20px;
                 border-radius: 50%;
                 cursor: pointer;
-                border: 1px solid $primary-color;
+                border: 1px solid var(--primary-color);
                 transition: border 0.3s ease, background-color 0.3s ease;
 
                 // &::before {
@@ -81,7 +100,7 @@ a{
 
                 &:hover {
                     // border: none;
-                    background-color: $highlight-color;
+                    background-color: var(--highlight-color);
 
                     &::before {
                         opacity: 1;
@@ -89,7 +108,7 @@ a{
                 }
 
                 &.themme-selector-box__circle--active {
-                    background-color: $highlight-color;
+                    background-color: var(--highlight-color);
                 }
             }
         }
@@ -106,14 +125,15 @@ a{
                 font-size: 36px;
                 font-weight: 700;
                 letter-spacing: 2.5px;
-                color: white;
+                color: var(--title-fill-color);
                 text-transform: uppercase;
                 text-align: right;
                 margin-bottom: 10px;
+                -webkit-text-stroke: 1px var(--text-color)
             }
         
             .projects-list__title--red {
-                -webkit-text-stroke: 1px $highlight-color;
+            
             }
         
             .projects-list__project-button {
@@ -127,7 +147,7 @@ a{
                 margin-bottom: 10px;
                 cursor: pointer;
                 transition: all 0.5s ease;
-                -webkit-text-stroke: 1px $primary-color;
+                -webkit-text-stroke: 1px var(--primary-color);
                 transform-origin: right; /* Set the transform origin */
         
                 &:hover {
@@ -137,8 +157,8 @@ a{
             }
 
             .project-button--active {
-                color: $highlight-color;
-                -webkit-text-stroke: 1px $highlight-color;
+                color: var(--text-color);
+                -webkit-text-stroke: 1px var(--text-color);
             }
         }
         
@@ -151,7 +171,7 @@ a{
             font-family: sans-serif;
             font-size: 16px;
             line-height: 20px;
-            color: $highlight-color;
+            color: var(--bio-text-color);
             letter-spacing: 1.12px;
             // word-spacing: 5px;
             text-align: justify;
@@ -170,14 +190,14 @@ a{
         bottom: 40px;
 
         .footer__text {
-        color: $primary-color;
+        color: var(--primary-color);
         font-family: JetBrains Mono;
         font-size: 16px;
  
         }
 
         .footer__here-btn {
-            color: $highlight-color;
+            color: var(--contact-here-color);
             text-decoration: underline;
 
             &:hover {
@@ -194,7 +214,7 @@ a{
         .social-link__icon {
             font-size: 25px;
             // width: 100%;
-            fill: $primary-color;
+            fill: var(--primary-color);
             transition: fill 0.3s ease; 
         }
 
