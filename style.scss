@@ -61,6 +61,7 @@ a{
         .title {
             font-family:JetBrains Mono;
             font-size: 58px;
+            text-align: right;
             color: transparent;
             -webkit-text-stroke: 2px var(--highlight-color);
             // text-shadow: 0 0 2px $highlight-color;
@@ -163,7 +164,7 @@ a{
         }
         
         .bio {
-            margin: 120px 40px 60px 40px;
+            margin-top: 60px;
             justify-self: center;
             align-self: center;
 
@@ -182,12 +183,14 @@ a{
 
     .footer {
         
-        display: flex;
+        display: grid;
+        grid-template-columns: auto auto auto;
         gap: 10px;
         justify-content: center;
         align-items: center;
         position: absolute;
         bottom: 40px;
+        margin: 0 20px;
 
         .footer__text {
         color: var(--primary-color);
