@@ -2,6 +2,26 @@
 // $primary-color: #6612EF;
 
 
+html {
+    // Default (Extra small screens). 1rem = 7px
+    // font-size: percentage(7 / 16);
+    @media (min-width: 768px) {
+      // Small screens. 1rem = 8px
+      font-size: percentage(8 / 16);
+    }
+    @media (min-width: 992px) {
+      // Medium screens. 1rem = 9px
+      font-size: percentage(9 / 16);
+    }
+    @media (min-width: 1200px) {
+      // Large screens. 1rem = 10px
+      font-size: percentage(10 / 16);
+    }
+  }
+  body {
+    font-size: 1.8em;
+  }
+
 
 * {
     margin: 0;
@@ -98,14 +118,20 @@ a{
     align-items: center;
     // justify-content: center;
     height: 100vh;
-    margin: 0 20px;
+    margin: 0 1.25rem;
 
     .main__bg-asset {
         z-index: -1;
         position: absolute;
-        top: -2px;
+        transform-origin: center top;
+        transform: scaleY(calc(1 - 0.2 * ((900px - 100vw) / 1000)));
+        top: -0.125rem;
         left: -35%;
     }
+    
+ 
+    
+    
 
     .grid {
         display: grid;
@@ -117,12 +143,13 @@ a{
         
         .title {
             font-family:JetBrains Mono;
-            font-size: 58px;
+            font-size: 13vw;
             text-align: right;
             color: var(--hunter-even-fill-color);
             -webkit-text-stroke: 2px var(--hunter-even-outline-color);
             text-transform: uppercase;
-            margin-top: 30px;
+            margin-top: 1.875rem;
+            white-space: nowrap;
         }
 
         .wavy-theme-transparent {
@@ -138,8 +165,8 @@ a{
             gap: 10px;
 
             .theme-selector-box__circle {
-                width: 20px;
-                height: 20px;
+                width: 1.25rem;
+                height: 1.25rem;
                 border-radius: 50%;
                 cursor: pointer;
                 border: 1px solid var(--theme-selector-outline-color);
@@ -174,7 +201,7 @@ a{
         }
         
         .projects-list {
-            margin-top: 20px;
+            margin-top: 1.25rem;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
@@ -182,26 +209,26 @@ a{
         
             .projects-list__title {
                 font-family: sans-serif;
-                font-size: 36px;
+                font-size: 8vw;
                 font-weight: 700;
-                letter-spacing: 2.5px;
+                letter-spacing: 0.1563rem;
                 color: var(--projects-title-fill-color);
                 text-transform: uppercase;
                 text-align: right;
-                margin-bottom: 10px;
+                margin-bottom: 0.625rem;
                 -webkit-text-stroke: 1px var(--projects-title-outline-color);
             }
         
         
             .projects-list__project-button {
                 font-family: sans-serif;
-                font-size: 28px;
+                font-size: 6vw;
                 font-weight: 700;
-                letter-spacing: 2px;
+                letter-spacing: 0.125rem;
                 color: white;
                 text-transform: uppercase;
                 text-align: right;
-                margin-bottom: 10px;
+                margin-bottom: 0.625rem;
                 cursor: pointer;
                 transition: all 0.5s ease;
                 -webkit-text-stroke: 1px var(--project-outline-color);
@@ -220,14 +247,14 @@ a{
         }
         
         .bio {
-            margin-top: 60px;
+            margin-top: 3.75rem;
             justify-self: center;
             align-self: center;
 
         .bio__text {
             font-family: sans-serif;
-            font-size: 16px;
-            line-height: 20px;
+            font-size: 1rem;
+            line-height: 1.25rem;
             color: var(--bio-text-color);
             letter-spacing: 1.12px;
             // word-spacing: 5px;
@@ -251,10 +278,10 @@ a{
             transition: all 0.3s ease;
 
             border: 1px solid var(--project-card-outline-color);
-            border-radius: 50px;
-            margin: 0px 0px;
+            border-radius: 3.125rem;
+            margin: 0rem 0rem;
             // padding: 10px 10px;
-            transform: translateY(60px);
+            transform: translateY(3.75rem);
             box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.55);
 
             &__title {
@@ -263,23 +290,23 @@ a{
                 justify-self: center;
                 
                 background-color: var(--project-title-bg-color);
-                font-size: 16px;
+                font-size: 1rem;
                 font-weight: 700;
-                letter-spacing: 2px;
+                letter-spacing: 0.125rem;
                 text-align: center ;
                 text-transform: uppercase;
                 color: var(--project-card-title-color);
 
-                margin: 20px 20px;
-                padding: 5px 40px;
+                margin: 1.25rem 1.25rem;
+                padding: 0.3125rem 2.5rem;
 
                 border: 2px solid var(--project-outline-color);
-                border-radius: 20px;    
+                border-radius: 1.25rem;    
             }
 
             &__details {
-                font-size: 16px;
-                margin: 10px 20px;
+                font-size: 1rem;
+                margin: 0.625rem 1.25rem;
                 color: var(--project-card-text-color);
                 text-align: justify;
 
@@ -288,11 +315,11 @@ a{
                 grid-template-rows: auto auto auto;
                 justify-content: center;
                 align-items: center;
-                gap: 10px;
+                gap: 0.625rem;
             }
 
             &__description {
-                font-size: 13px;
+                font-size: 0.8125rem;
                 
                 
             }
@@ -309,17 +336,17 @@ a{
         
         display: grid;
         grid-template-columns: auto auto auto;
-        gap: 10px;
+        gap: 0.625rem;
         justify-content: center;
         // align-items: center;
         position: absolute;
-        bottom: 40px;
-        margin: 0 20px;
+        bottom: 4vh;
+        margin: 0 2vh;
 
         .footer__text {
         color: var(--footer-text-colour);
         font-family: JetBrains Mono;
-        font-size: 16px;
+        font-size: .8rem;
  
         }
 
@@ -343,10 +370,10 @@ a{
         .footer__social-link {
             align-self: flex-start;
             justify-self: flex-start;
-            height: 25px;
+            height: 1.5625rem;
 
         .social-link__icon {
-            font-size: 25px;
+            font-size: 1.5625rem;
             // width: 100%;
             color: var(--contact-social-color);
             transition: fill 0.3s ease; 

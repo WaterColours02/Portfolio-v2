@@ -1,3 +1,23 @@
+@media (min-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (min-width: 992px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  font-size: 1.8em;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -84,12 +104,14 @@ a {
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  margin: 0 20px;
+  margin: 0 1.25rem;
 }
 .main .main__bg-asset {
   z-index: -1;
   position: absolute;
-  top: -2px;
+  transform-origin: center top;
+  transform: scaleY(calc(1 - 0.2 * (900px - 100vw) / 1000));
+  top: -0.125rem;
   left: -35%;
 }
 .main .grid {
@@ -102,12 +124,13 @@ a {
 }
 .main .grid .title {
   font-family: JetBrains Mono;
-  font-size: 58px;
+  font-size: 13vw;
   text-align: right;
   color: var(--hunter-even-fill-color);
   -webkit-text-stroke: 2px var(--hunter-even-outline-color);
   text-transform: uppercase;
-  margin-top: 30px;
+  margin-top: 1.875rem;
+  white-space: nowrap;
 }
 .main .grid .wavy-theme-transparent {
   opacity: 0.8;
@@ -120,8 +143,8 @@ a {
   gap: 10px;
 }
 .main .grid .theme-selector-box .theme-selector-box__circle {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 50%;
   cursor: pointer;
   border: 1px solid var(--theme-selector-outline-color);
@@ -140,7 +163,7 @@ a {
   background-color: var(--highlight-color);
 }
 .main .grid .projects-list {
-  margin-top: 20px;
+  margin-top: 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -148,24 +171,24 @@ a {
 }
 .main .grid .projects-list .projects-list__title {
   font-family: sans-serif;
-  font-size: 36px;
+  font-size: 8vw;
   font-weight: 700;
-  letter-spacing: 2.5px;
+  letter-spacing: 0.1563rem;
   color: var(--projects-title-fill-color);
   text-transform: uppercase;
   text-align: right;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   -webkit-text-stroke: 1px var(--projects-title-outline-color);
 }
 .main .grid .projects-list .projects-list__project-button {
   font-family: sans-serif;
-  font-size: 28px;
+  font-size: 6vw;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
   color: white;
   text-transform: uppercase;
   text-align: right;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   cursor: pointer;
   transition: all 0.5s ease;
   -webkit-text-stroke: 1px var(--project-outline-color);
@@ -180,14 +203,14 @@ a {
   -webkit-text-stroke: 1px var(--text-color);
 }
 .main .grid .bio {
-  margin-top: 60px;
+  margin-top: 3.75rem;
   justify-self: center;
   align-self: center;
 }
 .main .grid .bio .bio__text {
   font-family: sans-serif;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   color: var(--bio-text-color);
   letter-spacing: 1.12px;
   text-align: justify;
@@ -204,29 +227,29 @@ a {
   justify-self: center;
   transition: all 0.3s ease;
   border: 1px solid var(--project-card-outline-color);
-  border-radius: 50px;
-  margin: 0px 0px;
-  transform: translateY(60px);
+  border-radius: 3.125rem;
+  margin: 0rem 0rem;
+  transform: translateY(3.75rem);
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.55);
 }
 .main .grid .project-card__title {
   max-width: 80%;
   justify-self: center;
   background-color: var(--project-title-bg-color);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
   text-align: center;
   text-transform: uppercase;
   color: var(--project-card-title-color);
-  margin: 20px 20px;
-  padding: 5px 40px;
+  margin: 1.25rem 1.25rem;
+  padding: 0.3125rem 2.5rem;
   border: 2px solid var(--project-outline-color);
-  border-radius: 20px;
+  border-radius: 1.25rem;
 }
 .main .grid .project-card__details {
-  font-size: 16px;
-  margin: 10px 20px;
+  font-size: 1rem;
+  margin: 0.625rem 1.25rem;
   color: var(--project-card-text-color);
   text-align: justify;
   display: grid;
@@ -234,24 +257,24 @@ a {
   grid-template-rows: auto auto auto;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
 }
 .main .grid .project-card__description {
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 .main .footer {
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 10px;
+  gap: 0.625rem;
   justify-content: center;
   position: absolute;
-  bottom: 40px;
-  margin: 0 20px;
+  bottom: 4vh;
+  margin: 0 2vh;
 }
 .main .footer .footer__text {
   color: var(--footer-text-colour);
   font-family: JetBrains Mono;
-  font-size: 16px;
+  font-size: 0.8rem;
 }
 .main .footer .footer__here-btn {
   color: var(--contact-here-color);
@@ -264,10 +287,10 @@ a {
 .main .footer .footer__social-link {
   align-self: flex-start;
   justify-self: flex-start;
-  height: 25px;
+  height: 1.5625rem;
 }
 .main .footer .footer__social-link .social-link__icon {
-  font-size: 25px;
+  font-size: 1.5625rem;
   color: var(--contact-social-color);
   transition: fill 0.3s ease;
 }
