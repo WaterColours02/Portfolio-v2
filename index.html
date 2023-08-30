@@ -15,7 +15,7 @@
   crossorigin="anonymous"></script>
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="body-wave-theme">
+<body class="body--wavy-theme">
     <section class="main">
         <div class="main__bg-asset">
             <svg xmlns="http://www.w3.org/2000/svg" width="364" height="421" viewBox="0 0 364 421" fill="none">
@@ -23,35 +23,60 @@
                 </svg>
         </div>
         <div class="grid">
-            <p class="title title--red">Hunter-even</p>
+            <p class="title wavy-theme-transparent">Hunter-even</p>
             <div class="theme-selector-box">
-                <a href="" class="theme-selector-box__circle themme-selector-box__circle--active"> </a>
-                <a href="" class="theme-selector-box__circle"> </a>
-                <a href="" class="theme-selector-box__circle"> </a>
+                <a href="" class="theme-selector-box__circle circle--purple-theme-selector" data-theme="purple-theme"></a>
+                <a href="" class="theme-selector-box__circle circle--static-theme-selector" data-theme="static-theme"></a>
+                <a href="" class="theme-selector-box__circle circle--wavy-theme-selector" data-theme="wavy-theme"></a>
             </div> 
             <div class="projects-list">
                 <p class="projects-list__title projects-list__title--red">my projects</p>
-                <a href="" class="projects-list__project-button">open-ferment</a>
-                <a href="" class="projects-list__project-button">bug-tracker</a>
-                <a href="" class="projects-list__project-button project-button--active">portfolio</a>
+                <button href="" class="projects-list__project-button open-ferment-button">open-ferment</button>
+                <button href="" class="projects-list__project-button">bug-tracker</button>
+                <button href="" class="projects-list__project-button project-button--active">portfolio</button>
             </div>
-            <div class="bio">
+            <div class="bio out-of-view-right">
                 <p class="bio__text">
                     Hi, I’m Hunter Cheveldave and thanks for visiting my webpage. I'm a passionate software developer looking to create new and exciting user experiences. I design using JavaScript, CSS and HTML. Please get it touch if you have a project you’d like to discuss. 
                 </p>
             </div>
-        </div>
 
+ 
+                <div class="project-card project-open-ferment">
+                    <p class="project-card__title">open-ferment</p>
+                    <div class="project-card__details">
+                        <p class="project-card__tech-stack">Javascript - Node - Mail Chimp Api - HTML - CSS</p>
+                        <p class="project-card__description">
+                            The Vancouver Wine Festival Demo Website is an unreleased project created in collaboration with a client and designer. It showcases the allure of the wine festival in Vancouver through a captivating splash page. The website includes a Mailchimp email sign-up integration, allowing visitors to stay informed about the festival. The site utilizes a full stack approach, with a static front end and a node.js server app that communicates with the Mailchimp API. Although not publicly released, this project demonstrates expertise in creating immersive web experiences that seamlessly blend design and functionality for wine festivals.
+                        </p>
+                    </div>
+                </div>
+    
+    
+    
+
+        </div>
+        
+        
+        
+        
+        
+        
         <footer class="footer">
             <p class="footer__text">Want to connect? Reach me  <a href="" class="footer__here-btn">HERE</a></p>
-            <a href="" class="footer__social-link"><ion-icon class="social-link__icon" name="logo-github"></ion-icon></a>
-            <a href="" class="footer__social-link"><ion-icon class="social-link__icon" name="logo-linkedin"></ion-icon></a>
+            <div class="footer__social-container">
+                <a href="" class="footer__social-link"><ion-icon class="social-link__icon" name="logo-github"></ion-icon></a>
+                <a href="" class="footer__social-link"><ion-icon class="social-link__icon" name="logo-linkedin"></ion-icon></a>
+            </div>
         </footer>
+        
+    </section>
+    
 
     </section>
 
 
 
-
+<script src="./index.js"></script>
 </body>
 </html>
