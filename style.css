@@ -128,9 +128,13 @@ a {
 }
 .main .grid {
   position: relative;
-  display: flex;
+  display: grid;
   flex-direction: column;
   gap: 0.8rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto 60vh auto;
+  justify-content: center;
+  align-items: center;
 }
 .main .grid .title {
   font-family: JetBrains Mono;
@@ -183,7 +187,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 5px;
+  gap: 0.2rem;
 }
 .main .grid .projects-list .projects-list__title {
   font-family: sans-serif;
@@ -206,7 +210,6 @@ a {
   text-transform: uppercase;
   text-align: right;
   margin-bottom: 0.625rem;
-  padding: 0.4rem 0;
   cursor: pointer;
   transition: all 0.5s ease;
   -webkit-text-stroke: 1px var(--project-outline-color);
@@ -220,9 +223,6 @@ a {
   color: var(--active-project-button-color);
   -webkit-text-stroke: 1px var(--active-project-button-outline-color);
 }
-.main .grid .bio {
-  margin-top: 3vh;
-}
 .main .grid .bio .bio__text {
   font-family: sans-serif;
   font-size: 2vh;
@@ -231,6 +231,7 @@ a {
   letter-spacing: 1.12px;
   text-align: justify;
   padding: 2vh 0.8rem;
+  margin: 4vh 0 0 0;
 }
 .main .grid .project-card, .main .grid .contact-card {
   overflow-y: scroll;
@@ -288,7 +289,7 @@ a {
   font-size: 0.8125rem;
 }
 .main .footer {
-  z-index: -1;
+  z-index: 1000;
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 1.2rem;
@@ -327,15 +328,24 @@ a {
   transition: transform 0.4s ease-in-out;
 }
 
-.out-of-view-right {
-  display: hidden;
-  block-size: 0%;
+.out-of-view {
+  display: none;
   position: absolute;
+  max-height: 0px;
+}
+
+.out-of-view--bottom {
+  transform: translateY(1000px);
+}
+
+.out-of-view--right {
   transform: translateX(120%);
 }
 
-.out-of-view-bottom {
-  block-size: 0%;
-  display: hidden;
-  transform: translateY(1000px);
+.visible {
+  display: contents;
+  block-size: 100%;
+  position: relative;
+  transform: translateX(0%);
+  max-height: none;
 }/*# sourceMappingURL=style.css.map */

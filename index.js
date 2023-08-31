@@ -4,8 +4,8 @@ $(document).ready(function() {
     const $projectCards = $(".project-card");
     const $bio = $(".bio");
     const $homeButton = $(".home-button");
-    const $contactCard = $(".contact-card"); // Add the class to your contact card element
-    const $footerHereBtn = $(".footer__here-btn"); // Add the class to your footer button element
+    const $contactCard = $(".contact-card");
+    const $footerHereBtn = $(".footer__here-btn");
 
     // Set the initial active theme selector based on the body's class
     var activeThemeClass = $("body").attr("class").split(" ").find(className => className.startsWith("body--"));
@@ -29,35 +29,35 @@ $(document).ready(function() {
     // Add click event listener to project buttons
     $projectButtons.click(function(event) {
         event.preventDefault();
-        $projectButtons.removeClass("project-button--active");
-        $(this).addClass("project-button--active");
         const targetCardClass = $(this).data("target-card");
-        $projectCards.not("." + targetCardClass).addClass("out-of-view-bottom");
-        $("." + targetCardClass).removeClass("out-of-view-bottom");
-        $bio.addClass("out-of-view-right");
-    });
+    
+        // Remove "visible" class from all cards
+        $projectCards.removeClass("visible");
+    
+        // Add "visible" class to corresponding card
+        $("." + targetCardClass).addClass("visible");
+    
+        // Remove "visible" class from all other elements
+        $contactCard.removeClass("visible");
 
-    // Add click event listener to hide project cards and reset bio
-    $projectCards.click(function() {
-        $projectCards.addClass("out-of-view-bottom");
-        $projectButtons.removeClass("project-button--active");
-        $bio.removeClass("out-of-view-right");
+        // Remove "visible" class from bio element
+        $bio.removeClass("visible");
     });
 
     // Add click event listener to home button
     $homeButton.click(function(event) {
         event.preventDefault();
-        $projectCards.addClass("out-of-view-bottom");
-        $bio.removeClass("out-of-view-right");
-        $contactCard.addClass("out-of-view-bottom");
+        $projectCards.removeClass("visible"); // Remove visible class from all cards
+        $contactCard.removeClass("visible");
+        $bio.addClass("visible");
     });
 
     // Add click event listener to footer here button
     $footerHereBtn.click(function(event) {
         event.preventDefault();
-        $contactCard.removeClass("out-of-view-bottom");
-        $projectCards.addClass("out-of-view-bottom");
-        $bio.addClass("out-of-view-right");
+        $contactCard.addClass("visible"); // Add visible class to contact card
+        $projectCards.removeClass("visible"); // Remove visible class from all cards
+        $bio.removeClass("visible");
     });
 
     function toggleTitleClass(theme) {
@@ -68,4 +68,41 @@ $(document).ready(function() {
             $title.removeClass("wavy-theme-transparent");
         }
     }
+});
+
+const contactSend = document.querySelector(".btn-send");
+contactSend.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const $formToReset = $(".contact-form");
+  const firstName = $(".first-name").val();
+  const lastName = $(".last-name").val();
+  const email = $(".email-input").val();
+  var message = $(".message").val();
+  
+
+// composed email message functionality 
+
+const body =
+"Name: " +
+firstName +
+" " +
+lastName +
+"\n Email:" +
+email +
+"\n Message: " +
+message;
+
+const submitAlertMessage = `Thank you ${firstName}. Your Message has been sent.`;
+
+Email.send({
+Host: "smtp.elasticemail.com",
+Username: "huntercheveldave@gmail.com",
+Password: "F122EDB288F88258553A7845BCBE8EF87242",
+To: "huntercheveldave@gmail.com",
+From: email,
+Subject: "New message from your website",
+Body: body,
+}).then((message) => alert(submitAlertMessage));
+formToReset.reset();
 });
