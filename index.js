@@ -3,7 +3,9 @@ $(document).ready(function() {
     const $projectButtons = $(".projects-list__project-button");
     const $projectCards = $(".project-card");
     const $bio = $(".bio");
-    const $homeButton = $(".home-button"); // Add the class to your home button element
+    const $homeButton = $(".home-button");
+    const $contactCard = $(".contact-card"); // Add the class to your contact card element
+    const $footerHereBtn = $(".footer__here-btn"); // Add the class to your footer button element
 
     // Set the initial active theme selector based on the body's class
     var activeThemeClass = $("body").attr("class").split(" ").find(className => className.startsWith("body--"));
@@ -47,6 +49,15 @@ $(document).ready(function() {
         event.preventDefault();
         $projectCards.addClass("out-of-view-bottom");
         $bio.removeClass("out-of-view-right");
+        $contactCard.addClass("out-of-view-bottom");
+    });
+
+    // Add click event listener to footer here button
+    $footerHereBtn.click(function(event) {
+        event.preventDefault();
+        $contactCard.removeClass("out-of-view-bottom");
+        $projectCards.addClass("out-of-view-bottom");
+        $bio.addClass("out-of-view-right");
     });
 
     function toggleTitleClass(theme) {
