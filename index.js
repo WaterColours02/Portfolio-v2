@@ -26,7 +26,6 @@ $(document).ready(function() {
         toggleTitleClass(selectedTheme);
     });
 
-    // Add click event listener to project buttons
     $projectButtons.click(function(event) {
         event.preventDefault();
         const targetCardClass = $(this).data("target-card");
@@ -34,14 +33,14 @@ $(document).ready(function() {
         // Remove "visible" class from all cards
         $projectCards.removeClass("visible");
     
-        // Add "visible" class to corresponding card
-        $("." + targetCardClass).addClass("visible");
-    
         // Remove "visible" class from all other elements
         $contactCard.removeClass("visible");
-
-        // Remove "visible" class from bio element
         $bio.removeClass("visible");
+    
+        // Add "visible" class to corresponding card after a 500ms delay
+        setTimeout(function() {
+            $("." + targetCardClass).addClass("visible");
+        }, 500);
     });
 
     // Add click event listener to home button
