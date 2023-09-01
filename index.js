@@ -15,6 +15,15 @@ $(document).ready(function() {
         toggleTitleClass(activeTheme);
     }
 
+    function toggleTitleClass(theme) {
+        const $title = $(".title");
+        if (theme === "wavy-theme") {
+            $title.addClass("wavy-theme-transparent");
+        } else {
+            $title.removeClass("wavy-theme-transparent");
+        }
+    }
+
     // Add click event listener to theme selector buttons
     $themeSelectors.click(function(event) {
         event.preventDefault();
@@ -31,13 +40,15 @@ $(document).ready(function() {
         event.preventDefault();
         $projectButtons.removeClass("project-button--active");
         $(this).addClass("project-button--active");
+
         const targetCardClass = $(this).data("target-card");
+        $contactCard.addClass("out-of-view-bottom");
         $projectCards.not("." + targetCardClass).addClass("out-of-view-bottom");
         $("." + targetCardClass).removeClass("out-of-view-bottom");
         $bio.addClass("out-of-view-right");
     });
 
-    // Add click event listener to hide project cards and reset bio
+    // // Add click event listener to hide project cards and reset bio
     $projectCards.click(function() {
         $projectCards.addClass("out-of-view-bottom");
         $projectButtons.removeClass("project-button--active");
@@ -60,12 +71,5 @@ $(document).ready(function() {
         $bio.addClass("out-of-view-right");
     });
 
-    function toggleTitleClass(theme) {
-        const $title = $(".title");
-        if (theme === "wavy-theme") {
-            $title.addClass("wavy-theme-transparent");
-        } else {
-            $title.removeClass("wavy-theme-transparent");
-        }
-    }
+    
 });

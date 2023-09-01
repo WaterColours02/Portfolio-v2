@@ -129,6 +129,7 @@ a {
 }
 .main .grid {
   position: relative;
+  min-height: 100vh;
   flex-direction: column;
   gap: 0.8rem;
 }
@@ -227,17 +228,21 @@ a {
   letter-spacing: 1.12px;
   text-align: justify;
   padding: 2vh 0.8rem;
+  transition: all 0.5s ease;
 }
 .main .grid .project-card, .main .grid .contact-card {
+  z-index: 100;
   overflow-y: scroll;
   max-height: 40vh;
   display: grid;
   gap: 0.6rem;
   background: white;
   grid-template-columns: 1fr;
+  position: absolute;
+  top: 38vh;
   justify-content: center;
   align-items: start;
-  transition: all 0.3s ease;
+  transition: all 1s ease;
   border: 1px solid var(--project-card-outline-color);
   border-radius: 3.125rem;
   margin: 3rem 0 30rem 0;
@@ -257,7 +262,7 @@ a {
   text-align: center;
   text-transform: uppercase;
   color: var(--project-card-title-color);
-  margin: 0 0;
+  margin: 0.8rem 0;
   padding: 0.3125rem 2.5rem;
   border: 2px solid var(--project-card-title-border-color);
   border-radius: 1.25rem;
@@ -282,7 +287,7 @@ a {
   padding-bottom: 0.6rem;
 }
 .main .footer {
-  z-index: -1;
+  z-index: 0;
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 1.2rem;
@@ -300,6 +305,7 @@ a {
 .main .footer .footer__here-btn {
   color: var(--contact-here-color);
   text-decoration: underline;
+  font-size: 1.6vh;
 }
 .main .footer .footer__here-btn:hover {
   cursor: pointer;
@@ -317,19 +323,18 @@ a {
 }
 
 .card-transition {
-  transition: all 0.7s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .out-of-view-right {
+  transition: all 1s ease-in-out;
   display: hidden;
-  block-size: 0%;
-  position: absolute;
-  transform: translateX(120%);
+  transform: translateX(120vw);
 }
 
 .out-of-view-bottom {
-  block-size: 0%;
+  transition: all 1s ease-in-out;
   display: hidden;
   position: absolute;
-  transform: translateY(1000px);
+  transform: translateY(140vh);
 }/*# sourceMappingURL=style.css.map */
