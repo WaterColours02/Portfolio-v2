@@ -170,13 +170,13 @@ a{
         
         .title {
             font-family:JetBrains Mono;
-            font-size: 13vw;
+            // font-size: 13vw;
             text-align: right;
             color: var(--hunter-even-fill-color);
             -webkit-text-stroke: 1px var(--hunter-even-outline-color);
             text-transform: uppercase;
             margin-top: 1.875rem;
-            white-space: nowrap;
+            // white-space: nowrap;
             transition: all 0.6s ease-in-out;
 
             &:hover {
@@ -568,3 +568,45 @@ a{
     position: absolute;
     transform: translateY(140vh);
 }
+
+
+@media only screen and (min-width: 1200px) {
+   
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+
+        
+        .title{
+            grid-column: 1;
+            max-width: 100%;
+            
+            text-align: left;
+            font-size:200px;
+            
+            
+        }
+        
+        .theme-selector-box {
+            grid-column: 1;
+            display: grid;
+            grid-template-columns: 1fr;
+            
+            
+        }
+        
+        .projects-list {
+            grid-column: 2;
+            grid-row: 1;
+            
+            .project-list__title{
+                font-size: 6rem;
+            }
+            
+        }
+      }
+
+  }
+
+    
