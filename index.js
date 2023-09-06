@@ -7,6 +7,8 @@ $(document).ready(function() {
     const $contactCard = $(".contact-card"); // Add the class to your contact card element
     const $footerHereBtn = $(".footer__here-btn"); // Add the class to your footer button element
 
+   
+
     // Set the initial active theme selector based on the body's class
     var activeThemeClass = $("body").attr("class").split(" ").find(className => className.startsWith("body--"));
     if (activeThemeClass) {
