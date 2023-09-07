@@ -135,6 +135,7 @@ a {
 }
 .main .grid .title {
   font-family: JetBrains Mono;
+  font-size: 12vw;
   text-align: right;
   color: var(--hunter-even-fill-color);
   -webkit-text-stroke: 1px var(--hunter-even-outline-color);
@@ -442,10 +443,11 @@ a {
   }
   .grid .title {
     grid-column: 1;
-    width: 100%;
+    max-width: 40vw;
     text-align: left;
-    font-size: 20rem;
+    font-size: 15rem !important;
     margin: 2rem 4rem;
+    padding: 1rem 1rem;
     -webkit-text-stroke: 2px var(--hunter-even-outline-color);
   }
   .grid .theme-selector-box {
@@ -469,7 +471,9 @@ a {
   }
   .grid .bio {
     grid-column: 2;
+    grid-row: 1;
     position: relative;
-    margin: 0 4rem;
+    width: 60%;
+    top: 40rem;
   }
 }/*# sourceMappingURL=style.css.map */
