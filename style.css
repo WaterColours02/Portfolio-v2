@@ -473,7 +473,19 @@ a {
     grid-column: 2;
     grid-row: 1;
     position: relative;
-    width: 60%;
+    width: 80%;
     top: 40rem;
+    left: 10rem;
+  }
+  .grid .bio__text {
+    font-size: 1.8rem !important;
+    line-height: 3.125rem !important;
+    letter-spacing: 0.1563rem;
+    padding: 0 4rem;
+  }
+  .grid .out-of-view-right {
+    transition: all 1s ease-in-out;
+    display: hidden;
+    transform: translateX(0vw);
   }
 }/*# sourceMappingURL=style.css.map */
