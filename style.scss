@@ -581,7 +581,7 @@ a{
 
 
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 600px) {
    
     main {
         display: block;
@@ -604,7 +604,7 @@ a{
         justify-content: end;
         margin: 0 0 0 0 !important;
 
-        background-image: url("../assets/BG-Purple-Theme.png");
+        background-image: url("./assets/BG-Purple-Theme.png");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: left;

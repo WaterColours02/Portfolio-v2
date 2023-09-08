@@ -431,7 +431,7 @@ a {
   transform: translateY(140vh);
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 600px) {
   main {
     display: block;
     margin: 0 0 0 0 !important;
@@ -446,7 +446,7 @@ a {
     grid-template-rows: 1fr;
     justify-content: end;
     margin: 0 0 0 0 !important;
-    background-image: url("../assets/BG-Purple-Theme.png");
+    background-image: url("./assets/BG-Purple-Theme.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left;
