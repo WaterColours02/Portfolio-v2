@@ -64,7 +64,7 @@ button {
 
 
 
-    --project-title-bg-color: transparent;
+    --project-title-bg-color: #fff;
     --project-card-title-color: #6612EF;
     --project-card-title-border-color: #6612EF;
     --project-card-text-color: #000;
@@ -478,14 +478,14 @@ a{
                     color: var(--project-card-title-color);
     
                     margin: 0.8rem 0;
-                    padding: 0.3125rem 2.5rem;
+                    padding: 0.4125rem 2.5rem;
     
                     border: 2px solid var(--project-card-title-border-color);
                     border-radius: 1.25rem; 
 
                     &:hover {
-                        background-color: var(--text-color);
-                        color: var(--project-title-bg-color);
+                        background-color: var(--project-card-title-border-color);
+                        color: var(--project-title-bg-color) !important;
                     }
                 }
             }
@@ -686,32 +686,79 @@ a{
 
         .project-card, .contact-card {
             grid-column: 1;
-            max-width: 30vw;
-            position: relative;
+            width: 30vw;
+            height: 45vh;
+            position: absolute;
+            top: 45vh !important;
+            left: 8vw !important;
+
+            &__title {
+          
+                margin: 1.2rem !important;
+              
+            }
+
+         
+
+            &__tech-stack {
+                font-size: 1.4rem !important;
+                margin-bottom: 0.8rem;
+                font-weight: 700;
+                color: var(--project-card-text-color);
+                text-align: center;
+            }
+
+            &__description {
+                font-size: 1.4rem !important;
+                line-height: 1.3;
+                padding-bottom: 0.6rem;
+            }
+
+            &__greeting{
+                font-size: 1.8rem !important;
       
         }
 
+        &__form {
+
+            gap: 1.8rem !important;
 
 
+            &-input {
+                font-size: 1.8rem   !important;
+                margin-top: 1.2rem;
 
-
-        .out-of-view-right{
-            transition: all 1.0s ease-in-out;
-            display: hidden;
-            // block-size: 0%;
-            // position: absolute;
-            transform: translateX(0vw);
         }
 
-        .footer {
-            grid-column: 2;
-            position: relative;
+        &-message {
+            margin-top: 1.8rem !important;
+            font-size: 1.8rem !important;
+
+            padding: 0.4rem 0.6rem -2.8rem 0.6rem !important;
+
         }
 
+
+        }
+
+
+
+
+        
     }
-      
+    
+    .out-of-view-right{
+        transition: all 1.0s ease-in-out;
+        display: hidden;
+        // block-size: 0%;
+        // position: absolute;
+        transform: translateX(0vw);
+    }
 
-
+    .footer {
+        grid-column: 2;
+        position: relative;
+    }
   }
 
-    
+}

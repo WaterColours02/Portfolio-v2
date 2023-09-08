@@ -50,7 +50,7 @@ button {
   --contact-here-color: #FF0000;
   --active-theme-selector-color: #FF0000;
   --theme-selector-outline-color: #6612EF;
-  --project-title-bg-color: transparent;
+  --project-title-bg-color: #fff;
   --project-card-title-color: #6612EF;
   --project-card-title-border-color: #6612EF;
   --project-card-text-color: #000;
@@ -369,13 +369,13 @@ a {
   text-transform: uppercase;
   color: var(--project-card-title-color);
   margin: 0.8rem 0;
-  padding: 0.3125rem 2.5rem;
+  padding: 0.4125rem 2.5rem;
   border: 2px solid var(--project-card-title-border-color);
   border-radius: 1.25rem;
 }
 .main .grid .project-card__form-submit:hover, .main .grid .contact-card__form-submit:hover {
-  background-color: var(--text-color);
-  color: var(--project-title-bg-color);
+  background-color: var(--project-card-title-border-color);
+  color: var(--project-title-bg-color) !important;
 }
 .main .footer {
   z-index: 0;
@@ -504,8 +504,41 @@ a {
   }
   .grid .project-card, .grid .contact-card {
     grid-column: 1;
-    max-width: 30vw;
-    position: relative;
+    width: 30vw;
+    height: 45vh;
+    position: absolute;
+    top: 45vh !important;
+    left: 8vw !important;
+  }
+  .grid .project-card__title, .grid .contact-card__title {
+    margin: 1.2rem !important;
+  }
+  .grid .project-card__tech-stack, .grid .contact-card__tech-stack {
+    font-size: 1.4rem !important;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    color: var(--project-card-text-color);
+    text-align: center;
+  }
+  .grid .project-card__description, .grid .contact-card__description {
+    font-size: 1.4rem !important;
+    line-height: 1.3;
+    padding-bottom: 0.6rem;
+  }
+  .grid .project-card__greeting, .grid .contact-card__greeting {
+    font-size: 1.8rem !important;
+  }
+  .grid .project-card__form, .grid .contact-card__form {
+    gap: 1.8rem !important;
+  }
+  .grid .project-card__form-input, .grid .contact-card__form-input {
+    font-size: 1.8rem !important;
+    margin-top: 1.2rem;
+  }
+  .grid .project-card__form-message, .grid .contact-card__form-message {
+    margin-top: 1.8rem !important;
+    font-size: 1.8rem !important;
+    padding: 0.4rem 0.6rem -2.8rem 0.6rem !important;
   }
   .grid .out-of-view-right {
     transition: all 1s ease-in-out;
