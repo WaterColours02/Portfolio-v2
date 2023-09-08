@@ -140,7 +140,7 @@ a{
     align-items: center;
     // justify-content: center;
     height: 100vh;
-    margin: 0.6rem 1.25rem 0 1.25rem;
+    // margin: 0.6rem 1.25rem 0 1.25rem;
 
     .main__bg-asset {
         z-index: -1;
@@ -157,6 +157,7 @@ a{
     
 
     .grid {
+        margin: 0.6rem 1.25rem 0 1.25rem;
         position: relative;
         min-height: 100vh;
         // display: grid;
@@ -584,6 +585,7 @@ a{
    
     main {
         display: block;
+        margin: 0 0 0 0 !important;
     }
 
     .main__bg-asset {
@@ -600,15 +602,14 @@ a{
         grid-template-rows: 1fr;
         // align-items: center;
         justify-content: end;
+        margin: 0 0 0 0 !important;
 
-        .desktop-bg-asset {
-            // position: absolute;
-            // top: 0;
-            // left: 0;
-            // height: 100%;
-            // width: 100%;
-            z-index: 100;
-        }
+        background-image: url("../assets/BG-Purple-Theme.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
+        background-position-x: -40%;
+        background-size: 60%;
 
         
         .title{
@@ -758,6 +759,10 @@ a{
     .footer {
         grid-column: 2;
         position: relative;
+
+        &__text {
+            font-size: 1.8rem !important;
+        }
     }
   }
 
