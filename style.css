@@ -453,14 +453,18 @@ a {
     background-position-x: -40%;
     background-size: 60%;
   }
+  .grid .desktop-right-grid {
+    display: flex !important;
+    justify-content: center !important;
+  }
   .grid .title {
     grid-column: 1;
     grid-row: 1;
     max-width: 40vw;
     text-align: left;
-    font-size: 15rem !important;
-    margin: 2rem 4rem;
-    padding: 1rem 1rem;
+    font-size: 10vw !important;
+    margin: 4.5 0rem !important;
+    padding: 0rem 1rem !important;
     -webkit-text-stroke: 2px var(--hunter-even-outline-color) !important;
   }
   .grid .theme-selector-box {
@@ -471,13 +475,13 @@ a {
     align-items: flex-end !important;
     flex-direction: column !important;
     justify-content: flex-start !important;
-    margin-top: 7.2rem;
+    margin-top: 3.8vw;
     margin-right: 5rem;
     padding-left: 2rem;
   }
   .grid .theme-selector-box .theme-selector-box__circle {
-    width: 2.8rem !important;
-    height: 2.8rem !important;
+    width: 2vw !important;
+    height: 2vw !important;
   }
   .grid .projects-list {
     grid-column: 2;
@@ -509,14 +513,15 @@ a {
   }
   .grid .project-card, .grid .contact-card {
     grid-column: 1;
-    width: 30vw;
-    height: 45vh;
-    position: absolute;
-    top: 45vh !important;
-    left: 8vw !important;
+    width: 35vw;
+    min-height: 70vh;
+    position: relative;
+    top: 4vh !important;
+    left: 5vw !important;
+    border: 2px solid var(--project-card-outline-color) !important;
   }
   .grid .project-card__title, .grid .contact-card__title {
-    margin: 1.2rem !important;
+    margin: 2.2rem !important;
   }
   .grid .project-card__tech-stack, .grid .contact-card__tech-stack {
     font-size: 1.4rem !important;
@@ -529,6 +534,7 @@ a {
     font-size: 1.4rem !important;
     line-height: 1.3;
     padding-bottom: 0.6rem;
+    margin: 0 2.25rem !important;
   }
   .grid .project-card__greeting, .grid .contact-card__greeting {
     font-size: 1.8rem !important;
@@ -549,6 +555,11 @@ a {
     transition: all 1s ease-in-out;
     display: hidden;
     transform: translateX(0vw);
+  }
+  .grid .out-of-view-left {
+    transition: all 1s ease-in-out;
+    display: hidden;
+    transform: translateX(-120vw);
   }
   .grid .footer {
     grid-column: 2;

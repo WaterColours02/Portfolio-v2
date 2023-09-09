@@ -169,6 +169,10 @@ a{
         // align-items: center;
         // margin: 0 1.6rem 0 1.6rem;
         
+        .desktop-right-grid {
+            // display: none;
+        }
+
         .title {
             font-family:JetBrains Mono;
             font-size: 12vw;
@@ -611,6 +615,11 @@ a{
         background-position-x: -40%;
         background-size: 60%;
 
+        .desktop-right-grid {
+            display: flex !important;
+          
+            justify-content: center !important;
+        }
         
         .title{
             grid-column: 1;
@@ -618,10 +627,10 @@ a{
             max-width: 40vw;
             
             text-align: left;
-            font-size: 15rem !important;
+            font-size: 10vw !important;
 
-            margin: 2rem 4rem;
-            padding: 1rem 1rem;
+            margin: 4.5 0rem !important;
+            padding: 0rem 1rem !important;
             
             -webkit-text-stroke: 2px var(--hunter-even-outline-color) !important;
             
@@ -636,13 +645,13 @@ a{
             align-items:flex-end !important;
             flex-direction: column !important;
             justify-content: flex-start !important;
-            margin-top: 7.2rem;
+            margin-top: 3.8vw;
             margin-right: 5rem;
             padding-left: 2rem;
 
             .theme-selector-box__circle{
-                width: 2.8rem !important;
-                height: 2.8rem !important;
+                width: 2vw !important;
+                height: 2vw !important;
 
             }
 
@@ -687,15 +696,18 @@ a{
 
         .project-card, .contact-card {
             grid-column: 1;
-            width: 30vw;
-            height: 45vh;
-            position: absolute;
-            top: 45vh !important;
-            left: 8vw !important;
+            width: 35vw;
+            min-height: 70vh;
+            position: relative;
+            top: 4vh !important;
+            left: 5vw !important;
+            border: 2px solid var(--project-card-outline-color) !important;
+            
 
             &__title {
           
-                margin: 1.2rem !important;
+                margin: 2.2rem !important;
+                
               
             }
 
@@ -713,6 +725,7 @@ a{
                 font-size: 1.4rem !important;
                 line-height: 1.3;
                 padding-bottom: 0.6rem;
+                margin: 0 2.25rem !important;
             }
 
             &__greeting{
@@ -754,6 +767,14 @@ a{
         // block-size: 0%;
         // position: absolute;
         transform: translateX(0vw);
+    }
+
+    .out-of-view-left {
+        transition: all 1.0s ease-in-out;
+        display: hidden;
+        // block-size: 0%;
+        // position: absolute;
+        transform: translateX(-120vw);
     }
 
     .footer {

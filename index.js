@@ -48,6 +48,7 @@ $(document).ready(function() {
         $projectCards.not("." + targetCardClass).addClass("out-of-view-bottom");
         $("." + targetCardClass).removeClass("out-of-view-bottom");
         $bio.addClass("out-of-view-right");
+        $homeButton.addClass("out-of-view-left");
     });
 
     // // Add click event listener to hide project cards and reset bio
