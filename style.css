@@ -475,9 +475,9 @@ a {
     align-items: flex-end !important;
     flex-direction: column !important;
     justify-content: flex-start !important;
-    margin-top: 3.8vw;
+    margin-top: 4vw;
     margin-right: 5rem;
-    padding-left: 2rem;
+    padding-left: 4rem;
   }
   .grid .theme-selector-box .theme-selector-box__circle {
     width: 2vw !important;
