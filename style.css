@@ -431,7 +431,7 @@ a {
   transform: translateY(140vh);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 900px) {
   main {
     display: block;
     margin: 0 0 0 0 !important;
