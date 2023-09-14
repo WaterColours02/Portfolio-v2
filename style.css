@@ -45,7 +45,7 @@ button {
   --active-project-button-color: #FF0000;
   --active-project-button-outline-color: #FF0000;
   --bio-text-color: #FF0000;
-  --footer-text-colour: #6612EF;
+  --footer-text-color: #6612EF;
   --contact-social-color: #6612EF;
   --contact-here-color: #FF0000;
   --active-theme-selector-color: #FF0000;
@@ -245,6 +245,38 @@ a {
   text-align: justify;
   padding: 4vh 0.8rem 1vh 0.8rem;
   transition: all 0.5s ease;
+}
+.main .grid .card-close-button {
+  display: none;
+  align-items: center;
+  justify-items: center;
+  z-index: 200;
+  position: absolute;
+  top: 5.4rem;
+  left: 10.4rem;
+  background-color: white;
+  font-size: 2.25rem;
+  height: 3.25rem;
+  width: 3.25rem;
+  color: var(--theme-selector-outline-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  scale: 1.2;
+  border: 2px solid var(--theme-selector-outline-color);
+  border-radius: 50%;
+}
+.main .grid .card-close-button:hover {
+  color: var(--highlight-color);
+}
+.main .grid .card-close-button__icon {
+  font-size: 2.25rem;
+  color: var(--theme-selector-outline-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  scale: 1.2;
+}
+.main .grid .card-close-button {
+  display: grid;
 }
 .main .grid .project-card, .main .grid .contact-card {
   z-index: 100;

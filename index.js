@@ -72,6 +72,7 @@ $(document).ready(function() {
         $contactCard.removeClass("out-of-view-bottom");
         $projectCards.addClass("out-of-view-bottom");
         $bio.addClass("out-of-view-right");
+        $homeButton.addClass("out-of-view-left");
     });
 
     
