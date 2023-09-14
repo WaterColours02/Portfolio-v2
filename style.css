@@ -111,16 +111,27 @@ a {
 }
 
 .background-clip {
-  display: none;
-  -webkit-mask-image: url(./assets/background1.svg);
-  -webkit-mask-size: 100vh 100vh;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position-x: -35vh;
+  height: 110vh;
+  -webkit-background-clip: text;
+          background-clip: text;
   position: absolute;
   top: 0;
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.apply-clip-mask {
+  -webkit-mask-image: url(./assets/background1.svg);
+  -webkit-mask-size: 120vh 120vh;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position-x: -35vh;
+  -webkit-mask-position-y: -5vh;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .main {
@@ -166,7 +177,7 @@ a {
   display: none !important;
 }
 .main .grid .wavy-theme-transparent {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 .main .grid .theme-selector-box {
   display: flex;
@@ -492,7 +503,6 @@ a {
     grid-template-rows: 1fr;
     justify-content: end;
     margin: 0 0 0 0 !important;
-    background-image: url("./assets/BG-Purple-Theme.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left;
@@ -511,7 +521,7 @@ a {
     font-size: 10vw !important;
     margin: 4.5 0rem !important;
     padding: 0rem 1rem !important;
-    -webkit-text-stroke: 2px var(--hunter-even-outline-color) !important;
+    -webkit-text-stroke: 3px var(--hunter-even-outline-color) !important;
   }
   .grid .theme-selector-box {
     grid-column: 1;

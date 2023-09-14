@@ -135,18 +135,32 @@ a{
 }
 
 .background-clip {
-    display: none;
-    // background-clip: text;
+    height: 110vh;
+    // display: none;
+    background-clip: text;
     // scale: 0.8;
-    -webkit-mask-image: url(./assets/background1.svg);
-    -webkit-mask-size: 100vh 100vh;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position-x: -35vh;
+    // -webkit-mask-image: url(./assets/background1.svg);
+    // -webkit-mask-size: 120vh 120vh;
+    // -webkit-mask-repeat: no-repeat;
+    // -webkit-mask-position-x: -35vh;
+    // -webkit-mask-position-y: -5vh;
     position:absolute;
     top:0;
     left:0;
     object-fit: cover;
-    // background-repeat: no-repeat;
+    background-repeat: no-repeat;
+}
+
+.apply-clip-mask {
+     -webkit-mask-image: url(./assets/background1.svg);
+    -webkit-mask-size: 120vh 120vh;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position-x: -35vh;
+    -webkit-mask-position-y: -5vh;
+}
+
+.hidden {
+    display: none !important;
 }
 
 .main {
@@ -190,6 +204,7 @@ a{
       
 
         .title {
+            
             font-family:JetBrains Mono;
             font-size: 12vw;
             text-align: right;
@@ -212,8 +227,14 @@ a{
 
         }
 
+        .apply-title-clip-mask {
+            // background-image: url('./assets/ezgif.com-gif-maker.gif');
+            // background-clip: text;
+            // -webkit-background-clip: text;
+        }
+
         .wavy-theme-transparent {
-            opacity: 0.8;
+            opacity: 0.6;
         }
      
         
@@ -663,12 +684,27 @@ a{
         justify-content: end;
         margin: 0 0 0 0 !important;
 
-        background-image: url("./assets/BG-Purple-Theme.png");
+        // background-image: url("./assets/background1.svg");
+        // -webkit-mask: url("./assets/background1.svg");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: left;
         background-position-x: -40%;
         background-size: 60%;
+
+
+        // &__bg-mask {
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+      
+          
+        //     .bg-image{
+              
+        //     }
+            
+        // }
+
 
         .desktop-right-grid {
             display: flex !important;
@@ -677,6 +713,7 @@ a{
         }
         
         .title{
+            
             grid-column: 1;
             grid-row: 1;
             max-width: 40vw;
@@ -687,8 +724,8 @@ a{
             margin: 4.5 0rem !important;
             padding: 0rem 1rem !important;
             
-            -webkit-text-stroke: 2px var(--hunter-even-outline-color) !important;
-            
+            -webkit-text-stroke: 3px var(--hunter-even-outline-color) !important;
+    
             
         }
         
