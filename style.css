@@ -75,7 +75,7 @@ button {
   --project-title-bg-color: #BDFF01;
   --project-card-outline-color: #6612EF;
   --project-card-text-color: #6612EF;
-  --footer-text-colour: #6612EF;
+  --footer-text-color: #6612EF;
   --contact-here-color: #6612EF;
   --contact-social-color: #6612EF;
 }
@@ -91,7 +91,7 @@ button {
   --active-project-button-color: #FFADAD;
   --active-project-button-outline-color: #FFADAD;
   --bio-text-color: #494949;
-  --footer-text-colour: #6612EF;
+  --footer-text-color: #6612EF;
   --contact-here-color: #6612EF;
   --contact-social-color: #6612EF;
   --active-theme-selector-color: #6612EF;
@@ -101,7 +101,7 @@ button {
   --project-card-title-border-color: #FFADAD;
   --project-card-outline-color: #494949;
   --project-card-text-color: #494949;
-  --footer-text-colour: #494949;
+  --footer-text-color: #494949;
   --contact-here-color: #FFADAD;
   --contact-social-color: #494949;
 }
@@ -110,7 +110,21 @@ a {
   text-decoration: none;
 }
 
+.background-clip {
+  display: none;
+  -webkit-mask-image: url(./assets/background1.svg);
+  -webkit-mask-size: 100vh 100vh;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position-x: -35vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .main {
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -176,7 +190,7 @@ a {
 .main .grid .theme-selector-box .theme-selector-box__circle:hover::before {
   opacity: 1;
 }
-.main .grid .theme-selector-box .theme-selector-box__circle.themme-selector-box__circle--active {
+.main .grid .theme-selector-box .theme-selector-box__circle.theme-selector-box__circle--active {
   background-color: var(--highlight-color);
 }
 .main .grid .theme-selector-box .active-theme-selector {
@@ -422,7 +436,7 @@ a {
   margin: 0 auto;
 }
 .main .footer__text {
-  color: var(--footer-text-colour);
+  color: var(--footer-text-color);
   font-family: JetBrains Mono;
   font-size: 1.6vh;
 }
