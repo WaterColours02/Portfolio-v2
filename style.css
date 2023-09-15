@@ -82,8 +82,8 @@ button {
 }
 
 .body--static-theme {
-  --hunter-even-outline-color: invert(100%);
-  --hunter-even-fill-color: invert(100%);
+  --hunter-even-outline-color: #2e2e2e;
+  --hunter-even-fill-color: #2e2e2e;
   --highlight-color: #6612EF;
   --text-color: #6612EF;
   --projects-title-fill-color: #494949;
@@ -160,7 +160,7 @@ a {
 }
 .main .grid .title {
   font-family: JetBrains Mono;
-  font-size: 12vw;
+  font-size: 13vw;
   text-align: right;
   color: var(--hunter-even-fill-color);
   -webkit-text-stroke: 1px var(--hunter-even-outline-color);
@@ -258,7 +258,6 @@ a {
   -webkit-text-stroke: 1px var(--active-project-button-outline-color);
 }
 .main .grid .bio {
-  transform: translateY(4rem);
   padding-top: 2rem;
   display: flex;
 }
