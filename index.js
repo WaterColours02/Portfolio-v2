@@ -6,7 +6,8 @@ $(document).ready(function() {
     const $homeButton = $(".home-button");
     const $contactCard = $(".contact-card"); // Add the class to your contact card element
     const $footerHereBtn = $(".footer__here-btn"); // Add the class to your footer button element
-    
+    const $projectList = $(".projects-list");
+
     function toggleBackgroundElements(selectedTheme) {
         $(".background-clip").each(function() {
             const theme = $(this).data("theme");
@@ -86,7 +87,10 @@ $(document).ready(function() {
         event.preventDefault();
         $projectCards.addClass("out-of-view-bottom");
         $bio.removeClass("out-of-view-right");
+        $bio.removeClass("out-of-view-right-desktop")
+        $projectList.removeClass("out-of-view-right-desktop");;
         $contactCard.addClass("out-of-view-bottom");
+
     });
 
     // Add click event listener to footer here button
@@ -95,8 +99,9 @@ $(document).ready(function() {
         $contactCard.removeClass("out-of-view-bottom");
         $projectCards.addClass("out-of-view-bottom");
         $bio.addClass("out-of-view-right");
-        $homeButton.addClass("out-of-view-left");
+        $bio.addClass("out-of-view-right-desktop");
+        $projectList.addClass("out-of-view-right-desktop");
+        $homeButton.removeClass("out-of-view-left"); // Remove "out-of-view-left" class from homeButton
     });
-
     
 });
