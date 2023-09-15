@@ -6,8 +6,31 @@ $(document).ready(function() {
     const $homeButton = $(".home-button");
     const $contactCard = $(".contact-card"); // Add the class to your contact card element
     const $footerHereBtn = $(".footer__here-btn"); // Add the class to your footer button element
+    
+    function toggleBackgroundElements(selectedTheme) {
+        $(".background-clip").each(function() {
+            const theme = $(this).data("theme");
+            if (theme === selectedTheme) {
+                $(this).removeClass("hidden");
+            } else {
+                $(this).addClass("hidden");
+            }
+        });
+    }
 
-   
+    // Add click event listener to theme selector buttons
+    $themeSelectors.click(function(event) {
+        event.preventDefault();
+        const selectedTheme = $(this).data("theme");
+        $("body").removeClass("body--wavy-theme body--purple-theme body--static-theme");
+        $("body").addClass("body--" + selectedTheme);
+        $themeSelectors.removeClass("active-theme-selector");
+        $(this).addClass("active-theme-selector");
+        toggleTitleClass(selectedTheme);
+        
+        // Toggle the background elements based on the selected theme
+        toggleBackgroundElements(selectedTheme);
+    });
 
     // Set the initial active theme selector based on the body's class
     var activeThemeClass = $("body").attr("class").split(" ").find(className => className.startsWith("body--"));

@@ -82,8 +82,8 @@ button {
 }
 
 .body--static-theme {
-  --hunter-even-outline-color: invert(70%);
-  --hunter-even-fill-color: invert(70%);
+  --hunter-even-outline-color: invert(100%);
+  --hunter-even-fill-color: invert(100%);
   --highlight-color: #6612EF;
   --text-color: #6612EF;
   --projects-title-fill-color: #494949;
@@ -95,8 +95,8 @@ button {
   --footer-text-color: #6612EF;
   --contact-here-color: #6612EF;
   --contact-social-color: #6612EF;
-  --active-theme-selector-color: #6612EF;
-  --theme-selector-outline-color: #6612EF;
+  --active-theme-selector-color: #FFADAD;
+  --theme-selector-outline-color: #000;
   --project-title-bg-color: #FFF;
   --project-card-title-color: #FFADAD;
   --project-card-title-border-color: #FFADAD;
@@ -196,16 +196,16 @@ a {
   transition: border 0.3s ease, background-color 0.3s ease;
 }
 .main .grid .theme-selector-box .theme-selector-box__circle:hover {
-  background-color: var(--highlight-color);
+  background-color: var(--active-theme-selector-color);
 }
 .main .grid .theme-selector-box .theme-selector-box__circle:hover::before {
   opacity: 1;
 }
 .main .grid .theme-selector-box .theme-selector-box__circle.theme-selector-box__circle--active {
-  background-color: var(--highlight-color);
+  background-color: var(--active-theme-selector-color);
 }
 .main .grid .theme-selector-box .active-theme-selector {
-  background-color: var(--highlight-color);
+  background-color: var(--active-theme-selector-color);
 }
 .main .grid .theme-selector-box .theme-selector-box__cross-icon {
   font-size: 1.25rem;
@@ -500,7 +500,7 @@ a {
   }
   .apply-clip-mask {
     -webkit-mask-size: 100vh;
-    -webkit-mask-position-x: -15vw;
+    -webkit-mask-position-x: -5vw;
     -webkit-mask-position-y: -5vh;
   }
   .grid {
@@ -532,7 +532,7 @@ a {
     align-items: flex-end !important;
     flex-direction: column !important;
     justify-content: flex-start !important;
-    margin-top: 4vw;
+    margin-top: 9rem;
     margin-right: 5rem;
     padding-left: 4rem;
   }
@@ -547,34 +547,35 @@ a {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2.2rem !important;
+    padding-top: 3rem;
   }
   .grid .projects-list__title {
-    font-size: 6rem !important;
+    font-size: 8rem !important;
   }
   .grid .projects-list__project-button {
-    font-size: 4rem !important;
+    font-size: 5rem !important;
   }
   .grid .bio {
     grid-column: 2;
     grid-row: 1;
     position: relative;
-    width: 80%;
-    top: 40rem;
-    left: 10rem;
+    max-width: 35vw;
+    top: 44rem;
+    left: 17rem;
   }
   .grid .bio__text {
     font-size: 1.8rem !important;
     line-height: 3.125rem !important;
     letter-spacing: 0.1563rem;
-    padding: 0 4rem;
+    padding: 2rem 0rem;
   }
   .grid .project-card, .grid .contact-card {
     grid-column: 1;
     width: 35vw;
     min-height: 70vh;
     position: relative;
-    top: 4vh !important;
-    left: 5vw !important;
+    top: 6rem !important;
+    left: 3rem !important;
     border: 2px solid var(--project-card-outline-color) !important;
   }
   .grid .project-card__title, .grid .contact-card__title {
