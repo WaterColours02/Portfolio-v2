@@ -750,7 +750,7 @@ a{
             text-align: left;
             font-size: 10vw !important;
 
-            margin: 4.5rem 0rem !important;
+            margin: 3.2rem 0rem !important;
             padding: 0rem 1rem !important;
             
             -webkit-text-stroke: 3px var(--hunter-even-outline-color) !important;
@@ -935,7 +935,7 @@ a{
 
         &--desktop-grid-right {
             grid-column: 2; 
-            // left: 12rem !important;
+            left: 12rem !important;
         }
     }
   }
