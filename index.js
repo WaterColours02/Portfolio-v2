@@ -75,12 +75,14 @@ $(document).ready(function() {
         $homeButton.addClass("out-of-view-left");
     });
 
+
+    // This is not require right now Maybe add this function to the close button on contact cortd
     // // Add click event listener to hide project cards and reset bio
-    $projectCards.click(function() {
-        $projectCards.addClass("out-of-view-bottom");
-        $projectButtons.removeClass("project-button--active");
-        $bio.removeClass("out-of-view-right");
-    });
+    // $projectCards.click(function() {
+    //     $projectCards.addClass("out-of-view-bottom");
+    //     $projectButtons.removeClass("project-button--active");
+    //     $bio.removeClass("out-of-view-right");
+    // });
 
     // Add click event listener to home button
     $homeButton.click(function(event) {
