@@ -76,7 +76,7 @@ $(document).ready(function() {
     });
 
 
-    // This is not require right now Maybe add this function to the close button on contact cortd
+    // This is not require right now Maybe add this function to the close button on contact
     // // Add click event listener to hide project cards and reset bio
     // $projectCards.click(function() {
     //     $projectCards.addClass("out-of-view-bottom");
