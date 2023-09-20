@@ -50,7 +50,7 @@ button {
   --contact-social-color: #6612EF;
   --contact-here-color: #FF0000;
   --active-theme-selector-color: #FF0000;
-  --theme-selector-outline-color: #6612EF;
+  --theme-selector-outline-color: #FF0000;
   --project-title-bg-color: #fff;
   --project-card-title-color: #6612EF;
   --project-card-title-border-color: #6612EF;
@@ -308,26 +308,31 @@ a {
   z-index: 100;
   overflow-y: scroll;
   max-height: 45vh;
+  min-height: 40vh;
   display: grid;
+  gap: 0.6rem;
   background: white;
   grid-template-columns: 1fr;
   position: absolute;
-  top: 36vh;
-  justify-content: center;
+  top: 40vh;
   transition: all 1s ease;
   border: 1px solid var(--project-card-outline-color);
   border-radius: 3.125rem;
-  margin: 3rem 0.8rem 0rem 0.8rem;
+  margin: 1rem 0.8rem 0rem 0.8rem;
+  padding: 0.4rem 0.6rem;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.55);
 }
 .main .grid .project-card::-webkit-scrollbar, .main .grid .contact-card::-webkit-scrollbar {
   display: none; /* Hide scrollbar for Chrome, Safari and Opera */
 }
 .main .grid .project-card__project-logo, .main .grid .contact-card__project-logo {
-  display: hidden;
+  display: none;
 }
 .main .grid .project-card__title, .main .grid .contact-card__title {
   max-width: 80%;
+  height: -moz-max-content;
+  height: max-content;
+  align-self: center;
   justify-self: center;
   background-color: var(--project-title-bg-color);
   font-size: 2.5vh;
@@ -336,7 +341,7 @@ a {
   text-align: center;
   text-transform: uppercase;
   color: var(--project-card-title-color);
-  margin: 0.8rem 0;
+  margin: 0.6rem 0;
   padding: 0.3125rem 1.5rem;
   border: 2px solid var(--project-card-title-border-color);
   border-radius: 1.25rem;
@@ -356,7 +361,7 @@ a {
   border-radius: 1.25rem;
 }
 .main .grid .project-card__details, .main .grid .contact-card__details {
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin: 0 1.25rem;
   color: var(--project-card-text-color);
   text-align: justify;
@@ -371,7 +376,8 @@ a {
   text-align: center;
 }
 .main .grid .project-card__description, .main .grid .contact-card__description {
-  font-size: 0.8125rem;
+  font-size: 0.6rem;
+  line-height: 1.2;
   padding-bottom: 0.6rem;
 }
 .main .grid .project-card__greeting, .main .grid .contact-card__greeting {
@@ -519,7 +525,7 @@ a {
   }
   .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     justify-content: end;
     margin: 0 0 0 0 !important;
@@ -535,7 +541,7 @@ a {
     text-align: left;
     font-size: 10vw !important;
     margin: 3.2rem 0rem !important;
-    padding: 0rem 1rem !important;
+    padding: 1rem 3rem !important;
     -webkit-text-stroke: 3px var(--hunter-even-outline-color) !important;
   }
   .grid .theme-selector-box {
@@ -547,7 +553,7 @@ a {
     flex-direction: column !important;
     justify-content: flex-start !important;
     margin-top: 9rem;
-    margin-right: 5rem;
+    margin-right: 5;
     padding-left: 4rem;
   }
   .grid .theme-selector-box .theme-selector-box__circle {
@@ -564,19 +570,20 @@ a {
     padding-top: 3rem;
   }
   .grid .projects-list__title {
-    font-size: 8rem !important;
+    font-size: 5vw !important;
   }
   .grid .projects-list__project-button {
-    font-size: 5rem !important;
+    font-size: 3vw !important;
   }
   .grid .bio {
     grid-column: 2;
     grid-row: 1;
     position: relative;
     padding: 0rem auto;
-    max-width: 75%;
+    max-width: 55%;
+    justify-self: right;
+    margin: 0rem 4rem;
     top: 48rem;
-    left: 11vw;
   }
   .grid .bio__text {
     font-size: 1.8rem !important;
@@ -593,16 +600,17 @@ a {
     align-items: end;
   }
   .grid .project-card, .grid .contact-card {
-    display: grid;
-    grid-template-rows: repeat(4, auto);
+    display: grid !important;
+    grid-template-rows: auto;
     width: 35vw;
-    min-height: 70vh;
-    max-height: 80vh !important;
+    min-height: 70vh !important;
+    max-height: 90vh !important;
     position: relative;
-    top: 6rem !important;
-    left: 3rem !important;
+    top: 9rem !important;
+    left: 6rem !important;
     border: 3px solid var(--project-card-outline-color) !important;
     justify-content: flex-start !important;
+    gap: 1.4rem !important;
   }
   .grid .project-card--desktop-grid-left, .grid .contact-card--desktop-grid-left {
     grid-column: 1;
@@ -610,16 +618,38 @@ a {
   .grid .project-card--desktop-grid-right, .grid .contact-card--desktop-grid-right {
     grid-column: 2;
     left: 12rem !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: end;
+    min-height: 70vh;
   }
   .grid .project-card__project-logo, .grid .contact-card__project-logo {
+    background-repeat: no-repeat;
+    background-size: contain;
     display: block !important;
-    max-height: 40%;
+    height: 20rem !important;
+    padding: 15rem 15rem;
+    margin: 4rem auto 0rem auto !important;
+  }
+  .grid .project-card .open-fermenet-logo, .grid .contact-card .open-fermenet-logo {
+    background-image: url("./assets/hunter-even-of-logo.png");
+  }
+  .grid .project-card .bug-tracker-logo, .grid .contact-card .bug-tracker-logo {
+    background-image: url("./assets/hunter-even-bt-logo.png");
+  }
+  .grid .project-card .portfolio-logo, .grid .contact-card .portfolio-logo {
+    background-image: url("./assets/hunter-even-he-logo.png");
+    background-size: cover;
+    padding: 20rem 30rem;
+  }
+  .grid .project-card__greeting, .grid .contact-card__greeting {
+    font-size: 2rem !important;
+    font-weight: 600;
+    margin: 3rem 0rem !important;
+    padding: 0.4rem 0.6rem;
+    text-align: center !important;
   }
   .grid .project-card__title, .grid .contact-card__title {
+    margin: 0 !important;
+    margin: 2.2rem !important;
+    padding: 0.8125rem 4.5rem !important;
     border: 3px solid var(--project-card-title-border-color) !important;
     border-radius: 3rem !important;
   }
@@ -636,7 +666,7 @@ a {
   }
   .grid .project-card__description, .grid .contact-card__description {
     font-size: 1.8rem !important;
-    line-height: 1.5;
+    line-height: 1.5 !important;
     padding-bottom: 0.6rem;
     margin: 0 2.25rem !important;
   }

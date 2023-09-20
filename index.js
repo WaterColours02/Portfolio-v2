@@ -8,6 +8,49 @@ $(document).ready(function() {
     const $footerHereBtn = $(".footer__here-btn"); // Add the class to your footer button element
     const $projectList = $(".projects-list");
 
+    $(".contact-card__form").submit(function (event) {
+        event.preventDefault();
+
+        const firstName = $(".contact-card__form-input:first-of-type").val();
+        const lastName = $(".contact-card__form-input:nth-of-type(2)").val();
+        const email = $(".contact-card__form-input:nth-of-type(3)").val();
+        const message = $(".contact-card__form-message").val();
+
+        // Compose email message
+        const body =
+            "Name: " +
+            firstName +
+            " " +
+            lastName +
+            "\n Email:" +
+            email +
+            "\n Message: " +
+            message;
+
+        const submitAlertMessage = `Thank you ${firstName}. Your message has been sent.`;
+
+        Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "huntercheveldave@gmail.com",
+            Password: "F122EDB288F88258553A7845BCBE8EF87242",
+            To: "huntercheveldave@gmail.com",
+            From: email,
+            Subject: "New message from your website",
+            Body: body,
+        }).then(function (message) {
+            alert(submitAlertMessage);
+        });
+
+        // Reset the form
+        $(this)[0].reset();
+    });
+
+
+    
+
+
+
+
     function toggleBackgroundElements(selectedTheme) {
         $(".background-clip").each(function() {
             const theme = $(this).data("theme");
@@ -106,4 +149,9 @@ $(document).ready(function() {
         $homeButton.removeClass("out-of-view-left"); // Remove "out-of-view-left" class from homeButton
     });
     
+
+
+
 });
+
+
