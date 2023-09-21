@@ -208,8 +208,7 @@ a{
             color: var(--hunter-even-fill-color);
             -webkit-text-stroke: 1px var(--hunter-even-outline-color);
             text-transform: uppercase;
-            margin-top: 2.875rem;
-            // white-space: nowrap;
+            margin-top: 2.375rem;
             transition: all 0.6s ease-in-out;
             background-color: transparent;
 
@@ -224,10 +223,6 @@ a{
                 display: none !important;
             }
 
-        }
-
-        .apply-title-clip-mask {
-     
         }
 
         .wavy-theme-transparent {
@@ -726,21 +721,30 @@ a{
 
         .desktop-right-grid {
             display: flex !important;
-          
+            align-items: end !important;
             justify-content: center !important;
         }
         
+        .desktop-grid-left {
+            display: flex !important;
+            grid-template-rows: auto auto;
+            margin-top: 6rem;
+        }
+
         .title{
-            
+            block-size:auto;
             grid-column: 1;
             grid-row: 1;
             max-width: 40vw;
             
             text-align: left;
-            font-size: 10vw !important;
+            // font-size: 10vw !important;
+            font-size: clamp(3.5rem, 10vw, 25rem) !important;
 
-            margin: 3.2rem 0rem !important;
-            padding: 1rem 3rem !important;
+            margin: 0rem 4rem !important;
+            padding: 0rem 3rem !important;
+            // top: 6.2rem !important;
+            justify-self: start !important;
             
             -webkit-text-stroke: 3px var(--hunter-even-outline-color) !important;
     
@@ -752,12 +756,19 @@ a{
             grid-row: 1;
             display: grid;
             grid-template-columns: 1fr;
-            align-items:flex-end !important;
+ 
             flex-direction: column !important;
-            justify-content: flex-start !important;
-            margin-top: 9rem;
+            justify-content: flex-start!important;
+            padding-top: 3vw !important;
+            // margin-top: clamp(1rem, 1.5rem, 6.2rem) !important;
             margin-right: 5;
+
+            // padding-top: clamp(2rem, 4rem, 6.2rem) !important;
+            // padding-top: 0 !important;
             padding-left: 4rem;
+
+            gap: clamp(0.6rem, 1vw, 2.5rem) !important;
+
 
             .theme-selector-box__circle{
                 width: 2vw !important;
@@ -780,11 +791,13 @@ a{
 
             
             &__title{
-                font-size: 5vw !important;
+                // font-size: 5vw !important;
+                font-size: clamp(1.8rem, 4vw, 10rem) !important;
             }
 
             &__project-button {
-                font-size: 3vw !important;
+                // font-size: 3vw !important;
+                font-size: clamp(1.5rem, 3vw, 7rem) !important;
             }
             
         }
@@ -794,13 +807,13 @@ a{
             grid-column: 2;
             grid-row: 1;
             position: relative;
-            padding: 0rem auto;
+            padding: 0rem auto !important;
             max-width: 55%;
             // margin: 0rem auto;
             justify-self: right;
             align-self: center;
             margin: 0rem 4rem;
-            top: 10rem !important;
+            top: 16rem !important;
             // left: 11vw;
 
             &__text {
@@ -895,6 +908,7 @@ a{
 
 
             &__title {
+                font-size: clamp(1.8rem, 4vw, 10rem) !important;
                 margin: 0 !important;
                 margin: 2.2rem !important;
                 padding: 0.8125rem 4.5rem !important;
@@ -987,13 +1001,23 @@ a{
     .footer {
         grid-column: 2;
         position: relative;
+        // margin: 0 10rem !important;
+        padding: 5rem 6rem !important;
 
         &__text {
-            font-size: 1.8rem !important;
+            // font-size: 1.8rem !important;
+            font-size: clamp(1.4rem, 1vw, 2rem) !important;
+
+            &__here-btn {
+                font-size: clamp(1.4rem, 1vw, 2rem) !important;
+            }
         }
+
+
 
         &--desktop-grid-right {
             grid-column: 2; 
+            grid-row: 2;
             left: 12rem !important;
         }
     }

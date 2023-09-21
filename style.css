@@ -166,7 +166,7 @@ a {
   color: var(--hunter-even-fill-color);
   -webkit-text-stroke: 1px var(--hunter-even-outline-color);
   text-transform: uppercase;
-  margin-top: 2.875rem;
+  margin-top: 2.375rem;
   transition: all 0.6s ease-in-out;
   background-color: transparent;
 }
@@ -531,16 +531,24 @@ a {
   }
   .grid .desktop-right-grid {
     display: flex !important;
+    align-items: end !important;
     justify-content: center !important;
   }
+  .grid .desktop-grid-left {
+    display: flex !important;
+    grid-template-rows: auto auto;
+    margin-top: 6rem;
+  }
   .grid .title {
+    block-size: auto;
     grid-column: 1;
     grid-row: 1;
     max-width: 40vw;
     text-align: left;
-    font-size: 10vw !important;
-    margin: 3.2rem 0rem !important;
-    padding: 1rem 3rem !important;
+    font-size: clamp(3.5rem, 10vw, 25rem) !important;
+    margin: 0rem 4rem !important;
+    padding: 0rem 3rem !important;
+    justify-self: start !important;
     -webkit-text-stroke: 3px var(--hunter-even-outline-color) !important;
   }
   .grid .theme-selector-box {
@@ -548,12 +556,12 @@ a {
     grid-row: 1;
     display: grid;
     grid-template-columns: 1fr;
-    align-items: flex-end !important;
     flex-direction: column !important;
     justify-content: flex-start !important;
-    margin-top: 9rem;
+    padding-top: 3vw !important;
     margin-right: 5;
     padding-left: 4rem;
+    gap: clamp(0.6rem, 1vw, 2.5rem) !important;
   }
   .grid .theme-selector-box .theme-selector-box__circle {
     width: 2vw !important;
@@ -571,21 +579,21 @@ a {
     padding-top: 3rem;
   }
   .grid .projects-list__title {
-    font-size: 5vw !important;
+    font-size: clamp(1.8rem, 4vw, 10rem) !important;
   }
   .grid .projects-list__project-button {
-    font-size: 3vw !important;
+    font-size: clamp(1.5rem, 3vw, 7rem) !important;
   }
   .grid .bio {
     grid-column: 2;
     grid-row: 1;
     position: relative;
-    padding: 0rem auto;
+    padding: 0rem auto !important;
     max-width: 55%;
     justify-self: right;
     align-self: center;
     margin: 0rem 4rem;
-    top: 10rem !important;
+    top: 16rem !important;
   }
   .grid .bio__text {
     font-size: 1.8rem !important;
@@ -655,6 +663,7 @@ a {
     text-align: center !important;
   }
   .grid .project-card__title, .grid .contact-card__title {
+    font-size: clamp(1.8rem, 4vw, 10rem) !important;
     margin: 0 !important;
     margin: 2.2rem !important;
     padding: 0.8125rem 4.5rem !important;
@@ -711,12 +720,17 @@ a {
   .grid .footer {
     grid-column: 2;
     position: relative;
+    padding: 5rem 6rem !important;
   }
   .grid .footer__text {
-    font-size: 1.8rem !important;
+    font-size: clamp(1.4rem, 1vw, 2rem) !important;
+  }
+  .grid .footer__text__here-btn {
+    font-size: clamp(1.4rem, 1vw, 2rem) !important;
   }
   .grid .footer--desktop-grid-right {
     grid-column: 2;
+    grid-row: 2;
     left: 12rem !important;
   }
 }/*# sourceMappingURL=style.css.map */
