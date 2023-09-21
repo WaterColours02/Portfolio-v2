@@ -166,7 +166,7 @@ a {
   color: var(--hunter-even-fill-color);
   -webkit-text-stroke: 1px var(--hunter-even-outline-color);
   text-transform: uppercase;
-  margin-top: 1.875rem;
+  margin-top: 2.875rem;
   transition: all 0.6s ease-in-out;
   background-color: transparent;
 }
@@ -178,7 +178,7 @@ a {
   display: none !important;
 }
 .main .grid .wavy-theme-transparent {
-  opacity: 0.6;
+  opacity: 0.65;
 }
 .main .grid .theme-selector-box {
   display: flex;
@@ -276,10 +276,10 @@ a {
   display: none;
   align-items: center;
   justify-items: center;
-  z-index: 200;
-  position: absolute;
-  top: 5.4rem;
-  left: 10.4rem;
+  z-index: 1000;
+  position: relative;
+  top: 1rem;
+  left: 1rem;
   background-color: white;
   font-size: 2.25rem;
   height: 3.25rem;
@@ -292,7 +292,8 @@ a {
   border-radius: 50%;
 }
 .main .grid .card-close-button:hover {
-  color: var(--highlight-color);
+  color: var(--active-theme-selector-color);
+  background-color: var(--theme-selector-outline-color);
 }
 .main .grid .card-close-button__icon {
   font-size: 2.25rem;
@@ -301,25 +302,24 @@ a {
   transition: color 0.3s ease;
   scale: 1.2;
 }
-.main .grid .card-close-button {
-  display: grid;
+.main .grid .card-close-button__icon:hover {
+  color: var(--active-theme-selector-color);
 }
 .main .grid .project-card, .main .grid .contact-card {
   z-index: 100;
   overflow-y: scroll;
-  max-height: 45vh;
+  max-height: 42vh;
   min-height: 40vh;
   display: grid;
-  gap: 0.6rem;
+  gap: 0.4rem;
   background: white;
   grid-template-columns: 1fr;
   position: absolute;
-  top: 40vh;
+  top: 42vh;
   transition: all 1s ease;
   border: 1px solid var(--project-card-outline-color);
   border-radius: 3.125rem;
-  margin: 1rem 0.8rem 0rem 0.8rem;
-  padding: 0.4rem 0.6rem;
+  margin: 0.6rem 0.8rem 0rem 0.8rem;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.55);
 }
 .main .grid .project-card::-webkit-scrollbar, .main .grid .contact-card::-webkit-scrollbar {
@@ -347,7 +347,7 @@ a {
   border-radius: 1.25rem;
 }
 .main .grid .project-card .title-contact, .main .grid .contact-card .title-contact {
-  font-size: 2.5vh;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.125rem;
   text-align: center;
@@ -355,21 +355,19 @@ a {
   color: var(--project-card-title-color);
   background-color: var(--contact-title-bg-color);
   border: none;
-  margin: 0.8rem 0;
-  padding: 0.3125rem 1.5rem;
   border: none;
   border-radius: 1.25rem;
 }
 .main .grid .project-card__details, .main .grid .contact-card__details {
-  font-size: 0.8rem;
-  margin: 0 1.25rem;
+  font-size: 0.6rem;
+  margin: 0 0.65rem;
   color: var(--project-card-text-color);
   text-align: justify;
   grid-template-columns: 1fr;
   gap: 0.925rem;
 }
 .main .grid .project-card__tech-stack, .main .grid .contact-card__tech-stack {
-  font-size: 0.8125rem;
+  font-size: 0.6rem;
   margin-bottom: 0.8rem;
   font-weight: 700;
   color: var(--project-card-text-color);
@@ -381,9 +379,10 @@ a {
   padding-bottom: 0.6rem;
 }
 .main .grid .project-card__greeting, .main .grid .contact-card__greeting {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: var(--project-card-text-color);
   text-align: justify;
+  margin-bottom: 0.4rem;
 }
 .main .grid .project-card__form, .main .grid .contact-card__form {
   display: flex;
@@ -391,10 +390,10 @@ a {
   justify-items: center;
   align-items: center;
   gap: 0.8rem;
-  margin: 0.4rem 0;
+  margin: 0.6rem 0;
 }
 .main .grid .project-card__form-input, .main .grid .contact-card__form-input {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   width: 100%;
   border: none;
   border-bottom: 1px solid var(--project-card-outline-color);
@@ -410,8 +409,8 @@ a {
   color: var(--project-card-text-color);
 }
 .main .grid .project-card__form-message, .main .grid .contact-card__form-message {
-  margin-top: 0.8rem;
-  font-size: 0.8rem;
+  margin-top: 0.6rem;
+  font-size: 0.7rem;
   padding: 0.4rem 0.6rem -0.8rem 0.6rem;
   width: 100%;
   border: none;
@@ -430,11 +429,11 @@ a {
 }
 .main .grid .project-card__form-message::-moz-placeholder, .main .grid .contact-card__form-message::-moz-placeholder {
   position: relative; /* Position the placeholder relative to the textarea */
-  top: 0.8rem;
+  top: 0.7rem;
 }
 .main .grid .project-card__form-message::placeholder, .main .grid .contact-card__form-message::placeholder {
   position: relative; /* Position the placeholder relative to the textarea */
-  top: 0.8rem;
+  top: 0.7rem;
 }
 .main .grid .project-card__form-submit, .main .grid .contact-card__form-submit {
   max-width: 80%;
@@ -462,10 +461,10 @@ a {
   gap: 1.2rem;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 4vh;
-  left: 8%;
-  margin: 0 auto;
+  position: relative;
+  margin-top: 8vh;
+  justify-self: center;
+  align-self: center;
 }
 .main .footer__text {
   color: var(--footer-text-color);
@@ -558,7 +557,9 @@ a {
   }
   .grid .theme-selector-box .theme-selector-box__circle {
     width: 2vw !important;
+    max-width: 4rem !important;
     height: 2vw !important;
+    max-height: 4rem !important;
   }
   .grid .projects-list {
     grid-column: 2;
@@ -582,14 +583,18 @@ a {
     padding: 0rem auto;
     max-width: 55%;
     justify-self: right;
+    align-self: center;
     margin: 0rem 4rem;
-    top: 48rem;
+    top: 10rem !important;
   }
   .grid .bio__text {
     font-size: 1.8rem !important;
     line-height: 3.125rem !important;
     letter-spacing: 0.1563rem;
     padding: 2rem 0rem;
+  }
+  .grid .card-close-button {
+    display: grid !important;
   }
   .grid .desktop-grid-right {
     grid-column: 2;
@@ -607,9 +612,11 @@ a {
     max-height: 90vh !important;
     position: relative;
     top: 9rem !important;
-    left: 6rem !important;
+    left: 5vw !important;
     border: 3px solid var(--project-card-outline-color) !important;
     justify-content: flex-start !important;
+    justify-self: center !important;
+    align-self: center !important;
     gap: 1.4rem !important;
   }
   .grid .project-card--desktop-grid-left, .grid .contact-card--desktop-grid-left {
@@ -636,7 +643,8 @@ a {
   }
   .grid .project-card .portfolio-logo, .grid .contact-card .portfolio-logo {
     background-image: url("./assets/hunter-even-he-logo.png");
-    background-size: cover;
+    background-size: auto 70%;
+    background-position: center;
     padding: 20rem 30rem;
   }
   .grid .project-card__greeting, .grid .contact-card__greeting {

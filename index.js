@@ -46,8 +46,26 @@ $(document).ready(function() {
     });
 
 
-    
+    function hideProjectCardsAndResetBio() {
+        $projectCards.addClass("out-of-view-bottom");
+        $projectButtons.removeClass("project-button--active");
+        $bio.removeClass("out-of-view-right");
+        $bio.removeClass("out-of-view-right-desktop");
+        $projectList.removeClass("out-of-view-right-desktop");
+        $contactCard.addClass("out-of-view-bottom");
+    }
 
+    // Add click event listener to home button
+    $homeButton.click(function(event) {
+        event.preventDefault();
+        hideProjectCardsAndResetBio();
+    });
+
+    // Add click event listener to card close button
+    $(".card-close-button").click(function(event) {
+        event.preventDefault();
+        hideProjectCardsAndResetBio();
+    });
 
 
 

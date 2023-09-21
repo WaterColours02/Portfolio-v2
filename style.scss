@@ -172,8 +172,7 @@ a{
     align-items: center;
     // justify-content: center;
     height: 100vh;
-    // margin: 0.6rem 1.25rem 0 1.25rem;
-
+    
 
 
     .main-bg-asset {
@@ -209,7 +208,7 @@ a{
             color: var(--hunter-even-fill-color);
             -webkit-text-stroke: 1px var(--hunter-even-outline-color);
             text-transform: uppercase;
-            margin-top: 1.875rem;
+            margin-top: 2.875rem;
             // white-space: nowrap;
             transition: all 0.6s ease-in-out;
             background-color: transparent;
@@ -232,7 +231,7 @@ a{
         }
 
         .wavy-theme-transparent {
-            opacity: 0.6;
+            opacity: 0.65;
         }
      
         
@@ -373,10 +372,10 @@ a{
             display: none;
             align-items: center;
             justify-items: center;
-            z-index: 200;
-            position: absolute;
-            top: 5.4rem;
-            left: 10.4rem;
+            z-index: 1000;
+            position: relative;
+            top: 1rem;
+            left: 1rem;
             background-color: white;
             font-size: 2.25rem;
             height: 3.25rem;
@@ -389,7 +388,8 @@ a{
             border-radius: 50%;
 
             &:hover {
-                color: var(--highlight-color);
+                color: var(--active-theme-selector-color);
+                background-color: var(--theme-selector-outline-color);
 
             }
 
@@ -399,26 +399,28 @@ a{
                 cursor: pointer;
                 transition: color 0.3s ease;
                 scale: 1.2;
+
+                &:hover {
+                    color: var(--active-theme-selector-color);
+                }
+
             }
         }
 
-        .card-close-button {
-            display: grid;
-        }
-
+      
 
         .project-card, .contact-card{
             z-index: 100;
             overflow-y: scroll;
-            max-height: 45vh;
+            max-height: 42vh;
             min-height: 40vh;
 
             display: grid;
-            gap: 0.6rem;
+            gap: 0.4rem;
             background: white;
             grid-template-columns: 1fr;
             position: absolute;
-            top: 40vh;
+            top: 42vh;
             // grid-template-rows: auto auto auto auto;
             // justify-content: center;
             // align-items: center;
@@ -428,8 +430,8 @@ a{
 
             border: 1px solid var(--project-card-outline-color);
             border-radius: 3.125rem;
-            margin: 1rem 0.8rem 0rem 0.8rem;
-            padding: 0.4rem 0.6rem;
+            margin: 0.6rem 0.8rem 0rem 0.8rem;
+            // padding: 0.4rem 0.6rem;
            
             box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.55);
 
@@ -464,7 +466,7 @@ a{
             }
 
             .title-contact{
-                font-size: 2.5vh;
+                font-size: 1rem;
                 font-weight: 700;
                 letter-spacing: 0.125rem;
                 text-align: center ;
@@ -473,16 +475,16 @@ a{
                 background-color: var(--contact-title-bg-color);
                 border: none;
 
-                margin: 0.8rem 0;
-                padding: 0.3125rem 1.5rem;
+                // margin: 0.8rem 0;
+                // padding: 0.3125rem 1.5rem;
 
                 border: none;
                 border-radius: 1.25rem;
             }
 
             &__details {
-                font-size: 0.8rem;
-                margin: 0 1.25rem;
+                font-size: 0.6rem;
+                margin: 0 0.65rem;
                 color: var(--project-card-text-color);
                 text-align: justify;
 
@@ -495,7 +497,7 @@ a{
             }
 
             &__tech-stack {
-                font-size: 0.8125rem;
+                font-size: 0.6rem;
                 margin-bottom: 0.8rem;
                 font-weight: 700;
                 color: var(--project-card-text-color);
@@ -509,9 +511,10 @@ a{
             }
 
             &__greeting{
-                font-size: 0.8rem;
+                font-size: 0.7rem;
                 color: var(--project-card-text-color);
                 text-align: justify;
+                margin-bottom: 0.4rem;
             }
 
             &__form {
@@ -520,11 +523,11 @@ a{
                 justify-items: center;
                 align-items: center;
                 gap: 0.8rem;
-                margin: 0.4rem 0;
+                margin: 0.6rem 0;
                 // padding-bottom: 0.8rem;
 
                 &-input {
-                    font-size: 0.8rem;
+                    font-size: 0.7rem;
                     width: 100%;
                     // padding: 0.4rem 0.6rem;
                     border: none;
@@ -543,8 +546,8 @@ a{
                 }
 
                 &-message {
-                    margin-top: 0.8rem;
-                    font-size: 0.8rem;
+                    margin-top: 0.6rem;
+                    font-size: 0.7rem;
                     padding: 0.4rem 0.6rem -0.8rem 0.6rem;
                     width: 100%;
                     border: none;
@@ -564,7 +567,7 @@ a{
                 &::placeholder {
                     
                     position: relative; /* Position the placeholder relative to the textarea */
-                    top: 0.8rem;
+                    top: 0.7rem;
                 }
 
                 }
@@ -609,10 +612,12 @@ a{
         gap: 1.2rem;
         justify-content: center;
         align-items: center;
-        position: absolute;
-        bottom: 4vh;
-        left: 8%;
-        margin: 0 auto;
+        position: relative;
+        // bottom: 1vh;
+        // left: 8%;
+        margin-top: 8vh;
+        justify-self: center;
+        align-self: center;
 
 
         &__text {
@@ -693,10 +698,6 @@ a{
         margin: 0 0 0 0 !important;
     }
 
-    .main__bg-asset {
-        // position: relative;
-        // scale: 1;
-    }
 
     .background-clip {
         scale: 1;
@@ -717,30 +718,10 @@ a{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
-        // align-items: center;
+
         justify-content: end;
         margin: 0 0 0 0 !important;
 
-        // background-image: url("./assets/background1.svg");
-        // -webkit-mask: url("./assets/background1.svg");
-        // background-repeat: no-repeat;
-        // background-size: contain;
-        // background-position: left;
-        // background-position-x: -40%;
-        // background-size: 60%;
-
-
-        // &__bg-mask {
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-      
-          
-        //     .bg-image{
-              
-        //     }
-            
-        // }
 
 
         .desktop-right-grid {
@@ -780,7 +761,9 @@ a{
 
             .theme-selector-box__circle{
                 width: 2vw !important;
+                max-width: 4rem !important;
                 height: 2vw !important;
+                max-height: 4rem !important;
 
             }
 
@@ -815,8 +798,9 @@ a{
             max-width: 55%;
             // margin: 0rem auto;
             justify-self: right;
+            align-self: center;
             margin: 0rem 4rem;
-            top: 48rem;
+            top: 10rem !important;
             // left: 11vw;
 
             &__text {
@@ -825,6 +809,11 @@ a{
                 letter-spacing: 0.1563rem;
                 padding: 2rem 0rem;
             }
+        }
+
+
+        .card-close-button {
+            display: grid !important;
         }
 
         .desktop-grid-right {
@@ -846,9 +835,11 @@ a{
             max-height: 90vh !important;
             position: relative;
             top: 9rem !important;
-            left: 6rem !important;
+            left: 5vw !important;
             border: 3px solid var(--project-card-outline-color) !important;
             justify-content:flex-start !important;
+            justify-self: center !important;
+            align-self: center !important;
             gap: 1.4rem !important;
             // align-items: normal !important;
             
@@ -886,7 +877,8 @@ a{
 
                 .portfolio-logo {
                     background-image: url('./assets/hunter-even-he-logo.png');
-                    background-size: cover;
+                    background-size:auto 70%;
+                    background-position: center;
                     padding: 20rem 30rem;
                     
                 }
@@ -928,6 +920,7 @@ a{
             }
 
             &__description {
+                // max-width: 80% !important;
                 font-size: 1.8rem !important;
                 line-height: 1.5 !important;
                 padding-bottom: 0.6rem;
