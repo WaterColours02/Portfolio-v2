@@ -663,7 +663,7 @@ a {
     text-align: center !important;
   }
   .grid .project-card__title, .grid .contact-card__title {
-    font-size: clamp(1.8rem, 4vw, 10rem) !important;
+    font-size: clamp(1.8rem, 2vw, 3rem) !important;
     margin: 0 !important;
     margin: 2.2rem !important;
     padding: 0.8125rem 4.5rem !important;
