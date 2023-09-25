@@ -475,15 +475,11 @@ a{
 
             &__details {
                 font-size: 0.6rem;
-                margin: 0 0.65rem;
+                // margin: 0 0.65rem;
                 color: var(--project-card-text-color);
                 text-align: justify;
 
-                // display: grid;
                 grid-template-columns: 1fr;
-                // grid-template-rows: auto auto auto;
-                // justify-content: center;
-                // align-items: center;
                 gap: 0.925rem;
             }
 
@@ -606,7 +602,7 @@ a{
         position: relative;
         
         padding-top: clamp(2rem, 7.5rem, 8.2rem);
-        // padding-bottom: clamp(2rem, 4.5rem, 6.2rem);
+
         justify-self: center;
         align-self: center;
 
@@ -616,14 +612,13 @@ a{
         font-family: JetBrains Mono;
         font-size: 0.8rem;
         text-align: center;
-        
- 
         }
 
         .footer__here-btn {
             color: var(--contact-here-color);
             text-decoration: underline;
             font-size: 0.8rem;
+
             &:hover {
                 cursor: pointer;
                 transform: scale(1.4);
@@ -633,7 +628,7 @@ a{
         .footer__social-link {
 
         .social-link__icon {
-            font-size: 1.2rem;
+            font-size: 1rem;
         
             color: var(--contact-social-color);
             transition: fill 0.3s ease; 
@@ -825,6 +820,12 @@ a{
 
         .card-close-button {
             display: grid !important;
+            height: 3.25rem !important;
+            width: 3.25rem !important;
+
+            &__icon {
+                font-size: 1.5rem !important;
+            }
         }
 
         .desktop-grid-right {
@@ -842,8 +843,8 @@ a{
             display:grid !important;
             grid-template-rows: auto;
             width: clamp(20rem, 40vw, 50rem) !important;
-            min-height: 70vh !important;
-            max-height: 90vh !important;
+            min-height: 60vh !important;
+            max-height: 80vh !important;
             position: relative;
             top: 9rem !important;
             left: 5vw !important;
@@ -852,8 +853,9 @@ a{
             justify-self: center !important;
             align-self: center !important;
             gap: 1.4rem !important;
+            padding: 1.4rem 3.4rem !important;
+            margin-bottom: 8rem !important;
            
-            // align-items: normal !important;
             
             &--desktop-grid-left {
                 grid-column: 1; 
@@ -873,8 +875,8 @@ a{
                 background-repeat: no-repeat;
                 background-size: contain;
                 display: block !important;
-                height: clamp(10rem, 20vw, 30rem) !important;
-                padding: 15rem 15rem;
+                height: clamp(6rem, 8rem, 12rem) !important;
+                padding: 10rem 10rem;
                 
                 margin: 4rem auto 0rem auto !important;
 
@@ -891,7 +893,6 @@ a{
                     background-image: url('./assets/hunter-even-he-logo.png');
                     background-size:auto 70%;
                     background-position: center;
-                    // padding: 20rem 30rem;
                     
                 }
 
@@ -903,14 +904,11 @@ a{
                 text-align: center !important;
             }   
 
-
-
-
             &__title {
                 font-size: clamp(1.8rem, 3rem, 4rem) !important;
                 margin: 0 !important;
                 margin: 2.2rem !important;
-                padding: 0.8125rem 4.5rem !important;
+                padding: 0.8125rem 3.5rem !important;
                 border: 3px solid var(--project-card-title-border-color) !important;
                 border-radius: 3rem !important;    
                 
@@ -935,10 +933,10 @@ a{
 
             &__description {
                 // max-width: 80% !important;
-                font-size: 1.8rem !important;
+                font-size: 1.6rem !important;
                 line-height: 1.5 !important;
                 padding-bottom: 0.6rem;
-                margin: 0 2.25rem !important;
+                margin: 0 1.25rem !important;
             }
 
             &__greeting{
@@ -1006,14 +1004,12 @@ a{
         position: relative;
         // margin: 0 10rem !important;
         padding: 5rem 6rem !important;
+        padding-right: clamp(4rem, 4.5rem, 6.2rem) !important;
 
         &__text {
             // font-size: 1.8rem !important;
             font-size: clamp(1.4rem, 1vw, 2rem) !important;
 
-            &__here-btn {
-                font-size: clamp(1.4rem, 1vw, 2rem) !important;
-            }
         }
 
 
@@ -1022,6 +1018,14 @@ a{
             grid-column: 2; 
             grid-row: 2;
             left: 12rem !important;
+        }
+
+        .footer__here-btn {
+            font-size: clamp(0.8rem, 1.6rem, 2.125rem) !important;
+        }
+
+        .social-link__icon {
+            font-size: 1.6rem !important;
         }
     }
   }
