@@ -350,8 +350,8 @@ a{
        
         .bio__text {
             font-family: sans-serif;
-            font-size: clamp(0.6rem, 0.8rem, 1.2rem);
-            line-height: clamp(1.5rem, 2.5vw, 3.125rem);
+            font-size: clamp(0.6rem, 1rem, 3.6vw);
+            line-height: clamp(1.5rem, 2.5vw, 4.125rem);
             color: var(--bio-text-color);
             letter-spacing: 1.12px;
             // word-spacing: 5px;
@@ -639,14 +639,14 @@ a{
         &__text {
         color: var(--footer-text-color);
         font-family: JetBrains Mono;
-        font-size: clamp(2.82vw, 3.2vw, 3.125rem);
+        font-size: clamp(1.2vh, 1.4vh, 1.6vh);
         text-align: center;
         }
 
         .footer__here-btn {
             color: var(--contact-here-color);
             text-decoration: underline;
-            font-size: clamp(2.82vw, 3.2vw, 3.125rem);
+            font-size: clamp(1.2vh, 1.4vh, 1.6vh);
 
             &:hover {
                 cursor: pointer;
@@ -704,11 +704,19 @@ a{
 
 
 
+
+
+
+
+
+
+
+
 // DESKTOP STYLES //
 
 
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 725px) {
    
     main {
         display: block;
@@ -723,10 +731,10 @@ a{
 
     .apply-clip-mask {
        
-        -webkit-mask-size: 100vh;
+        -webkit-mask-size: clamp(60vw, 70vw, 80vw);
 
         -webkit-mask-position-x: -5vw;
-        -webkit-mask-position-y: -5vh;
+        -webkit-mask-position-y: 0vh;
    
     }
     
@@ -1032,7 +1040,7 @@ a{
         grid-column: 2;
         position: relative;
         // margin: 0 10rem !important;
-        padding: 5rem 6rem !important;
+        padding: 5rem 10rem !important;
         padding-right: clamp(4rem, 4.5rem, 6.2rem) !important;
 
         &__text {
@@ -1046,11 +1054,23 @@ a{
         &--desktop-grid-right {
             grid-column: 2; 
             grid-row: 2;
-            left: 12rem !important;
+            
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-shrink: 2;
+       
+        }
+
+        .footer__text {
+            font-size: clamp(1.2vh, 1.4vh, 1.4vh);
         }
 
         .footer__here-btn {
-            font-size: clamp(0.8rem, 1.6rem, 2.125rem) !important;
+            // font-size: clamp(0.8rem, 1.6rem, 2.125rem) !important;
         }
 
         .social-link__icon {

@@ -264,8 +264,8 @@ a {
 }
 .main .grid .bio .bio__text {
   font-family: sans-serif;
-  font-size: 0.8rem;
-  line-height: clamp(1.5rem, 2.5vw, 3.125rem);
+  font-size: clamp(0.6rem, 1rem, 3.6vw);
+  line-height: clamp(1.5rem, 2.5vw, 4.125rem);
   color: var(--bio-text-color);
   letter-spacing: 1.12px;
   text-align: justify;
@@ -483,13 +483,13 @@ a {
 .main .footer__text {
   color: var(--footer-text-color);
   font-family: JetBrains Mono;
-  font-size: clamp(2.82vw, 3.2vw, 3.125rem);
+  font-size: 1.4vh;
   text-align: center;
 }
 .main .footer .footer__here-btn {
   color: var(--contact-here-color);
   text-decoration: underline;
-  font-size: clamp(2.82vw, 3.2vw, 3.125rem);
+  font-size: 1.4vh;
 }
 .main .footer .footer__here-btn:hover {
   cursor: pointer;
@@ -522,7 +522,7 @@ a {
   transform: translateY(140vh);
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 725px) {
   main {
     display: block;
     margin: 0 0 0 0 !important;
@@ -532,9 +532,9 @@ a {
     min-height: 100vh !important;
   }
   .apply-clip-mask {
-    -webkit-mask-size: 100vh;
+    -webkit-mask-size: 70vw;
     -webkit-mask-position-x: -5vw;
-    -webkit-mask-position-y: -5vh;
+    -webkit-mask-position-y: 0vh;
   }
   .grid {
     display: grid;
@@ -744,7 +744,7 @@ a {
   .grid .footer {
     grid-column: 2;
     position: relative;
-    padding: 5rem 6rem !important;
+    padding: 5rem 10rem !important;
     padding-right: 4.5rem !important;
   }
   .grid .footer__text {
@@ -753,10 +753,15 @@ a {
   .grid .footer--desktop-grid-right {
     grid-column: 2;
     grid-row: 2;
-    left: 12rem !important;
   }
-  .grid .footer .footer__here-btn {
-    font-size: 1.6rem !important;
+  .grid .footer .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 2;
+  }
+  .grid .footer .footer__text {
+    font-size: 1.4vh;
   }
   .grid .footer .social-link__icon {
     font-size: 1.6rem !important;
