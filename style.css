@@ -131,7 +131,7 @@ a {
 .apply-clip-mask {
   scale: clap(0.6, 0.8, 1);
   -webkit-mask-image: url(./assets/background1.svg);
-  -webkit-mask-size: 60vw;
+  -webkit-mask-size: 80vw;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position-x: -25vw;
   -webkit-mask-position-y: -5vh;
@@ -273,22 +273,22 @@ a {
   transition: all 0.5s ease;
 }
 .main .grid .card-close-button {
-  display: none;
+  display: grid;
   align-items: center;
   justify-items: center;
   z-index: 1000;
   position: relative;
-  top: 1rem;
-  left: 1rem;
+  top: 0.2rem;
+  left: 0.2rem;
   background-color: white;
-  font-size: 2.25rem;
+  font-size: 3.25rem;
   height: 1.75rem;
   width: 1.75rem;
   color: var(--theme-selector-outline-color);
   cursor: pointer;
   transition: color 0.3s ease;
   scale: 1.2;
-  border: 2px solid var(--theme-selector-outline-color);
+  border: 1px solid var(--theme-selector-outline-color);
   border-radius: 50%;
 }
 .main .grid .card-close-button:hover {
@@ -552,6 +552,10 @@ a {
     grid-template-rows: 1fr;
     justify-content: end;
     margin: 0 0 0 0 !important;
+    margin-top: 2vh !important;
+    margin-bottom: 2vh !important;
+    margin-left: clamp(0vh, 0vh, 5vw) !important;
+    margin-right: clamp(0vh, 0vh, 5vw) !important;
   }
   .grid .desktop-right-grid {
     display: flex !important;
