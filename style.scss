@@ -190,7 +190,7 @@ a{
     
 
     .grid {
-        max-width: 2000px;
+        max-width: 1000px;
         margin: 0.6rem 1.25rem 0 1.25rem;
         position: relative;
         min-height: 100vh;
@@ -211,6 +211,7 @@ a{
             margin-top: 2.375rem;
             transition: all 0.6s ease-in-out;
             background-color: transparent;
+            
 
             
 
@@ -331,7 +332,7 @@ a{
                 transform-origin: right; /* Set the transform origin */
         
                 &:hover {
-                    scale: 1.5;
+                    scale: 1.2;
                     align-self: flex-end;
                 }
             }
@@ -756,12 +757,13 @@ a{
     
 
     .grid {
+        max-width: 1800px !important;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
 
         justify-content: end;
-        margin: 0 0 0 0 !important;
+        margin: 3rem !important;
         margin-top: clamp(0vh, 2vh, 5vh) !important;
         margin-bottom: clamp(0vh, 2vh, 5vh) !important;
         margin-left: clamp(0vh, 0vh, 5vw) !important;
@@ -774,6 +776,7 @@ a{
             display: flex !important;
             align-items: end !important;
             justify-content: center !important;
+          
         }
         
         .desktop-grid-left {
@@ -787,15 +790,16 @@ a{
             block-size:auto;
             grid-column: 1;
             grid-row: 1;
-            max-width: 45vw;
+
             
             text-align: left;
-            // font-size: 10vw !important;
-            font-size: clamp(3.5rem, 10vw, 25rem) !important;
 
-            margin: 0rem 4rem !important;
-            padding: 0rem 3rem !important;
-            // top: 6.2rem !important;
+            font-size: clamp(3.5rem, 10vw, 18rem) !important;
+
+            margin: 0rem 0rem !important;
+            margin-top: 0;
+            padding: 0 3rem !important;
+
             justify-self: start !important;
             
             -webkit-text-stroke: 3px var(--hunter-even-outline-color) !important;
@@ -811,24 +815,20 @@ a{
  
             flex-direction: column !important;
             justify-content: flex-start!important;
-            
-            // margin-top: clamp(1rem, 1.5rem, 6.2rem) !important;
+   
             margin-right: 5;
-            // transform: translateX(2rem) !important;
-
-            // padding-top: clamp(2rem, 4rem, 6.2rem) !important;
-            // padding-top: 0 !important;
+ 
             padding: 0 3rem !important;
             padding-top: 4rem !important;
             padding-left: 4rem;
 
-            gap: clamp(0.6rem, 1vw, 2.5rem) !important;
+            gap: clamp(0.6rem, 0.5vw, 2.2rem) !important;
 
 
             .theme-selector-box__circle{
-                width: 2vw !important;
+                width: 1.8vw !important;
                 max-width: 4rem !important;
-                height: 2vw !important;
+                height: 1.8vw !important;
                 max-height: 4rem !important;
 
             }
@@ -908,7 +908,8 @@ a{
         .project-card, .contact-card {      
             display:grid !important;
             grid-template-rows: auto;
-            width: clamp(20rem, 40vw, 50rem) !important;
+            max-width: 40vw;
+            width: 70% !important;
             min-height: 60vh !important;
             max-height: 80vh !important;
             // max-width: clamp(20rem, 60vw, 50rem) !important;
@@ -1070,7 +1071,7 @@ a{
     .footer {
         grid-column: 2;
         position: relative;
-        // margin: 0 10rem !important;
+
         padding: 5rem 10rem !important;
         padding-right: clamp(4rem, 4.5rem, 6.2rem) !important;
 
@@ -1087,7 +1088,7 @@ a{
             grid-row: 2;
             align-self: center !important;
             justify-self: center !important;
-            left: 4rem !important;
+            left: 3rem !important;
             
         }
 
@@ -1095,8 +1096,7 @@ a{
             display: flex;
             justify-content: space-around;
             align-items: center;
-            flex-shrink: 2;
-       
+
         }
 
         .footer__text {
