@@ -55,6 +55,11 @@ $(document).ready(function() {
         $contactCard.addClass("out-of-view-bottom");
     }
 
+    function showHomeButton() {
+        $homeButton.removeClass("out-of-view-left");
+    }
+
+
     // Add click event listener to home button
     $homeButton.click(function(event) {
         event.preventDefault();
@@ -65,6 +70,7 @@ $(document).ready(function() {
     $(".card-close-button").click(function(event) {
         event.preventDefault();
         hideProjectCardsAndResetBio();
+        showHomeButton();
     });
 
 

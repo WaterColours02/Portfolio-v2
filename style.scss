@@ -778,7 +778,8 @@ a{
         
         .desktop-grid-left {
             display: flex !important;
-            grid-template-rows: auto auto;
+            justify-items: center !important;
+            grid-template-rows: auto fit-content(100%) !important;
             margin-top: 6rem;
         }
 
@@ -786,7 +787,7 @@ a{
             block-size:auto;
             grid-column: 1;
             grid-row: 1;
-            max-width: 40vw;
+            max-width: 45vw;
             
             text-align: left;
             // font-size: 10vw !important;
@@ -810,13 +811,15 @@ a{
  
             flex-direction: column !important;
             justify-content: flex-start!important;
-            padding-top: 3vw !important;
+            
             // margin-top: clamp(1rem, 1.5rem, 6.2rem) !important;
             margin-right: 5;
             // transform: translateX(2rem) !important;
 
             // padding-top: clamp(2rem, 4rem, 6.2rem) !important;
             // padding-top: 0 !important;
+            padding: 0 3rem !important;
+            padding-top: 4rem !important;
             padding-left: 4rem;
 
             gap: clamp(0.6rem, 1vw, 2.5rem) !important;
@@ -883,6 +886,8 @@ a{
             display: grid !important;
             height: 3.25rem !important;
             width: 3.25rem !important;
+            top: 0.2rem !important;
+            left: 0.2rem !important;
 
             &__icon {
                 font-size: 1.5rem !important;
@@ -906,7 +911,7 @@ a{
             width: clamp(20rem, 40vw, 50rem) !important;
             min-height: 60vh !important;
             max-height: 80vh !important;
-            max-width: 70%;
+            // max-width: clamp(20rem, 60vw, 50rem) !important;
             position: relative;
             top: 9rem !important;
             left: 5vw !important;
@@ -915,7 +920,7 @@ a{
             justify-self: center !important;
             align-self: center !important;
             gap: 1.4rem !important;
-            padding: 1.4rem 3.4rem !important;
+            // padding: 1.4rem 3.4rem !important;
             margin-bottom: 8rem !important;
            
             
@@ -990,13 +995,14 @@ a{
                 font-weight: 700;
                 color: var(--project-card-text-color);
                 text-align: center;
-                // padding: 2rem 0rem;
+                padding: 0 3rem;
             }
 
             &__description {
                 // max-width: 80% !important;
                 font-size: 1.6rem !important;
                 line-height: 1.5 !important;
+                padding: 0 3rem !important;
                 padding-bottom: 0.6rem;
                 margin: 0 1.25rem !important;
             }
