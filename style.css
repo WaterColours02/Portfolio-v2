@@ -130,8 +130,11 @@ a {
 
 .apply-clip-mask {
   scale: clap(0.6, 0.8, 1);
+  mask-image: url(./assets/background1.svg);
   -webkit-mask-image: url(./assets/background1.svg);
   -webkit-mask-size: 80vw;
+  mask-size: 80vw;
+  mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position-x: -25vw;
   -webkit-mask-position-y: -5vh;
@@ -359,6 +362,10 @@ a {
   border: 2px solid var(--project-card-title-border-color);
   border-radius: 1.25rem;
 }
+.main .grid .project-card__title:hover, .main .grid .contact-card__title:hover {
+  background-color: var(--project-card-title-border-color);
+  color: var(--project-title-bg-color) !important;
+}
 .main .grid .project-card .title-contact, .main .grid .contact-card .title-contact {
   font-size: 1rem;
   font-weight: 700;
@@ -389,6 +396,20 @@ a {
   font-size: 0.8rem;
   line-height: 1.2;
   padding-bottom: 0.6rem;
+}
+.main .grid .project-card .github-link, .main .grid .contact-card .github-link {
+  font-size: 0.6rem;
+  color: var(--project-card-text-color);
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 0.8rem;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 1rem;
+}
+.main .grid .project-card .github-link:hover, .main .grid .contact-card .github-link:hover {
+  color: var(--project-card-title-color);
 }
 .main .grid .project-card__greeting, .main .grid .contact-card__greeting {
   font-size: 0.7rem;
@@ -477,7 +498,7 @@ a {
   margin: 0 auto;
   left: 0;
   right: 0;
-  bottom: 5.5rem;
+  bottom: 6.5rem;
   justify-self: center;
   align-self: center;
 }
@@ -544,6 +565,7 @@ a {
   }
   .apply-clip-mask {
     -webkit-mask-size: 70vw;
+    mask-size: 70vw;
     -webkit-mask-position-x: -5vw;
     -webkit-mask-position-y: 0vh;
   }
@@ -689,11 +711,15 @@ a {
   .grid .project-card .open-fermenet-logo, .grid .contact-card .open-fermenet-logo {
     background-image: url("./assets/hunter-even-of-logo.png");
   }
-  .grid .project-card .bug-tracker-logo, .grid .contact-card .bug-tracker-logo {
-    background-image: url("./assets/hunter-even-bt-logo.png");
+  .grid .project-card .shortly-logo, .grid .contact-card .shortly-logo {
+    margin-top: 5rem !important;
+    background-image: url("./assets/shortly-logo.svg");
+    background-position: center;
+    scale: 1.5;
   }
   .grid .project-card .portfolio-logo, .grid .contact-card .portfolio-logo {
     background-image: url("./assets/hunter-even-he-logo.png");
+    padding: 15rem;
     background-size: auto 70%;
     background-position: center;
   }
@@ -731,6 +757,17 @@ a {
     padding: 0 3rem !important;
     padding-bottom: 0.6rem;
     margin: 0 1.25rem !important;
+  }
+  .grid .project-card .github-link, .grid .contact-card .github-link {
+    font-size: 1.6rem !important;
+    color: var(--project-card-text-color);
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 0.8rem;
+    transition: all 0.3s ease;
+  }
+  .grid .project-card .github-link:hover, .grid .contact-card .github-link:hover {
+    scale: 1.2;
   }
   .grid .project-card__greeting, .grid .contact-card__greeting {
     font-size: 1.8rem !important;

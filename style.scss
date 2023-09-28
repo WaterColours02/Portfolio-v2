@@ -153,8 +153,11 @@ a{
 
 .apply-clip-mask {
     scale: clap(0.6, 0.8, 1);
+    mask-image: url(./assets/background1.svg);
     -webkit-mask-image: url(./assets/background1.svg);
     -webkit-mask-size: clamp(40vw, 80vw, 90vw);
+    mask-size: clamp(40vw, 80vw, 90vw);
+    mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position-x: -25vw;
     -webkit-mask-position-y: -5vh;
@@ -481,7 +484,13 @@ a{
                 padding: 0.3125rem 1rem;
 
                 border: 2px solid var(--project-card-title-border-color);
-                border-radius: 1.25rem;    
+                border-radius: 1.25rem; 
+
+                &:hover {
+                    background-color: var(--project-card-title-border-color);
+                    color: var(--project-title-bg-color) !important;
+                }
+
             }
 
             .title-contact{
@@ -523,6 +532,22 @@ a{
                 font-size: clamp(0.6rem, 0.8rem, 1rem);
                 line-height: 1.2;
                 padding-bottom: 0.6rem;
+            }
+
+            .github-link {
+                font-size: 0.6rem;
+                color: var(--project-card-text-color);
+                text-align: center;
+                text-decoration: underline;
+                margin-bottom: 0.8rem;
+                transition: all 0.3s ease;
+                font-weight: 600;
+                text-decoration: none;
+                padding: 1rem;
+
+                &:hover {
+                    color: var(--project-card-title-color);
+                }
             }
 
             &__greeting{
@@ -631,7 +656,7 @@ a{
         margin: 0 auto;
         left: 0;
         right: 0;
-        bottom: 5.5rem;
+        bottom: 6.5rem;
         
         
 
@@ -749,6 +774,7 @@ a{
     .apply-clip-mask {
        
         -webkit-mask-size: clamp(60vw, 70vw, 80vw);
+        mask-size: clamp(60vw, 70vw, 80vw);
 
         -webkit-mask-position-x: -5vw;
         -webkit-mask-position-y: 0vh;
@@ -953,12 +979,18 @@ a{
                     background-image: url('./assets/hunter-even-of-logo.png');
                 }
 
-                .bug-tracker-logo {
-                    background-image: url('./assets/hunter-even-bt-logo.png');
+                .shortly-logo {
+                    margin-top: 5rem !important;
+                    background-image: url('./assets/shortly-logo.svg');
+                    background-position: center;
+                    scale: 1.5;
+                    
                 }
 
                 .portfolio-logo {
+                    
                     background-image: url('./assets/hunter-even-he-logo.png');
+                    padding: 15rem;
                     background-size:auto 70%;
                     background-position: center;
                     
@@ -1006,6 +1038,19 @@ a{
                 padding: 0 3rem !important;
                 padding-bottom: 0.6rem;
                 margin: 0 1.25rem !important;
+            }
+
+            .github-link{
+                font-size: 1.6rem !important;
+                color: var(--project-card-text-color);
+                text-align: center;
+                text-decoration: underline;
+                margin-bottom: 0.8rem;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    scale: 1.2;
+                }
             }
 
             &__greeting{
