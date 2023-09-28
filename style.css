@@ -309,13 +309,13 @@ a {
   z-index: 100;
   overflow-y: scroll;
   max-height: 42vh;
-  min-height: 40vh;
+  min-height: 30vh;
   display: grid;
   gap: 0.4rem;
   background: white;
   grid-template-columns: 1fr;
   position: absolute;
-  top: 40vh;
+  top: 45vh;
   transition: all 1s ease;
   border: 1px solid var(--project-card-outline-color);
   border-radius: 1.525rem;
@@ -522,7 +522,17 @@ a {
   transform: translateY(140vh);
 }
 
-@media only screen and (min-width: 725px) {
+@media only screen and (min-width: 700px) {
+  .bio {
+    display: block;
+  }
+  .bio__text {
+    font-size: 1.2rem !important;
+    margin-left: 10rem;
+    max-width: 80%;
+  }
+}
+@media only screen and (min-width: 750px) {
   main {
     display: block;
     margin: 0 0 0 0 !important;
@@ -613,7 +623,9 @@ a {
     font-size: 1.8rem !important;
     line-height: 3.125rem !important;
     letter-spacing: 0.1563rem;
-    padding: 2rem 0rem;
+    padding: 2rem 0rem !important;
+    margin-left: 0 !important;
+    max-width: none !important;
   }
   .grid .card-close-button {
     display: grid !important;
@@ -637,6 +649,7 @@ a {
     width: clamp(20rem, 40vw, 50rem) !important;
     min-height: 60vh !important;
     max-height: 80vh !important;
+    max-width: 70%;
     position: relative;
     top: 9rem !important;
     left: 5vw !important;
@@ -753,6 +766,9 @@ a {
   .grid .footer--desktop-grid-right {
     grid-column: 2;
     grid-row: 2;
+    align-self: center !important;
+    justify-self: center !important;
+    left: 4rem !important;
   }
   .grid .footer .footer {
     display: flex;
@@ -761,7 +777,7 @@ a {
     flex-shrink: 2;
   }
   .grid .footer .footer__text {
-    font-size: 1.4vh;
+    font-size: 1.4vh !important;
   }
   .grid .footer .social-link__icon {
     font-size: 1.6rem !important;

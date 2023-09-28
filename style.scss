@@ -408,14 +408,14 @@ a{
             z-index: 100;
             overflow-y: scroll;
             max-height: 42vh;
-            min-height: 40vh;
+            min-height: 30vh;
 
             display: grid;
             gap: 0.4rem;
             background: white;
             grid-template-columns: 1fr;
             position: absolute;
-            top: 40vh;
+            top: 45vh;
          
             transition: all 1.0s ease;
 
@@ -678,6 +678,7 @@ a{
 
 
 
+
 //UTILITY CLASSES//
 
 .card-transition {
@@ -705,6 +706,19 @@ a{
 
 
 
+@media only screen and (min-width: 700px) { 
+    .bio {
+        display: block;
+    }
+
+    .bio__text {
+        font-size: 1.2rem !important;
+        margin-left: 10rem;
+        max-width: 80%;
+    }
+
+
+}
 
 
 
@@ -716,7 +730,7 @@ a{
 
 
 
-@media only screen and (min-width: 725px) {
+@media only screen and (min-width: 750px) {
    
     main {
         display: block;
@@ -746,6 +760,7 @@ a{
 
         justify-content: end;
         margin: 0 0 0 0 !important;
+        // padding-right: 6rem;
 
 
 
@@ -792,6 +807,7 @@ a{
             padding-top: 3vw !important;
             // margin-top: clamp(1rem, 1.5rem, 6.2rem) !important;
             margin-right: 5;
+            // transform: translateX(2rem) !important;
 
             // padding-top: clamp(2rem, 4rem, 6.2rem) !important;
             // padding-top: 0 !important;
@@ -850,7 +866,9 @@ a{
                 font-size: 1.8rem !important;
                 line-height: 3.125rem !important;
                 letter-spacing: 0.1563rem;
-                padding: 2rem 0rem;
+                padding: 2rem 0rem !important;
+                margin-left: 0 !important;
+                max-width: none !important;
             }
         }
 
@@ -882,6 +900,7 @@ a{
             width: clamp(20rem, 40vw, 50rem) !important;
             min-height: 60vh !important;
             max-height: 80vh !important;
+            max-width: 70%;
             position: relative;
             top: 9rem !important;
             left: 5vw !important;
@@ -1054,6 +1073,9 @@ a{
         &--desktop-grid-right {
             grid-column: 2; 
             grid-row: 2;
+            align-self: center !important;
+            justify-self: center !important;
+            left: 4rem !important;
             
         }
 
@@ -1066,7 +1088,7 @@ a{
         }
 
         .footer__text {
-            font-size: clamp(1.2vh, 1.4vh, 1.4vh);
+            font-size: clamp(1.2vh, 1.4vh, 1.4vh) !important;
         }
 
         .footer__here-btn {
