@@ -408,7 +408,7 @@ a{
         .project-card, .contact-card{
             z-index: 100;
             overflow-y: scroll;
-            max-height: 45vh;
+            max-height: 10rem;
             min-height: 45vh;
             // min-width: 60%;
             // max-width: 90%;
@@ -762,7 +762,7 @@ a{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
 
-        justify-content: end;
+        justify-content: end !important;
         margin: 3rem !important;
         margin-top: clamp(0vh, 2vh, 5vh) !important;
         margin-bottom: clamp(0vh, 2vh, 5vh) !important;
@@ -908,7 +908,7 @@ a{
         .project-card, .contact-card {      
             display:grid !important;
             grid-template-rows: auto;
-            max-width: 40vw;
+            max-width: 60rem !important;
             width: 70% !important;
             min-height: 60vh !important;
             max-height: 80vh !important;
@@ -1047,36 +1047,35 @@ a{
     .out-of-view-right{
         transition: all 1.0s ease-in-out;
         display: hidden;
-        // block-size: 0%;
-        // position: absolute;
+
         transform: translateX(0vw);
     }
 
     .out-of-view-right-desktop {
         transition: all 1.0s ease-in-out;
         display: hidden;
-        // block-size: 0%;
-        // position: absolute;
+ 
         transform: translateX(120vw);
     }
 
     .out-of-view-left {
         transition: all 1.0s ease-in-out;
         display: hidden;
-        // block-size: 0%;
-        // position: absolute;
+  
         transform: translateX(-120vw);
     }
 
     .footer {
         grid-column: 2;
-        position: relative;
+        grid-row: 1;
+        
+        
 
         padding: 5rem 10rem !important;
         padding-right: clamp(4rem, 4.5rem, 6.2rem) !important;
 
         &__text {
-            // font-size: 1.8rem !important;
+  
             font-size: clamp(1.4rem, 1vw, 2rem) !important;
 
         }
@@ -1086,16 +1085,17 @@ a{
         &--desktop-grid-right {
             grid-column: 2; 
             grid-row: 2;
-            align-self: center !important;
-            justify-self: center !important;
-            left: 3rem !important;
+            align-self: end !important;
+            justify-self: end !important;
+            left: 10rem;
             
         }
 
         .footer {
             display: flex;
             justify-content: space-around;
-            align-items: center;
+            justify-content: end !important;
+            // align-self:flex-end !important;
 
         }
 
