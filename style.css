@@ -23,7 +23,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: unset;
   font-family: sans-serif;
   transition: all 0.3s ease;
 }
@@ -534,11 +535,13 @@ a {
 .out-of-view-right {
   transition: all 1s ease-in-out;
   display: hidden;
+  block-size: 0%;
   transform: translateX(120vw);
 }
 
 .out-of-view-bottom {
   transition: all 1s ease-in-out;
+  block-size: 0%;
   display: hidden;
   position: absolute;
   transform: translateY(140vh);
@@ -795,11 +798,13 @@ a {
   .grid .out-of-view-right-desktop {
     transition: all 1s ease-in-out;
     display: hidden;
+    block-size: 0% !important;
     transform: translateX(120vw);
   }
   .grid .out-of-view-left {
     transition: all 1s ease-in-out;
     display: hidden;
+    block-size: 0% !important;
     transform: translateX(-120vw);
   }
   .grid .footer {
