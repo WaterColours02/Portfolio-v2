@@ -25,11 +25,12 @@ html {
 
 
 * {
+    max-height: 100vh;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-    overflow-y:unset;
+    overflow-y: hidden;
 
     font-family: sans-serif;
 
@@ -62,13 +63,13 @@ button {
 
 
     --active-theme-selector-color: #FF0000;
-    --theme-selector-outline-color: #FF0000;
+    --theme-selector-outline-color: #6612EF;
 
 
 
     --project-title-bg-color: #fff;
     --project-card-title-color: #6612EF;
-    --project-card-title-border-color: #6612EF;
+    --project-card-title-border-color: c;
     --project-card-text-color: #000;
     --project-card-outline-color: #000;
 
@@ -205,7 +206,7 @@ a{
       
 
         .title {
-            
+
             font-family:JetBrains Mono;
             font-size: 13vw;
             text-align: right;
@@ -215,6 +216,12 @@ a{
             margin-top: 2.375rem;
             transition: all 0.6s ease-in-out;
             background-color: transparent;
+
+            .static-theme {
+                
+                background-clip: text;
+              
+            }
             
 
             
@@ -774,8 +781,8 @@ a{
 
     .apply-clip-mask {
        
-        -webkit-mask-size: clamp(60vw, 70vw, 80vw);
-        mask-size: clamp(60vw, 70vw, 80vw);
+        -webkit-mask-size: 90rem;
+        // mask-size: clamp(60vw, 70vw, 80vw);
 
         -webkit-mask-position-x: -5vw;
         -webkit-mask-position-y: 0vh;
@@ -875,6 +882,7 @@ a{
             &__title{
                 // font-size: 5vw !important;
                 font-size: clamp(1.8rem, 4vw, 10rem) !important;
+                font-weight: bold !important;
             }
 
             &__project-button {
