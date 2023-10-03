@@ -25,16 +25,21 @@ html {
 
 
 * {
-    max-height: 100vh;
+    // max-height: 100vh;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
     overflow-y: hidden;
-
-    font-family: sans-serif;
-
+    font-family: 'rubik', sans-serif;
     transition: all 0.3s ease;
+}
+
+html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 button {
@@ -176,7 +181,8 @@ a{
     flex-direction: column;
     align-items: center;
     // justify-content: center;
-    height: 100vh;
+    height: 120rem;
+    overflow-y: scroll;
     
 
 
@@ -198,17 +204,16 @@ a{
         max-width: 1000px;
         margin: 0.6rem 1.25rem 0 1.25rem;
         position: relative;
-        min-height: 100vh;
-  
+        // max-height: 120rem;
+        // overflow-y: auto;
         flex-direction: column;
         gap: 0.8rem;
     
       
 
         .title {
-
             font-family:JetBrains Mono;
-            font-size: 3rem;
+            font-size: 13vw;
             text-align: right;
             color: var(--hunter-even-fill-color);
             -webkit-text-stroke: 1px var(--hunter-even-outline-color);
@@ -257,16 +262,6 @@ a{
                 cursor: pointer;
                 border: 1px solid var(--theme-selector-outline-color);
                 transition: border 0.3s ease, background-color 0.3s ease;
-
-                // &::before {
-                //     // content: "+";
-                //     // opacity: 0;
-                //     // position: absolute;
-                //     // top: 50%;
-                //     // left: 50%;
-                //     // transform: translate(-50%, -50%);
-                //     // transition: opacity 0.3s ease;
-                // }
 
                 &:hover {
                     // border: none;
@@ -353,7 +348,7 @@ a{
         
         .bio {
         // transform: translateY(4rem);
-        padding-top: 2rem;
+        // padding-top: 2rem;
         display: flex;
         
        
@@ -365,7 +360,7 @@ a{
             letter-spacing: 1.12px;
             // word-spacing: 5px;
             text-align: justify;
-            padding: 4rem 0.8rem 0 0.8rem;
+            margin: 4.5rem 0.8rem 0 0.8rem;
 
             transition: all 0.5s ease;
             
@@ -373,13 +368,13 @@ a{
     }
 
         .card-close-button {
-            display: grid;
+            display: none;
             align-items: center;
             justify-items: center;
             z-index: 1000;
             position: relative;
-            top: 0.2rem;
-            left: 0.2rem;
+            top: 0.4rem;
+            left: 0.4rem;
             background-color: white;
             font-size: 3.25rem;
             height: 1.25rem;
@@ -417,31 +412,26 @@ a{
             font-family: 'rubik', sans-serif;
             z-index: 100;
             overflow-y: scroll;
-            max-height: 10rem;
-            min-height: 20rem;
-            // min-width: 60%;
-            // max-width: 90%;
+            max-height: 15rem;
+            min-height: 18rem;
+            max-width: 18rem;
            
             display: grid;
             gap: 0.4rem;
             background: white;
             grid-template-columns: 1fr;
             position: absolute;
-            top: 18rem;
+            top: 20rem;
+            align-self: center;
          
             transition: all 1.0s ease;
 
             border: 1px solid var(--project-card-outline-color);
             border-radius: 1.525rem;
-            margin: 0.6rem auto 0rem auto;
-            padding: 0.6rem 0.8rem;
+            margin: 0.6rem 1.4rem 0rem 1.4rem;
+            padding: 0.6rem 1.2rem;
            
             box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.55);
-
-            // .project-card__contents-container {
-            //     padding: 1.2rem 1.2rem;
-                
-            // }
 
 
             &::-webkit-scrollbar {
@@ -480,7 +470,7 @@ a{
                 justify-self: center;
                 
                 background-color: var(--project-title-bg-color);
-                font-size: 1.2rem;
+                font-size: 0.8rem;
                 font-weight: 700;
                 letter-spacing: 0.125rem;
                 text-align: center ;
@@ -488,7 +478,7 @@ a{
                 color: var(--project-card-title-color);
 
                 margin: 0.6rem 0;
-                padding: 0.3125rem 1rem;
+                padding: 0.2125rem 1rem;
 
                 border: 2px solid var(--project-card-title-border-color);
                 border-radius: 1.25rem; 
@@ -626,7 +616,6 @@ a{
 
                 &-submit {
                     max-width: 80%;
-                    // align-self: center;
                     justify-self: center;
                     
                     background-color: var(--project-title-bg-color);
@@ -644,7 +633,7 @@ a{
                     border-radius: 1.25rem; 
 
                     &:hover {
-                        background-color: var(--project-card-title-border-color);
+                        background-color: var(--project-card-title-border-color) !important;
                         color: var(--project-title-bg-color) !important;
                     }
                 }
@@ -664,7 +653,7 @@ a{
         justify-content: center;
         align-items: center;
         position: relative;
-        margin: 6.5rem auto 4.5rem auto;
+        margin: 10.5rem auto 4.5rem auto;
     
         
 
@@ -727,7 +716,7 @@ a{
 
 .out-of-view-right{
     transition: all 1.0s ease-in-out;
-    display: hidden;
+    // display: hidden;
     // block-size: 0%;
     // position: absolute;
     transform: translateX(120vw);
@@ -737,7 +726,7 @@ a{
     transition: all 1s ease-in-out;
     max-height: 0px !important;
     block-size: 0%;
-    display: hidden;
+    // display: hidden;
     position: absolute;
     transform: translateY(120vh);
 }
@@ -753,6 +742,7 @@ a{
     .bio__text {
         font-size: 1.2rem !important;
         margin-left: 10rem;
+        margin-top: 10rem !important;
         max-width: 80%;
     }
 
@@ -774,6 +764,8 @@ a{
     main {
         display: block;
         margin: 0 0 0 0 !important;
+        height: 100vh;
+        
     }
 
 
@@ -784,28 +776,25 @@ a{
 
     .apply-clip-mask {
        
-        -webkit-mask-size: 90rem;
+        -webkit-mask-size: 100rem;
         // mask-size: clamp(60vw, 70vw, 80vw);
 
-        -webkit-mask-position-x: -5vw;
-        -webkit-mask-position-y: 0vh;
+        -webkit-mask-position-x: -10vw;
+        -webkit-mask-position-y: -5rem;
    
     }
     
 
     .grid {
         max-width: 1800px !important;
+        
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
 
         justify-content: end !important;
         margin: 3rem !important;
-        // margin-top: clamp(0vh, 2vh, 5vh) !important;
-        // margin-bottom: clamp(0vh, 2vh, 5vh) !important;
-        margin-left: clamp(0vh, 0vh, 5vw) !important;
-        margin-right: clamp(0vh, 0vh, 5vw) !important;
-        // padding-right: 6rem;
+
 
 
 
@@ -831,7 +820,7 @@ a{
             
             text-align: left;
 
-            font-size: clamp(3.5rem, 10vw, 18rem) !important;
+            font-size: 16rem !important;
 
             margin: 0rem 0rem !important;
             margin-top: 0;
@@ -859,14 +848,12 @@ a{
             padding-top: 4rem !important;
             padding-left: 4rem;
 
-            gap: clamp(0.6rem, 0.5vw, 2.2rem) !important;
+            gap: 1.5rem !important;
 
 
             .theme-selector-box__circle{
-                width: 1.8vw !important;
-                max-width: 4rem !important;
-                height: 1.8vw !important;
-                max-height: 4rem !important;
+                width: 3.2rem !important;
+                height: 3.2rem !important;
 
             }
 
@@ -883,13 +870,11 @@ a{
 
             
             &__title{
-                // font-size: 5vw !important;
                 font-size: 6rem !important;
                 font-weight: bold !important;
             }
 
             &__project-button {
-                // font-size: 3vw !important;
                 font-size: 4rem !important;
             }
             
@@ -899,12 +884,8 @@ a{
             
             grid-column: 2;
             grid-row: 1;
-            // position: relative;
-            // padding: 0rem auto !important;
             max-width: 80%;
-            // justify-self: end !important;
-            // align-self: center;
-            margin: 10rem 0 0 auto !important;
+            margin: 0 0 0 auto !important;
            
 
             &__text {
@@ -922,8 +903,8 @@ a{
             display: grid !important;
             height: 3.25rem !important;
             width: 3.25rem !important;
-            top: 0.2rem !important;
-            left: 0.2rem !important;
+            top: 1.2rem !important;
+            left: 1.2rem !important;
 
             &__icon {
                 font-size: 1.5rem !important;
@@ -947,8 +928,7 @@ a{
             grid-template-rows: auto;
             max-width: 60rem !important;
             width: 70% !important;
-            min-height: 60vh !important;
-            max-height: 80vh !important;
+            min-height: 75rem !important;
             // position: relative !important;
             max-width: clamp(20rem, 60vw, 50rem) !important;
             top: 9rem !important;
@@ -969,7 +949,8 @@ a{
 
             &--desktop-grid-right {
                 grid-column: 2; 
-                left: 12rem !important;
+                margin-right: 0;
+                right: 5rem;
                 // top: 18rem !important;
                 // min-height: 70vh;
               
@@ -1091,6 +1072,11 @@ a{
 
         }
 
+        &-submit {
+            font-size: 1.8rem !important;
+            margin: 0.8rem 0 !important;
+            padding: 0.4125rem 2.5rem !important;
+        }
 
         }
 
@@ -1102,33 +1088,33 @@ a{
     
     .out-of-view-right{
         transition: all 1.0s ease-in-out;
-        display: hidden;
+        // display: hidden;
 
         transform: translateX(0vw);
     }
 
     .out-of-view-right-desktop {
         transition: all 1.0s ease-in-out;
-        display: hidden;
+        // display: hidden;
         block-size: 0% !important;
         transform: translateX(120vw);
     }
 
     .out-of-view-left {
         transition: all 1.0s ease-in-out;
-        display: hidden;
+        // display: hidden;
         block-size: 0% !important;
         transform: translateX(-120vw);
     }
 
     .footer {
-        grid-column: 2;
-        grid-row: 1;
+        grid-column: 1 span 2 !important;
+        grid-row: 2 !important;
         position: relative;
         gap: 1.6rem !important;
-        
-        margin: 10rem 4rem 10rem auto !important;
-        padding: 10rem 0 10rem auto !important;
+        transform: translatey(-8rem);
+        margin: 12rem 5rem 0rem auto !important;
+        // padding: 10rem 0 10rem auto !important;
         // padding-right: clamp(4rem, 4.5rem, 6.2rem) !important;
 
        
@@ -1141,7 +1127,7 @@ a{
         }
 
         .social-link__icon {
-            font-size: 2.2rem !important;
+            font-size: 3.2rem !important;
         }
 
 

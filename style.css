@@ -20,14 +20,19 @@ body {
 }
 
 * {
-  max-height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: hidden;
-  font-family: sans-serif;
+  font-family: "rubik", sans-serif;
   transition: all 0.3s ease;
+}
+
+html {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 button {
@@ -152,7 +157,8 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 120rem;
+  overflow-y: scroll;
 }
 .main .main-bg-asset {
   transform-origin: center top;
@@ -161,13 +167,12 @@ a {
   max-width: 1000px;
   margin: 0.6rem 1.25rem 0 1.25rem;
   position: relative;
-  min-height: 100vh;
   flex-direction: column;
   gap: 0.8rem;
 }
 .main .grid .title {
   font-family: JetBrains Mono;
-  font-size: 3rem;
+  font-size: 13vw;
   text-align: right;
   color: var(--hunter-even-fill-color);
   -webkit-text-stroke: 1px var(--hunter-even-outline-color);
@@ -269,7 +274,6 @@ a {
   -webkit-text-stroke: 1px var(--active-project-button-outline-color);
 }
 .main .grid .bio {
-  padding-top: 2rem;
   display: flex;
 }
 .main .grid .bio .bio__text {
@@ -279,17 +283,17 @@ a {
   color: var(--bio-text-color);
   letter-spacing: 1.12px;
   text-align: justify;
-  padding: 4rem 0.8rem 0 0.8rem;
+  margin: 4.5rem 0.8rem 0 0.8rem;
   transition: all 0.5s ease;
 }
 .main .grid .card-close-button {
-  display: grid;
+  display: none;
   align-items: center;
   justify-items: center;
   z-index: 1000;
   position: relative;
-  top: 0.2rem;
-  left: 0.2rem;
+  top: 0.4rem;
+  left: 0.4rem;
   background-color: white;
   font-size: 3.25rem;
   height: 1.25rem;
@@ -319,19 +323,21 @@ a {
   font-family: "rubik", sans-serif;
   z-index: 100;
   overflow-y: scroll;
-  max-height: 10rem;
-  min-height: 20rem;
+  max-height: 15rem;
+  min-height: 18rem;
+  max-width: 18rem;
   display: grid;
   gap: 0.4rem;
   background: white;
   grid-template-columns: 1fr;
   position: absolute;
-  top: 18rem;
+  top: 20rem;
+  align-self: center;
   transition: all 1s ease;
   border: 1px solid var(--project-card-outline-color);
   border-radius: 1.525rem;
-  margin: 0.6rem auto 0rem auto;
-  padding: 0.6rem 0.8rem;
+  margin: 0.6rem 1.4rem 0rem 1.4rem;
+  padding: 0.6rem 1.2rem;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.55);
 }
 .main .grid .project-card::-webkit-scrollbar, .main .grid .contact-card::-webkit-scrollbar {
@@ -359,14 +365,14 @@ a {
   align-self: center;
   justify-self: center;
   background-color: var(--project-title-bg-color);
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.125rem;
   text-align: center;
   text-transform: uppercase;
   color: var(--project-card-title-color);
   margin: 0.6rem 0;
-  padding: 0.3125rem 1rem;
+  padding: 0.2125rem 1rem;
   border: 2px solid var(--project-card-title-border-color);
   border-radius: 1.25rem;
 }
@@ -496,7 +502,7 @@ a {
   border-radius: 1.25rem;
 }
 .main .grid .project-card__form-submit:hover, .main .grid .contact-card__form-submit:hover {
-  background-color: var(--project-card-title-border-color);
+  background-color: var(--project-card-title-border-color) !important;
   color: var(--project-title-bg-color) !important;
 }
 .main .footer {
@@ -507,7 +513,7 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: 6.5rem auto 4.5rem auto;
+  margin: 10.5rem auto 4.5rem auto;
   justify-self: center;
   align-self: center;
 }
@@ -544,7 +550,6 @@ a {
 
 .out-of-view-right {
   transition: all 1s ease-in-out;
-  display: hidden;
   transform: translateX(120vw);
 }
 
@@ -552,7 +557,6 @@ a {
   transition: all 1s ease-in-out;
   max-height: 0px !important;
   block-size: 0%;
-  display: hidden;
   position: absolute;
   transform: translateY(120vh);
 }
@@ -564,6 +568,7 @@ a {
   .bio__text {
     font-size: 1.2rem !important;
     margin-left: 10rem;
+    margin-top: 10rem !important;
     max-width: 80%;
   }
 }
@@ -571,15 +576,16 @@ a {
   main {
     display: block;
     margin: 0 0 0 0 !important;
+    height: 100vh;
   }
   .background-clip {
     scale: 1;
     min-height: 100vh !important;
   }
   .apply-clip-mask {
-    -webkit-mask-size: 90rem;
-    -webkit-mask-position-x: -5vw;
-    -webkit-mask-position-y: 0vh;
+    -webkit-mask-size: 100rem;
+    -webkit-mask-position-x: -10vw;
+    -webkit-mask-position-y: -5rem;
   }
   .grid {
     max-width: 1800px !important;
@@ -588,8 +594,6 @@ a {
     grid-template-rows: 1fr;
     justify-content: end !important;
     margin: 3rem !important;
-    margin-left: clamp(0vh, 0vh, 5vw) !important;
-    margin-right: clamp(0vh, 0vh, 5vw) !important;
   }
   .grid .desktop-right-grid {
     display: flex !important;
@@ -607,7 +611,7 @@ a {
     grid-column: 1;
     grid-row: 1;
     text-align: left;
-    font-size: clamp(3.5rem, 10vw, 18rem) !important;
+    font-size: 16rem !important;
     margin: 0rem 0rem !important;
     margin-top: 0;
     padding: 0 3rem !important;
@@ -625,13 +629,11 @@ a {
     padding: 0 3rem !important;
     padding-top: 4rem !important;
     padding-left: 4rem;
-    gap: clamp(0.6rem, 0.5vw, 2.2rem) !important;
+    gap: 1.5rem !important;
   }
   .grid .theme-selector-box .theme-selector-box__circle {
-    width: 1.8vw !important;
-    max-width: 4rem !important;
-    height: 1.8vw !important;
-    max-height: 4rem !important;
+    width: 3.2rem !important;
+    height: 3.2rem !important;
   }
   .grid .projects-list {
     grid-column: 2;
@@ -653,7 +655,7 @@ a {
     grid-column: 2;
     grid-row: 1;
     max-width: 80%;
-    margin: 10rem 0 0 auto !important;
+    margin: 0 0 0 auto !important;
   }
   .grid .bio__text {
     font-size: 2rem !important;
@@ -667,8 +669,8 @@ a {
     display: grid !important;
     height: 3.25rem !important;
     width: 3.25rem !important;
-    top: 0.2rem !important;
-    left: 0.2rem !important;
+    top: 1.2rem !important;
+    left: 1.2rem !important;
   }
   .grid .card-close-button__icon {
     font-size: 1.5rem !important;
@@ -679,8 +681,7 @@ a {
     grid-template-rows: auto;
     max-width: 60rem !important;
     width: 70% !important;
-    min-height: 60vh !important;
-    max-height: 80vh !important;
+    min-height: 75rem !important;
     max-width: clamp(20rem, 60vw, 50rem) !important;
     top: 9rem !important;
     left: 10rem !important;
@@ -696,7 +697,8 @@ a {
   }
   .grid .project-card--desktop-grid-right, .grid .contact-card--desktop-grid-right {
     grid-column: 2;
-    left: 12rem !important;
+    margin-right: 0;
+    right: 5rem;
   }
   .grid .project-card__project-logo, .grid .contact-card__project-logo {
     background-repeat: no-repeat;
@@ -785,30 +787,32 @@ a {
     font-size: 1.8rem !important;
     padding: 0.4rem 0.6rem -2.8rem 0.6rem !important;
   }
+  .grid .project-card__form-submit, .grid .contact-card__form-submit {
+    font-size: 1.8rem !important;
+    margin: 0.8rem 0 !important;
+    padding: 0.4125rem 2.5rem !important;
+  }
   .grid .out-of-view-right {
     transition: all 1s ease-in-out;
-    display: hidden;
     transform: translateX(0vw);
   }
   .grid .out-of-view-right-desktop {
     transition: all 1s ease-in-out;
-    display: hidden;
     block-size: 0% !important;
     transform: translateX(120vw);
   }
   .grid .out-of-view-left {
     transition: all 1s ease-in-out;
-    display: hidden;
     block-size: 0% !important;
     transform: translateX(-120vw);
   }
   .grid .footer {
-    grid-column: 2;
-    grid-row: 1;
+    grid-column: 1 span 2 !important;
+    grid-row: 2 !important;
     position: relative;
     gap: 1.6rem !important;
-    margin: 10rem 4rem 10rem auto !important;
-    padding: 10rem 0 10rem auto !important;
+    transform: translatey(-8rem);
+    margin: 12rem 5rem 0rem auto !important;
   }
   .grid .footer .footer__text {
     font-size: 1.6rem !important;
@@ -817,7 +821,7 @@ a {
     font-size: 1.6rem !important;
   }
   .grid .footer .social-link__icon {
-    font-size: 2.2rem !important;
+    font-size: 3.2rem !important;
   }
   .grid .footer--desktop-grid-right {
     grid-column: 2;
