@@ -167,7 +167,7 @@ a {
 }
 .main .grid .title {
   font-family: JetBrains Mono;
-  font-size: 13vw;
+  font-size: 3rem;
   text-align: right;
   color: var(--hunter-even-fill-color);
   -webkit-text-stroke: 1px var(--hunter-even-outline-color);
@@ -196,7 +196,7 @@ a {
   align-items: center;
   justify-content: flex-end;
   padding: 0.4rem 0rem;
-  gap: 1vh;
+  gap: 1rem;
 }
 .main .grid .theme-selector-box .theme-selector-box__circle {
   width: 1.25rem;
@@ -239,7 +239,7 @@ a {
 }
 .main .grid .projects-list .projects-list__title {
   font-family: sans-serif;
-  font-size: 8vw;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.1563rem;
   color: var(--projects-title-fill-color);
@@ -249,7 +249,7 @@ a {
 }
 .main .grid .projects-list .projects-list__project-button {
   font-family: sans-serif;
-  font-size: 3vh;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.125rem;
   color: white;
@@ -269,7 +269,7 @@ a {
   -webkit-text-stroke: 1px var(--active-project-button-outline-color);
 }
 .main .grid .bio {
-  padding-top: 4rem;
+  padding-top: 2rem;
   display: flex;
 }
 .main .grid .bio .bio__text {
@@ -279,7 +279,7 @@ a {
   color: var(--bio-text-color);
   letter-spacing: 1.12px;
   text-align: justify;
-  padding: 4vh 0.8rem 1vh 0.8rem;
+  padding: 4rem 0.8rem 0 0.8rem;
   transition: all 0.5s ease;
 }
 .main .grid .card-close-button {
@@ -320,13 +320,13 @@ a {
   z-index: 100;
   overflow-y: scroll;
   max-height: 10rem;
-  min-height: 45vh;
+  min-height: 20rem;
   display: grid;
   gap: 0.4rem;
   background: white;
   grid-template-columns: 1fr;
   position: absolute;
-  top: 42vh;
+  top: 18rem;
   transition: all 1s ease;
   border: 1px solid var(--project-card-outline-color);
   border-radius: 1.525rem;
@@ -359,7 +359,7 @@ a {
   align-self: center;
   justify-self: center;
   background-color: var(--project-title-bg-color);
-  font-size: 2.5vh;
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.125rem;
   text-align: center;
@@ -484,7 +484,7 @@ a {
   max-width: 80%;
   justify-self: center;
   background-color: var(--project-title-bg-color);
-  font-size: 2vh;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.125rem;
   text-align: center;
@@ -507,8 +507,7 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: 14.5rem auto 4.5rem auto;
-  bottom: 4rem;
+  margin: 6.5rem auto 4.5rem auto;
   justify-self: center;
   align-self: center;
 }
@@ -555,7 +554,7 @@ a {
   block-size: 0%;
   display: hidden;
   position: absolute;
-  transform: translateY(140vh);
+  transform: translateY(120vh);
 }
 
 @media only screen and (min-width: 700px) {
@@ -589,8 +588,6 @@ a {
     grid-template-rows: 1fr;
     justify-content: end !important;
     margin: 3rem !important;
-    margin-top: 2vh !important;
-    margin-bottom: 2vh !important;
     margin-left: clamp(0vh, 0vh, 5vw) !important;
     margin-right: clamp(0vh, 0vh, 5vw) !important;
   }
@@ -700,7 +697,6 @@ a {
   .grid .project-card--desktop-grid-right, .grid .contact-card--desktop-grid-right {
     grid-column: 2;
     left: 12rem !important;
-    min-height: 70vh;
   }
   .grid .project-card__project-logo, .grid .contact-card__project-logo {
     background-repeat: no-repeat;

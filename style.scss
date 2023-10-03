@@ -208,7 +208,7 @@ a{
         .title {
 
             font-family:JetBrains Mono;
-            font-size: 13vw;
+            font-size: 3rem;
             text-align: right;
             color: var(--hunter-even-fill-color);
             -webkit-text-stroke: 1px var(--hunter-even-outline-color);
@@ -248,7 +248,7 @@ a{
             align-items: center;
             justify-content: flex-end;
             padding: 0.4rem 0rem;
-            gap: 1vh;
+            gap: 1rem;
 
             .theme-selector-box__circle {
                 width: 1.25rem;
@@ -315,28 +315,25 @@ a{
         
             .projects-list__title {
                 font-family: sans-serif;
-                font-size: 8vw;
+                font-size: 2rem;
                 font-weight: 700;
                 letter-spacing: 0.1563rem;
                 color: var(--projects-title-fill-color);
                 text-transform: uppercase;
                 text-align: right;
-                // margin-bottom: 0.625rem;
-                // padding: 0.4rem 0;
+
                 -webkit-text-stroke: 1px var(--projects-title-outline-color);
             }
         
         
             .projects-list__project-button {
                 font-family: sans-serif;
-                font-size: 3vh;
+                font-size: 1.5rem;
                 font-weight: 700;
                 letter-spacing: 0.125rem;
                 color: white;
                 text-transform: uppercase;
                 text-align: right;
-                // margin-bottom: 0.625rem;
-                // padding: 0.4rem 0;
                 cursor: pointer;
                 transition: all 0.5s ease;
                 -webkit-text-stroke: 1px var(--project-outline-color);
@@ -356,7 +353,7 @@ a{
         
         .bio {
         // transform: translateY(4rem);
-        padding-top: clamp(4rem, 4rem, 16rem);
+        padding-top: 2rem;
         display: flex;
         
        
@@ -368,7 +365,7 @@ a{
             letter-spacing: 1.12px;
             // word-spacing: 5px;
             text-align: justify;
-            padding: 4vh 0.8rem 1vh 0.8rem;
+            padding: 4rem 0.8rem 0 0.8rem;
 
             transition: all 0.5s ease;
             
@@ -421,7 +418,7 @@ a{
             z-index: 100;
             overflow-y: scroll;
             max-height: 10rem;
-            min-height: 45vh;
+            min-height: 20rem;
             // min-width: 60%;
             // max-width: 90%;
            
@@ -430,7 +427,7 @@ a{
             background: white;
             grid-template-columns: 1fr;
             position: absolute;
-            top: 42vh;
+            top: 18rem;
          
             transition: all 1.0s ease;
 
@@ -483,7 +480,7 @@ a{
                 justify-self: center;
                 
                 background-color: var(--project-title-bg-color);
-                font-size: 2.5vh;
+                font-size: 1.2rem;
                 font-weight: 700;
                 letter-spacing: 0.125rem;
                 text-align: center ;
@@ -633,7 +630,7 @@ a{
                     justify-self: center;
                     
                     background-color: var(--project-title-bg-color);
-                    font-size: 2vh;
+                    font-size: 0.8rem;
                     font-weight: 700;
                     letter-spacing: 0.125rem;
                     text-align: center ;
@@ -667,10 +664,8 @@ a{
         justify-content: center;
         align-items: center;
         position: relative;
-        margin: 14.5rem auto 4.5rem auto;
-        // padding: 0 auto;
-        bottom: 4rem;
-       
+        margin: 6.5rem auto 4.5rem auto;
+    
         
 
         justify-self: center;
@@ -744,7 +739,7 @@ a{
     block-size: 0%;
     display: hidden;
     position: absolute;
-    transform: translateY(140vh);
+    transform: translateY(120vh);
 }
 
 
@@ -806,8 +801,8 @@ a{
 
         justify-content: end !important;
         margin: 3rem !important;
-        margin-top: clamp(0vh, 2vh, 5vh) !important;
-        margin-bottom: clamp(0vh, 2vh, 5vh) !important;
+        // margin-top: clamp(0vh, 2vh, 5vh) !important;
+        // margin-bottom: clamp(0vh, 2vh, 5vh) !important;
         margin-left: clamp(0vh, 0vh, 5vw) !important;
         margin-right: clamp(0vh, 0vh, 5vw) !important;
         // padding-right: 6rem;
@@ -976,7 +971,7 @@ a{
                 grid-column: 2; 
                 left: 12rem !important;
                 // top: 18rem !important;
-                min-height: 70vh;
+                // min-height: 70vh;
               
             }
 
