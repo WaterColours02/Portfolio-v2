@@ -162,11 +162,11 @@ a{
     scale: clap(0.6, 0.8, 1);
     mask-image: url(./assets/background1.svg);
     -webkit-mask-image: url(./assets/background1.svg);
-    -webkit-mask-size: clamp(40vw, 80vw, 90vw);
-    mask-size: clamp(40vw, 80vw, 90vw);
+    -webkit-mask-size: 22rem;
+    mask-size: 22rem;
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position-x: -25vw;
+    -webkit-mask-position-x: -30vw;
     -webkit-mask-position-y: -5vh;
     overflow-y: visible;
 }
@@ -182,7 +182,7 @@ a{
     align-items: center;
     // justify-content: center;
     height: 120rem;
-    overflow-y: scroll;
+    overflow-y: visible;
     
 
 
@@ -834,6 +834,7 @@ a{
         }
         
         .theme-selector-box {
+            position: relative;
             grid-column: 1;
             grid-row: 1;
             display: grid;
@@ -932,7 +933,7 @@ a{
             // position: relative !important;
             max-width: clamp(20rem, 60vw, 50rem) !important;
             top: 9rem !important;
-            left: 10rem !important;
+            // left: 10rem !important;
             border: 3px solid var(--project-card-outline-color) !important;
             justify-content:flex-start !important;
             justify-self: center !important;
@@ -944,6 +945,7 @@ a{
             
             &--desktop-grid-left {
                 grid-column: 1; 
+                left: 10rem;
                
             }
 
@@ -1113,7 +1115,7 @@ a{
         position: relative;
         gap: 1.6rem !important;
         transform: translatey(-8rem);
-        margin: 12rem 5rem 0rem auto !important;
+        margin: 20rem 5rem 0rem auto !important;
         // padding: 10rem 0 10rem auto !important;
         // padding-right: clamp(4rem, 4.5rem, 6.2rem) !important;
 
