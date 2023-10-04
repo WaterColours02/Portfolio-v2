@@ -1214,14 +1214,14 @@ a{
     .out-of-view-right-desktop {
         transition: all 1.0s ease-in-out;
         // display: hidden;
-        block-size: 0% !important;
+        // block-size: 0% !important;
         transform: translateX(120vw);
     }
 
     .out-of-view-left {
         transition: all 1.0s ease-in-out;
         // display: hidden;
-        block-size: 0% !important;
+        // block-size: 0% !important;
         transform: translateX(-120vw);
     }
 

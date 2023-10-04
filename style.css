@@ -864,12 +864,10 @@ a {
   }
   .grid .out-of-view-right-desktop {
     transition: all 1s ease-in-out;
-    block-size: 0% !important;
     transform: translateX(120vw);
   }
   .grid .out-of-view-left {
     transition: all 1s ease-in-out;
-    block-size: 0% !important;
     transform: translateX(-120vw);
   }
   .grid .footer {
