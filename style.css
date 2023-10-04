@@ -8,7 +8,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  overflow-y: hidden;
   font-family: "rubik", sans-serif;
   transition: all 0.3s ease;
 }
@@ -19,6 +18,9 @@ html {
   flex-direction: column;
   overflow-y: hidden;
   min-height: 80vh;
+}
+html::-webkit-scrollbar {
+  display: none;
 }
 
 button {
@@ -130,7 +132,10 @@ a {
   -o-object-fit: fill;
      object-fit: fill;
   background-repeat: no-repeat;
-  overflow: hidden;
+  overflow: auto;
+}
+.background-clip::-webkit-scrollbar {
+  display: hidden !important;
 }
 
 .apply-clip-mask {
@@ -145,6 +150,9 @@ a {
   -webkit-mask-position-y: -5vh;
   overflow-y: visible;
 }
+.apply-clip-mask::-webkit-scrollbar {
+  display: hidden;
+}
 
 .hidden {
   display: none !important;
@@ -155,6 +163,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: auto;
 }
 .main .main-bg-asset {
   transform-origin: center top;
@@ -165,6 +174,7 @@ a {
   position: relative;
   flex-direction: column;
   gap: 0.8rem;
+  overflow-y: hidden;
 }
 .main .grid .title {
   font-family: JetBrains Mono;
@@ -551,7 +561,7 @@ a {
   max-height: 0px !important;
   block-size: 0%;
   position: absolute;
-  transform: translateY(120vh);
+  transform: translateY(200rem);
 }
 
 @media only screen and (min-width: 500px) {
@@ -651,15 +661,14 @@ a {
 @media only screen and (min-width: 1300px) {
   html {
     font-size: 50%;
+    overflow-y: auto !important;
   }
   main {
     display: block;
     margin: 0 0 0 0 !important;
-    height: 100vh;
   }
   .background-clip {
     scale: 1;
-    min-height: 100vh !important;
   }
   .apply-clip-mask {
     -webkit-mask-size: 100rem;
@@ -682,10 +691,10 @@ a {
   }
   .grid .desktop-grid-left {
     display: flex !important;
-    justify-items: center !important;
     margin-top: 6rem;
   }
   .grid .title {
+    display: block !important;
     block-size: auto;
     grid-column: 1;
     grid-row: 1;
@@ -889,7 +898,8 @@ a {
     position: relative;
     gap: 1.6rem !important;
     transform: translatey(-8rem);
-    margin: 26rem 6rem 0rem auto !important;
+    margin: 40% 6rem 0rem auto !important;
+    z-index: 1000 !important;
   }
   .grid .footer .footer__text {
     font-size: 1.6rem !important;

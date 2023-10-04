@@ -1,24 +1,5 @@
-// $highlight-color: #FF0000;
-// $primary-color: #6612EF;
 
 
-html {
-    // font-size: percentage(10 / 20)
-    // Default (Extra small screens). 1rem = 7px
-    // font-size: percentage(7 / 16);
-    // @media (min-width: 768px) {
-      // Small screens. 1rem = 8px
-    //   font-size: percentage(8 / 16);
-    // }
-    // @media (min-width: 992px) {
-    //   Medium screens. 1rem = 9px
-    //   font-size: percentage(9 / 16);
-    // }
-    // @media (min-width: 1200px) {
-    //   Large screens. 1rem = 10px
-    //   font-size: percentage(10 / 20);
-    // }
-  }
   body {
     font-size: 1.8em;
     transition: all 0.6s ease;
@@ -30,7 +11,7 @@ html {
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-    overflow-y: hidden;
+    // overflow-y: hidden;
     font-family: 'rubik', sans-serif;
     transition: all 0.3s ease;
 }
@@ -41,6 +22,10 @@ html {
     flex-direction: column;
     overflow-y: hidden;
     min-height: 80vh;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
     
 }
 
@@ -177,7 +162,12 @@ a{
     left:0;
     object-fit: fill;
     background-repeat: no-repeat;
-    overflow: hidden;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        display: hidden !important;
+    }
+    
 }
 
 .apply-clip-mask {
@@ -191,6 +181,10 @@ a{
     -webkit-mask-position-x: -30vw;
     -webkit-mask-position-y: -5vh;
     overflow-y: visible;
+
+    &::-webkit-scrollbar {
+        display: hidden;
+    }
 }
 
 .hidden {
@@ -202,6 +196,7 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: auto;
     // justify-content: center;
     // height: 130rem;
     
@@ -209,16 +204,7 @@ a{
 
 
     .main-bg-asset {
-        // z-index: -1;
-        // position: absolute;
         transform-origin: center top;
-        // scale: 0.7;
-        // height: 20%;
-        // top: -0.125rem;
-        // left: -35%;
-        // overflow: visible;
-
-    
     }
     
 
@@ -226,13 +212,9 @@ a{
         max-width: 1000px;
         margin: 0.6rem 1.25rem 0 1.25rem;
         position: relative;
-        // max-height: 120rem;
-        // overflow-y: auto;
         flex-direction: column;
         gap: 0.8rem;
-        // overflow-y: visible;
-    
-      
+        overflow-y: hidden;
 
         .title {
             font-family:JetBrains Mono;
@@ -753,7 +735,7 @@ a{
     block-size: 0%;
     // display: hidden;
     position: absolute;
-    transform: translateY(120vh);
+    transform: translateY(200rem);
 }
 
 
@@ -894,27 +876,23 @@ a{
 
 @media only screen and (min-width: 1300px) {
    html {
-    font-size: percentage(10 / 20)
+    font-size: percentage(10 / 20);
+    overflow-y: auto !important;
    }
 
     main {
         display: block;
         margin: 0 0 0 0 !important;
-        height: 100vh;
-        
     }
 
 
     .background-clip {
         scale: 1;
-        min-height: 100vh !important;
+        // min-height: 100vh !important;
     }
 
     .apply-clip-mask {
-       
         -webkit-mask-size: 100rem;
-        // mask-size: clamp(60vw, 70vw, 80vw);
-
         -webkit-mask-position-x: -10vw;
         -webkit-mask-position-y: -5rem;
    
@@ -944,12 +922,13 @@ a{
         
         .desktop-grid-left {
             display: flex !important;
-            justify-items: center !important;
             margin-top: 6rem;
-            // flex-wrap: wrap;
         }
 
+     
+
         .title{
+            display: block !important;
             block-size:auto;
             grid-column: 1;
             grid-row: 1;
@@ -962,7 +941,6 @@ a{
 
             margin: 0rem 0rem !important;
             margin-top: 0;
-            // padding: 0 4rem !important;
 
             justify-self: start !important;
             
@@ -1252,9 +1230,8 @@ a{
         position: relative;
         gap: 1.6rem !important;
         transform: translatey(-8rem);
-        margin: 26rem 6rem 0rem auto !important;
-        // padding: 10rem 0 10rem auto !important;
-        // padding-right: clamp(4rem, 4.5rem, 6.2rem) !important;
+        margin: 40% 6rem 0rem auto !important;
+        z-index: 1000 !important;
 
        
         .footer__text {
