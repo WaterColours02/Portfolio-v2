@@ -523,6 +523,9 @@ a {
   justify-self: center;
   align-self: center;
 }
+.main .footer::-webkit-scrollbar {
+  display: none;
+}
 .main .footer__text {
   font-family: "rubik", sans-serif;
   color: var(--footer-text-color);

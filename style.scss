@@ -664,6 +664,10 @@ a{
         align-items: center;
         position: relative;
         margin: 12.5rem auto 4.5rem auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     
         
 
