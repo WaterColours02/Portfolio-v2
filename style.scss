@@ -695,6 +695,15 @@ a{
             }
         }
 
+        .footer__social-container {
+            display: flex;
+            gap: 0.6rem;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
         .footer__social-link {
 
         .social-link__icon {
@@ -800,7 +809,6 @@ a{
         font-size: 1.6rem !important;
         margin-left: 10rem;
         margin-top: 8rem !important;
-        // max-width: 80% !important;
     }
 
     .card-close-button {
@@ -875,6 +883,11 @@ a{
 
         .footer__here-btn {
             font-size: 1.6rem !important;
+        }
+
+        .social-link__icon {
+            font-size: 2.6rem !important;
+
         }
     }
 

@@ -543,6 +543,13 @@ a {
   cursor: pointer;
   transform: scale(1.2);
 }
+.main .footer .footer__social-container {
+  display: flex;
+  gap: 0.6rem;
+}
+.main .footer .footer__social-container::-webkit-scrollbar {
+  display: none;
+}
 .main .footer .footer__social-link .social-link__icon {
   font-size: 1.2rem;
   color: var(--contact-social-color);
@@ -671,6 +678,9 @@ a {
   }
   .footer .footer__here-btn {
     font-size: 1.6rem !important;
+  }
+  .footer .social-link__icon {
+    font-size: 2.6rem !important;
   }
   .out-of-view-right {
     transform: translateX(0) !important;
