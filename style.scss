@@ -179,7 +179,7 @@ a{
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position-x: -30vw;
     -webkit-mask-position-y: -5vh;
-    overflow-y: visible;
+    overflow-y: hidden;
 
     &::-webkit-scrollbar {
         display: hidden;
@@ -195,7 +195,7 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: auto;
+    overflow-y: hidden;
     // justify-content: center;
     // height: 130rem;
     
@@ -424,8 +424,7 @@ a{
             overflow-y: scroll;
             max-height: 15rem;
             min-height: 18rem;
-            max-width: 18rem;
-           
+       
             display: grid;
             gap: 0.4rem;
             background: white;
@@ -438,7 +437,7 @@ a{
 
             border: 1px solid var(--project-card-outline-color);
             border-radius: 1.525rem;
-            margin: 0.6rem 1.4rem 0rem 1.4rem;
+            margin: 0.6rem 10% 0rem 10%;
             padding: 0.6rem 1.2rem;
            
             box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.55);
@@ -663,7 +662,7 @@ a{
         justify-content: center;
         align-items: center;
         position: relative;
-        margin: 10.5rem auto 4.5rem auto;
+        margin: 12.5rem auto 4.5rem auto;
     
         
 
@@ -805,7 +804,9 @@ a{
     .project-card, .contact-card {
         min-height: 40vw !important;
         min-width: 30vw !important;
+        max-width: 35vw !important;
         top: 25vw !important;
+        margin: 0.6rem auto 0rem auto !important;
 
         &__title {
             font-size: 2.5rem !important;
@@ -891,6 +892,7 @@ a{
     main {
         display: block;
         margin: 0 0 0 0 !important;
+        overflow-y: auto !important;
     }
 
 
