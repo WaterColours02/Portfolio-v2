@@ -52,6 +52,7 @@ button {
   --submit-button-bg-color: #fff;
   --submit-button-text-color: #6612EF;
   --submit-button-border-color: #000;
+  --message-text-color: #6612EF ;
 }
 
 .body--wavy-theme {
@@ -73,6 +74,7 @@ button {
   --project-card-outline-color: #6612EF;
   --project-card-text-color: #6612EF;
   --contact-title-bg-color: #FFF;
+  --message-text-color: #6612EF;
   --submit-button-bg-color: #BDFF01;
   --submit-button-text-color: #6612EF;
   --submit-button-border-color: #6612EF;
@@ -102,6 +104,7 @@ button {
   --project-card-title-border-color: #FFADAD;
   --project-card-outline-color: #494949;
   --project-card-text-color: #494949;
+  --message-text-color: #494949;
   --submit-button-bg-color: #fff;
   --submit-button-text-color: #FFADAD;
   --submit-button-border-color: #FFADAD;
@@ -452,15 +455,15 @@ a {
 .main .grid .project-card__form-message, .main .grid .contact-card__form-message {
   margin-top: 0.6rem;
   font-size: 0.7rem;
-  padding: 0.4rem 0.6rem -0.8rem 0.6rem;
+  padding: 0.4rem 0.2rem -1.2rem 0.6rem;
   width: 100%;
   border: none;
-  border-bottom: 2px dashed var(--project-card-outline-color);
-  color: var(--project-card-text-color);
+  border-bottom: 2px dashed var(--message-text-color);
+  color: var(--message-text-color);
 }
 .main .grid .project-card__form-message:focus, .main .grid .contact-card__form-message:focus {
   outline: none;
-  border-bottom: 2px solid var(--project-card-outline-color);
+  border-bottom: 3px solid var(--message-text-color);
 }
 .main .grid .project-card__form-message:focus::-moz-placeholder, .main .grid .contact-card__form-message:focus::-moz-placeholder {
   top: 10px;
@@ -487,13 +490,13 @@ a {
   text-transform: uppercase;
   color: var(--submit-button-text-color);
   margin: 0.8rem 0;
-  padding: 0.4125rem 2.5rem;
-  border: 2px solid var(--submit-button-border-color);
+  padding: 0.4125rem 3.5rem;
+  border: 3px solid var(--submit-button-border-color);
   border-radius: 1.25rem;
 }
 .main .grid .project-card__form-submit:hover, .main .grid .contact-card__form-submit:hover {
   background-color: var(--submit-button-border-color) !important;
-  color: var(--submit-button-bg-colorr) !important;
+  color: var(--submit-button-bg-color) !important;
 }
 .main .footer {
   z-index: 0;
@@ -865,7 +868,8 @@ a {
   .grid .project-card__form-submit, .grid .contact-card__form-submit {
     font-size: 1.8rem !important;
     margin: 0.8rem 0 !important;
-    padding: 0.4125rem 2.5rem !important;
+    padding: 0.4125rem 4.5rem !important;
+    border-radius: 3.5rem !important;
   }
   .grid .out-of-view-right {
     transition: all 1s ease-in-out;
