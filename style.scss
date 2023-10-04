@@ -3,20 +3,21 @@
 
 
 html {
+    // font-size: percentage(10 / 20)
     // Default (Extra small screens). 1rem = 7px
     // font-size: percentage(7 / 16);
-    @media (min-width: 768px) {
+    // @media (min-width: 768px) {
       // Small screens. 1rem = 8px
-      font-size: percentage(8 / 16);
-    }
-    @media (min-width: 992px) {
-      // Medium screens. 1rem = 9px
-      font-size: percentage(9 / 16);
-    }
-    @media (min-width: 1200px) {
-      // Large screens. 1rem = 10px
-      font-size: percentage(10 / 16);
-    }
+    //   font-size: percentage(8 / 16);
+    // }
+    // @media (min-width: 992px) {
+    //   Medium screens. 1rem = 9px
+    //   font-size: percentage(9 / 16);
+    // }
+    // @media (min-width: 1200px) {
+    //   Large screens. 1rem = 10px
+    //   font-size: percentage(10 / 20);
+    // }
   }
   body {
     font-size: 1.8em;
@@ -25,7 +26,6 @@ html {
 
 
 * {
-    // max-height: 100vh;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -39,6 +39,8 @@ html {
     height: 100%;
     display: flex;
     flex-direction: column;
+    overflow-y: hidden;
+    min-height: 80vh;
     
 }
 
@@ -68,7 +70,7 @@ button {
 
 
     --active-theme-selector-color: #FF0000;
-    --theme-selector-outline-color: #6612EF;
+    --theme-selector-outline-color: #FF0000;
 
 
 
@@ -162,8 +164,8 @@ a{
     scale: clap(0.6, 0.8, 1);
     mask-image: url(./assets/background1.svg);
     -webkit-mask-image: url(./assets/background1.svg);
-    -webkit-mask-size: 22rem;
-    mask-size: 22rem;
+    -webkit-mask-size: 70vw;
+    mask-size: 70vw;
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position-x: -30vw;
@@ -181,8 +183,8 @@ a{
     flex-direction: column;
     align-items: center;
     // justify-content: center;
-    height: 120rem;
-    overflow-y: visible;
+    // height: 130rem;
+    
     
 
 
@@ -208,12 +210,14 @@ a{
         // overflow-y: auto;
         flex-direction: column;
         gap: 0.8rem;
+        // overflow-y: visible;
     
       
 
         .title {
             font-family:JetBrains Mono;
-            font-size: 13vw;
+            font-size: clamp(2.6rem, 5vw, 10rem);
+            // font-size: 13vw;
             text-align: right;
             color: var(--hunter-even-fill-color);
             -webkit-text-stroke: 1px var(--hunter-even-outline-color);
@@ -232,8 +236,8 @@ a{
             
 
             &:hover {
-                cursor: pointer;
-                filter: invert(.8);
+                // cursor: pointer;
+                // filter: invert(.8);
                 
             }
             .desktop-title-break {
@@ -361,8 +365,9 @@ a{
             // word-spacing: 5px;
             text-align: justify;
             margin: 4.5rem 0.8rem 0 0.8rem;
-
             transition: all 0.5s ease;
+
+            max-width: 24rem;
             
         }    
     }
@@ -734,18 +739,126 @@ a{
 
 
 
-@media only screen and (min-width: 700px) { 
+@media only screen and (min-width: 500px) { 
+    html {
+        font-size: 62.5%;
+    }
+
+    .apply-clip-mask {
+        -webkit-mask-size: 70vw;
+        mask-size: 70vw;
+        -webkit-mask-position-x: -10vw;
+        -webkit-mask-position-y: -5rem;
+    }
+
+    .grid {
+        display: grid !important;
+        grid-template-rows: auto auto auto 1fr 1fr !important;
+    }
+
+    .title {
+        grid-row: 1;
+        font-size: 10vw !important;
+        -webkit-text-stroke: 3px var(--hunter-even-outline-color) !important;
+    }
+
+    .projects-list{
+        grid-row: 2;
+    }
+
+    .projects-list__title {
+        font-size: 4vw !important;
+        -webkit-text-stroke: 2px var(--projects-title-outline-color);
+    }
+
+    .projects-list__project-button {
+        font-size: 3vw !important;
+        -webkit-text-stroke: 2px var(--project-outline-color);
+    }
+
     .bio {
+        grid-row: 3;
         display: block;
     }
 
     .bio__text {
-        font-size: 1.2rem !important;
+        font-size: 1.6rem !important;
         margin-left: 10rem;
-        margin-top: 10rem !important;
-        max-width: 80%;
+        margin-top: 8rem !important;
+        // max-width: 80% !important;
     }
 
+    .card-close-button {
+        display: grid !important;
+    }
+
+    .project-card, .contact-card {
+        min-height: 40vw !important;
+        min-width: 30vw !important;
+        top: 25vw !important;
+
+        &__title {
+            font-size: 2.5rem !important;
+            padding: 0.5rem 3.5rem !important;
+            border-radius: 5rem !important;
+        }
+
+        &__details {
+            padding: 0 1.2rem !important;
+        }
+
+        &__tech-stack {
+             font-size: 1.4rem !important;
+        }
+
+        &__description {
+            font-size: 1.4rem !important;
+        }
+
+        .github-link {
+            font-size: 1.4rem !important;
+        }
+
+        &__greeting {
+            font-size: 1.4rem !important;
+        }
+
+        &__form {
+            gap: 1.6rem !important;
+            &-input {
+                font-size: 1.4rem !important;
+            }
+
+            &-message {
+                font-size: 1.4rem !important;
+            }
+
+            &-submit {
+                font-size: 1.4rem !important;
+            }
+        }
+        
+
+        
+    }
+
+    .footer {
+        grid-row: 4;
+        margin: 8.5rem 2rem 8.5rem auto !important;
+        justify-content: end !important;
+
+        .footer__text {
+            font-size: 1.6rem !important;
+        }
+
+        .footer__here-btn {
+            font-size: 1.6rem !important;
+        }
+    }
+
+    .out-of-view-right {
+        transform: translateX(0) !important;
+    }
 
 }
 
@@ -759,8 +872,11 @@ a{
 
 
 
-@media only screen and (min-width: 750px) {
-   
+@media only screen and (min-width: 1300px) {
+   html {
+    font-size: percentage(10 / 20)
+   }
+
     main {
         display: block;
         margin: 0 0 0 0 !important;
@@ -786,7 +902,7 @@ a{
     
 
     .grid {
-        max-width: 1800px !important;
+        max-width: 1500px !important;
         
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -799,7 +915,8 @@ a{
 
 
         .desktop-right-grid {
-            display: flex !important;
+            display: grid !important;
+            grid-template-columns: fit-content(100%) auto !important;
             align-items: end !important;
             justify-content: center !important;
           
@@ -808,8 +925,8 @@ a{
         .desktop-grid-left {
             display: flex !important;
             justify-items: center !important;
-            grid-template-rows: auto fit-content(100%) !important;
             margin-top: 6rem;
+            // flex-wrap: wrap;
         }
 
         .title{
@@ -819,16 +936,17 @@ a{
 
             
             text-align: left;
-
+          
+            font-size: clamp(6rem, 8vw, 16rem) !important;
             font-size: 16rem !important;
 
             margin: 0rem 0rem !important;
             margin-top: 0;
-            padding: 0 3rem !important;
+            // padding: 0 4rem !important;
 
             justify-self: start !important;
             
-            -webkit-text-stroke: 3px var(--hunter-even-outline-color) !important;
+            -webkit-text-stroke: 4px var(--hunter-even-outline-color) !important;
     
             
         }
@@ -843,11 +961,11 @@ a{
             flex-direction: column !important;
             justify-content: flex-start!important;
    
-            margin-right: 5;
+            margin-right: 5rem;
  
             padding: 0 3rem !important;
             padding-top: 4rem !important;
-            padding-left: 4rem;
+           
 
             gap: 1.5rem !important;
 
@@ -855,6 +973,7 @@ a{
             .theme-selector-box__circle{
                 width: 3.2rem !important;
                 height: 3.2rem !important;
+                border: 2px solid var(--theme-selector-outline-color) !important;
 
             }
 
@@ -927,13 +1046,10 @@ a{
             margin-right: 0 !important;
             display:grid !important;
             grid-template-rows: auto;
-            max-width: 60rem !important;
-            width: 70% !important;
+            max-width: 50rem !important;
             min-height: 75rem !important;
-            // position: relative !important;
-            max-width: clamp(20rem, 60vw, 50rem) !important;
             top: 9rem !important;
-            // left: 10rem !important;
+        
             border: 3px solid var(--project-card-outline-color) !important;
             justify-content:flex-start !important;
             justify-self: center !important;
@@ -945,7 +1061,7 @@ a{
             
             &--desktop-grid-left {
                 grid-column: 1; 
-                left: 10rem;
+                left: 2rem;
                
             }
 
@@ -1115,7 +1231,7 @@ a{
         position: relative;
         gap: 1.6rem !important;
         transform: translatey(-8rem);
-        margin: 20rem 5rem 0rem auto !important;
+        margin: 26rem 6rem 0rem auto !important;
         // padding: 10rem 0 10rem auto !important;
         // padding-right: clamp(4rem, 4.5rem, 6.2rem) !important;
 
