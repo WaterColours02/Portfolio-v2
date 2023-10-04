@@ -80,6 +80,11 @@ button {
     --project-card-text-color: #000;
     --project-card-outline-color: #000;
 
+    --submit-button-bg-color: #fff;
+    --submit-button-text-color: #6612EF;
+    --submit-button-border-color: #000;
+
+
 }
 
 .body--wavy-theme {
@@ -105,6 +110,10 @@ button {
     --project-card-text-color: #6612EF;
 
     --contact-title-bg-color: #FFF;
+
+    --submit-button-bg-color: #BDFF01;
+    --submit-button-text-color: #6612EF;
+    --submit-button-border-color: #6612EF;
 
     --footer-text-color: #6612EF;
     --contact-here-color: #6612EF;
@@ -136,6 +145,10 @@ button {
     --project-card-title-border-color: #FFADAD;
     --project-card-outline-color: #494949;
     --project-card-text-color: #494949;
+
+    --submit-button-bg-color: #fff;
+    --submit-button-text-color: #FFADAD;
+    --submit-button-border-color: #FFADAD;
 
     --footer-text-color: #494949;
     --contact-here-color: #FFADAD;
@@ -623,23 +636,23 @@ a{
                     max-width: 80%;
                     justify-self: center;
                     
-                    background-color: var(--project-title-bg-color);
+                    background-color: var(--submit-button-bg-color);
                     font-size: 0.8rem;
                     font-weight: 700;
                     letter-spacing: 0.125rem;
                     text-align: center ;
                     text-transform: uppercase;
-                    color: var(--project-card-title-color);
+                    color: var(--submit-button-text-color);
     
                     margin: 0.8rem 0;
                     padding: 0.4125rem 2.5rem;
     
-                    border: 2px solid var(--project-card-title-border-color);
+                    border: 2px solid var(--submit-button-border-color);
                     border-radius: 1.25rem; 
 
                     &:hover {
-                        background-color: var(--project-card-title-border-color) !important;
-                        color: var(--project-title-bg-color) !important;
+                        background-color: var(--submit-button-border-color) !important;
+                        color: var(--submit-button-bg-colorr) !important;
                     }
                 }
             }
