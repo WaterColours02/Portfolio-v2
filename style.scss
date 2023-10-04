@@ -11,7 +11,6 @@
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-    // overflow-y: hidden;
     font-family: 'rubik', sans-serif;
     transition: all 0.3s ease;
 }
@@ -392,6 +391,10 @@ a{
             scale: 1.2;
             border: 1px solid var(--theme-selector-outline-color);
             border-radius: 50%;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
 
             &:hover {
                 color: var(--active-theme-selector-color);
@@ -792,6 +795,11 @@ a{
 
     .card-close-button {
         display: grid !important;
+        height: 2.2rem !important;
+        width: 2.2rem !important;
+        &__icon {
+            font-size: 1.4rem !important;
+        }
     }
 
     .project-card, .contact-card {
@@ -1231,7 +1239,11 @@ a{
         gap: 1.6rem !important;
         transform: translatey(-8rem);
         margin: 40% 6rem 0rem auto !important;
-        z-index: 1000 !important;
+
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
        
         .footer__text {

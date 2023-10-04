@@ -308,6 +308,9 @@ a {
   border: 1px solid var(--theme-selector-outline-color);
   border-radius: 50%;
 }
+.main .grid .card-close-button::-webkit-scrollbar {
+  display: none;
+}
 .main .grid .card-close-button:hover {
   color: var(--active-theme-selector-color);
   background-color: var(--theme-selector-outline-color);
@@ -605,6 +608,11 @@ a {
   }
   .card-close-button {
     display: grid !important;
+    height: 2.2rem !important;
+    width: 2.2rem !important;
+  }
+  .card-close-button__icon {
+    font-size: 1.4rem !important;
   }
   .project-card, .contact-card {
     min-height: 40vw !important;
@@ -899,7 +907,9 @@ a {
     gap: 1.6rem !important;
     transform: translatey(-8rem);
     margin: 40% 6rem 0rem auto !important;
-    z-index: 1000 !important;
+  }
+  .grid .footer::-webkit-scrollbar {
+    display: none;
   }
   .grid .footer .footer__text {
     font-size: 1.6rem !important;
