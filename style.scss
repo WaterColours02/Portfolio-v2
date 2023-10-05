@@ -1408,3 +1408,9 @@ a{
   }
 
 }
+
+@media (prefers-reduced-motion) {
+    .card-transition {
+        transition: none !important;
+    }
+}
