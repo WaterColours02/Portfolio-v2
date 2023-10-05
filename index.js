@@ -8,6 +8,29 @@ $(document).ready(function() {
     const $footerHereBtn = $(".footer__here-btn"); // Add the class to your footer button element
     const $projectList = $(".projects-list");
 
+    function showSuccessDialog() {
+        $(".success-modal-overlay").removeClass("hidden");
+        $(".success-modal").removeClass("hidden");
+    }
+
+    // Function to hide success dialog
+    function hideSuccessDialog() {
+        $(".success-modal-overlay").addClass("hidden");
+        $(".success-modal").addClass("hidden");
+    }
+
+       // Function to show email error modal
+       function showErrorModalEmail() {
+        $(".error-modal-email").removeClass("hidden");
+        $(".error-modal-overlay").removeClass("hidden");
+    }
+
+    // Function to hide email error modal
+    function hideErrorModalEmail() {
+        $(".error-modal-email").addClass("hidden");
+        $(".error-modal-overlay").addClass("hidden");
+    }
+
     $(".contact-card__form").submit(function (event) {
         event.preventDefault();
 
@@ -15,6 +38,13 @@ $(document).ready(function() {
         const lastName = $(".contact-card__form-input:nth-of-type(2)").val();
         const email = $(".contact-card__form-input:nth-of-type(3)").val();
         const message = $(".contact-card__form-message").val();
+
+         // Check if the email address is valid
+         if (!isValidEmail(email)) {
+            showErrorModalEmail(); // Show email error modal
+            alert("Please enter a valid email address."); // Show alert
+            return; // Prevent form submission
+        }
 
         // Compose email message
         const body =
@@ -38,12 +68,30 @@ $(document).ready(function() {
             Subject: "New message from your website",
             Body: body,
         }).then(function (message) {
+            showSuccessDialog(); // Show success dialog
             alert(submitAlertMessage);
         });
 
         // Reset the form
         $(this)[0].reset();
     });
+
+    // Close success dialog when close button is clicked
+    $(".success-close-button").click(function(event) {
+        event.preventDefault();
+        hideSuccessDialog();
+    });
+
+    $(".error-close-button").click(function(event) {
+        event.preventDefault();
+        hideErrorModalEmail();
+    });
+
+    function isValidEmail(email) {
+        // Simple email validation using a regular expression
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
 
 
     function hideProjectCardsAndResetBio() {
