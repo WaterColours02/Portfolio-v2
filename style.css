@@ -22,7 +22,6 @@ html {
   overflow-y: hidden;
   min-height: 80vh;
 }
-
 button {
   border: none;
   background-color: transparent;
@@ -177,12 +176,10 @@ a {
   align-items: center;
   overflow-y: hidden;
 }
-
-.main-bg-asset {
+.main .main-bg-asset {
   transform-origin: center top;
 }
-
-.grid {
+.main .grid {
   max-width: 1000px;
   margin: 0.6rem 1.25rem 0 1.25rem;
   position: relative;
@@ -190,8 +187,7 @@ a {
   gap: 0.8rem;
   overflow-y: hidden;
 }
-
-.title {
+.main .grid .title {
   font-family: JetBrains Mono;
   font-size: clamp(2.6rem, 5vw, 10rem);
   text-align: right;
@@ -203,21 +199,17 @@ a {
   transition: all 0.6s ease-in-out;
   background-color: transparent;
 }
-
-.static-theme {
+.main .grid .title .static-theme {
   -webkit-background-clip: text;
           background-clip: text;
 }
-
-.desktop-title-break {
+.main .grid .title .desktop-title-break {
   display: none !important;
 }
-
-.wavy-theme-transparent {
+.main .grid .wavy-theme-transparent {
   opacity: 0.65;
 }
-
-.theme-selector-box {
+.main .grid .theme-selector-box {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -225,8 +217,7 @@ a {
   padding: 0.4rem 0rem;
   gap: 1rem;
 }
-
-.theme-selector-box__circle {
+.main .grid .theme-selector-box .theme-selector-box__circle {
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 50%;
@@ -234,27 +225,38 @@ a {
   border: 1px solid var(--theme-selector-outline-color);
   transition: border 0.3s ease, background-color 0.3s ease;
 }
-.theme-selector-box__circle:hover {
+.main .grid .theme-selector-box .theme-selector-box__circle:hover {
   background-color: var(--active-theme-selector-color);
 }
-.theme-selector-box__circle:hover::before {
+.main .grid .theme-selector-box .theme-selector-box__circle:hover::before {
   opacity: 1;
 }
-.theme-selector-box__circle.theme-selector-box__circle--active {
+.main .grid .theme-selector-box .theme-selector-box__circle.theme-selector-box__circle--active {
   background-color: var(--active-theme-selector-color);
 }
-
-.active-theme-selector {
+.main .grid .theme-selector-box .active-theme-selector {
   background-color: var(--active-theme-selector-color);
 }
-
-.projects-list {
+.main .grid .theme-selector-box .theme-selector-box__cross-icon {
+  font-size: 1.25rem;
+  color: var(--theme-selector-outline-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  scale: 1.2;
+}
+.main .grid .theme-selector-box .cross-hidden {
+  display: none;
+}
+.main .grid .theme-selector-box .hidden {
+  display: none;
+}
+.main .grid .projects-list {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 0.7rem;
 }
-.projects-list .projects-list__title {
+.main .grid .projects-list .projects-list__title {
   font-family: sans-serif;
   font-size: 2rem;
   font-weight: 700;
@@ -264,7 +266,7 @@ a {
   text-align: right;
   -webkit-text-stroke: 1px var(--projects-title-outline-color);
 }
-.projects-list .projects-list__project-button {
+.main .grid .projects-list .projects-list__project-button {
   font-family: sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
@@ -277,19 +279,18 @@ a {
   -webkit-text-stroke: 1px var(--project-outline-color);
   transform-origin: right; /* Set the transform origin */
 }
-.projects-list .projects-list__project-button:hover {
+.main .grid .projects-list .projects-list__project-button:hover {
   scale: 1.2;
   align-self: flex-end;
 }
-.projects-list .project-button--active {
+.main .grid .projects-list .project-button--active {
   color: var(--active-project-button-color);
   -webkit-text-stroke: 1px var(--active-project-button-outline-color);
 }
-
-.bio {
+.main .grid .bio {
   display: flex;
 }
-.bio .bio__text {
+.main .grid .bio .bio__text {
   font-family: "rubik", sans-serif;
   font-size: 0.8rem;
   line-height: 1.2;
@@ -300,8 +301,7 @@ a {
   transition: all 0.5s ease;
   max-width: 24rem;
 }
-
-.card-close-button {
+.main .grid .card-close-button {
   display: none;
   align-items: center;
   justify-items: center;
@@ -319,24 +319,23 @@ a {
   border: 1px solid var(--close-button-outline-color);
   border-radius: 50%;
 }
-.card-close-button::-webkit-scrollbar {
+.main .grid .card-close-button::-webkit-scrollbar {
   display: none;
 }
-.card-close-button:hover {
+.main .grid .card-close-button:hover {
   background-color: var(--close-button-outline-color);
 }
-.card-close-button__icon {
+.main .grid .card-close-button__icon {
   font-size: 1rem;
   color: var(--close-button-icon-color);
   cursor: pointer;
   transition: color 0.3s ease;
   scale: 1.4;
 }
-.card-close-button__icon:hover {
+.main .grid .card-close-button__icon:hover {
   color: var(--close-button-active-icon-color);
 }
-
-.project-card, .contact-card {
+.main .grid .project-card, .main .grid .contact-card {
   font-family: "rubik", sans-serif;
   z-index: 100;
   overflow-y: scroll;
@@ -356,10 +355,24 @@ a {
   padding: 0.6rem 1.2rem;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.55);
 }
-.project-card__project-logo, .contact-card__project-logo {
+.main .grid .project-card::-webkit-scrollbar, .main .grid .contact-card::-webkit-scrollbar {
+  display: none;
+  border-radius: 2rem;
+  width: 0.5rem;
+}
+.main .grid .project-card::-webkit-scrollbar-track, .main .grid .contact-card::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 2rem;
+  height: 80%;
+}
+.main .grid .project-card::-webkit-scrollbar-thumb, .main .grid .contact-card::-webkit-scrollbar-thumb {
+  border: 2px solid var(--project-card-outline-color);
+  border-radius: 2rem;
+}
+.main .grid .project-card__project-logo, .main .grid .contact-card__project-logo {
   display: none;
 }
-.project-card__title, .contact-card__title {
+.main .grid .project-card__title, .main .grid .contact-card__title {
   font-family: "rubik", sans-serif;
   max-width: 100%;
   height: -moz-max-content;
@@ -378,11 +391,11 @@ a {
   border: 2px solid var(--project-card-title-border-color);
   border-radius: 1.25rem;
 }
-.project-card__title:hover, .contact-card__title:hover {
-  background-color: var(--project-card-title-border-color);
+.main .grid .project-card__title:hover, .main .grid .contact-card__title:hover {
+  background-color: var(--project-card-title-border-color) !important;
   color: var(--project-title-bg-color) !important;
 }
-.project-card .title-contact, .contact-card .title-contact {
+.main .grid .project-card .title-contact, .main .grid .contact-card .title-contact {
   font-family: "rubik", sans-serif;
   font-size: 1rem;
   font-weight: 700;
@@ -395,7 +408,7 @@ a {
   border: none;
   border-radius: 1.25rem;
 }
-.project-card__details, .contact-card__details {
+.main .grid .project-card__details, .main .grid .contact-card__details {
   font-family: "rubik", sans-serif;
   font-size: 0.6rem;
   color: var(--project-card-text-color);
@@ -403,7 +416,7 @@ a {
   grid-template-columns: 1fr;
   gap: 0.925rem;
 }
-.project-card__tech-stack, .contact-card__tech-stack {
+.main .grid .project-card__tech-stack, .main .grid .contact-card__tech-stack {
   font-family: "rubik", sans-serif;
   font-size: 0.6rem;
   margin-bottom: 0.8rem;
@@ -411,13 +424,13 @@ a {
   color: var(--project-card-text-color);
   text-align: center;
 }
-.project-card__description, .contact-card__description {
+.main .grid .project-card__description, .main .grid .contact-card__description {
   font-family: "rubik", sans-serif;
   font-size: 0.8rem;
   line-height: 1.2;
   padding-bottom: 0.6rem;
 }
-.project-card .github-link, .contact-card .github-link {
+.main .grid .project-card .github-link, .main .grid .contact-card .github-link {
   font-size: 0.6rem;
   color: var(--project-card-text-color);
   text-align: center;
@@ -428,16 +441,16 @@ a {
   text-decoration: none;
   padding: 1rem;
 }
-.project-card .github-link:hover, .contact-card .github-link:hover {
+.main .grid .project-card .github-link:hover, .main .grid .contact-card .github-link:hover {
   color: var(--project-card-title-color);
 }
-.project-card__greeting, .contact-card__greeting {
+.main .grid .project-card__greeting, .main .grid .contact-card__greeting {
   font-size: 0.7rem;
   color: var(--project-card-text-color);
   text-align: justify;
   margin-bottom: 0.4rem;
 }
-.project-card__form, .contact-card__form {
+.main .grid .project-card__form, .main .grid .contact-card__form {
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -445,23 +458,23 @@ a {
   gap: 0.8rem;
   margin: 0.6rem 0;
 }
-.project-card__form-input, .contact-card__form-input {
+.main .grid .project-card__form-input, .main .grid .contact-card__form-input {
   font-size: 0.7rem;
   width: 100%;
   border: none;
   border-bottom: 1px solid var(--project-card-outline-color);
 }
-.project-card__form-input:focus, .contact-card__form-input:focus {
+.main .grid .project-card__form-input:focus, .main .grid .contact-card__form-input:focus {
   outline: none;
   border-bottom: 2px solid var(--project-card-outline-color);
 }
-.project-card__form-input::-moz-placeholder, .contact-card__form-input::-moz-placeholder {
+.main .grid .project-card__form-input::-moz-placeholder, .main .grid .contact-card__form-input::-moz-placeholder {
   color: var(--project-card-text-color);
 }
-.project-card__form-input::placeholder, .contact-card__form-input::placeholder {
+.main .grid .project-card__form-input::placeholder, .main .grid .contact-card__form-input::placeholder {
   color: var(--project-card-text-color);
 }
-.project-card__form-message, .contact-card__form-message {
+.main .grid .project-card__form-message, .main .grid .contact-card__form-message {
   margin-top: 0.6rem;
   font-size: 0.7rem;
   padding: 0.4rem 0.2rem -1.2rem 0.6rem;
@@ -470,25 +483,25 @@ a {
   border-bottom: 2px dashed var(--message-text-color);
   color: var(--message-text-color);
 }
-.project-card__form-message:focus, .contact-card__form-message:focus {
+.main .grid .project-card__form-message:focus, .main .grid .contact-card__form-message:focus {
   outline: none;
   border-bottom: 3px solid var(--message-text-color);
 }
-.project-card__form-message:focus::-moz-placeholder, .contact-card__form-message:focus::-moz-placeholder {
+.main .grid .project-card__form-message:focus::-moz-placeholder, .main .grid .contact-card__form-message:focus::-moz-placeholder {
   top: 10px;
 }
-.project-card__form-message:focus::placeholder, .contact-card__form-message:focus::placeholder {
+.main .grid .project-card__form-message:focus::placeholder, .main .grid .contact-card__form-message:focus::placeholder {
   top: 10px;
 }
-.project-card__form-message::-moz-placeholder, .contact-card__form-message::-moz-placeholder {
+.main .grid .project-card__form-message::-moz-placeholder, .main .grid .contact-card__form-message::-moz-placeholder {
   position: relative; /* Position the placeholder relative to the textarea */
   top: 0.7rem;
 }
-.project-card__form-message::placeholder, .contact-card__form-message::placeholder {
+.main .grid .project-card__form-message::placeholder, .main .grid .contact-card__form-message::placeholder {
   position: relative; /* Position the placeholder relative to the textarea */
   top: 0.7rem;
 }
-.project-card__form-submit, .contact-card__form-submit {
+.main .grid .project-card__form-submit, .main .grid .contact-card__form-submit {
   max-width: 80%;
   justify-self: center;
   background-color: var(--submit-button-bg-color);
@@ -503,12 +516,11 @@ a {
   border: 3px solid var(--submit-button-border-color);
   border-radius: 1.25rem;
 }
-.project-card__form-submit:hover, .contact-card__form-submit:hover {
+.main .grid .project-card__form-submit:hover, .main .grid .contact-card__form-submit:hover {
   background-color: var(--submit-button-border-color) !important;
   color: var(--submit-button-bg-color) !important;
 }
-
-.footer {
+.main .footer {
   z-index: 0;
   display: grid;
   grid-template-columns: auto auto auto;
@@ -520,42 +532,42 @@ a {
   justify-self: center;
   align-self: center;
 }
-.footer::-webkit-scrollbar {
+.main .footer::-webkit-scrollbar {
   display: none;
 }
-.footer__text {
+.main .footer__text {
   font-family: "rubik", sans-serif;
   color: var(--footer-text-color);
   font-family: JetBrains Mono;
   font-size: 0.7rem;
   text-align: center;
 }
-.footer .footer__here-btn {
+.main .footer .footer__here-btn {
   font-family: "rubik", sans-serif;
   color: var(--contact-here-color);
   text-decoration: underline;
   font-size: 0.7rem;
 }
-.footer .footer__here-btn:hover {
+.main .footer .footer__here-btn:hover {
   cursor: pointer;
   transform: scale(1.2);
 }
-.footer .footer__social-container {
+.main .footer .footer__social-container {
   display: flex;
   gap: 0.6rem;
 }
-.footer .footer__social-container::-webkit-scrollbar {
+.main .footer .footer__social-container::-webkit-scrollbar {
   display: none;
 }
-.footer .footer__social-link .social-link__icon {
+.main .footer .footer__social-link .social-link__icon {
   font-size: 1.2rem;
   color: var(--contact-social-color);
   transition: fill 0.3s ease;
 }
-.footer .footer__social-link .social-link__icon::-webkit-scrollbar {
+.main .footer .footer__social-link .social-link__icon::-webkit-scrollbar {
   display: none;
 }
-.footer .footer__social-link .social-link__icon:hover {
+.main .footer .footer__social-link .social-link__icon:hover {
   scale: 1.4;
   cursor: pointer;
 }
@@ -583,109 +595,184 @@ a {
   }
   .apply-clip-mask {
     -webkit-mask-size: 70vw;
-    mask-size: 80vw;
+    mask-size: 70vw;
     -webkit-mask-position-x: -10vw;
     -webkit-mask-position-y: -5rem;
   }
   .grid {
-    display: grid;
-    grid-template-rows: auto auto auto 1fr 1fr;
+    display: grid !important;
+    grid-template-rows: auto auto auto 1fr 1fr !important;
   }
   .title {
     grid-row: 1;
-    font-size: 12vw;
-    -webkit-text-stroke: 3px var(--hunter-even-outline-color);
+    font-size: 12vw !important;
+    -webkit-text-stroke: 3px var(--hunter-even-outline-color) !important;
   }
   .theme-selector-box__circle {
-    width: 2rem;
-    height: 2rem;
-    border: 2px solid var(--theme-selector-outline-color);
+    width: 2rem !important;
+    height: 2rem !important;
+    border: 2px solid var(--theme-selector-outline-color) !important;
   }
   .projects-list {
     grid-row: 2;
   }
-  .projects-list .projects-list__title {
-    font-size: 4vw;
+  .projects-list__title {
+    font-size: 4vw !important;
     -webkit-text-stroke: 2px var(--projects-title-outline-color);
   }
-  .projects-list .projects-list__project-button {
-    font-size: 3vw;
+  .projects-list__project-button {
+    font-size: 3vw !important;
     -webkit-text-stroke: 2px var(--project-outline-color);
   }
   .bio {
+    grid-row: 3;
     display: block;
   }
-  .bio .bio__text {
-    font-size: 1.6rem;
+  .bio__text {
+    font-size: 1.6rem !important;
     margin-left: 10rem;
-    margin-top: 8rem;
-    line-height: 1.6;
+    margin-top: 8rem !important;
   }
   .card-close-button {
-    display: grid;
-    height: 2.2rem;
-    width: 2.2rem;
+    display: grid !important;
+    height: 2.2rem !important;
+    width: 2.2rem !important;
   }
   .card-close-button__icon {
-    font-size: 1.4rem;
+    font-size: 1.4rem !important;
   }
   .project-card, .contact-card {
-    min-height: 40vw;
-    min-width: 30vw;
-    max-width: 35vw;
-    top: 25vw;
-    margin: 0.6rem auto 0rem auto;
+    min-height: 40vw !important;
+    min-width: 30vw !important;
+    max-width: 35vw !important;
+    top: 25vw !important;
+    margin: 0.6rem auto 0rem auto !important;
   }
   .project-card__title, .contact-card__title {
-    font-size: 2.5rem;
-    padding: 0.5rem 3.5rem;
-    border-radius: 5rem;
+    font-size: 2.5rem !important;
+    padding: 0.5rem 3.5rem !important;
+    border-radius: 5rem !important;
   }
   .project-card__details, .contact-card__details {
-    padding: 0 1.2rem;
+    padding: 0 1.2rem !important;
   }
   .project-card__tech-stack, .contact-card__tech-stack {
-    font-size: 1.4rem;
+    font-size: 1.4rem !important;
   }
   .project-card__description, .contact-card__description {
-    font-size: 1.4rem;
+    font-size: 1.4rem !important;
   }
   .project-card .github-link, .contact-card .github-link {
-    font-size: 1.4rem;
+    font-size: 1.4rem !important;
   }
   .project-card__greeting, .contact-card__greeting {
-    font-size: 1.4rem;
+    font-size: 1.4rem !important;
   }
   .project-card__form, .contact-card__form {
-    gap: 1.6rem;
+    gap: 1.6rem !important;
   }
   .project-card__form-input, .contact-card__form-input {
-    font-size: 1.4rem;
+    font-size: 1.4rem !important;
   }
   .project-card__form-message, .contact-card__form-message {
-    font-size: 1.4rem;
+    font-size: 1.4rem !important;
   }
   .project-card__form-submit, .contact-card__form-submit {
-    font-size: 1.4rem;
+    font-size: 1.4rem !important;
   }
   .footer {
     grid-row: 4;
-    margin: 8.5rem 2rem 8.5rem auto;
-    justify-content: end;
+    margin: 8.5rem 2rem 8.5rem auto !important;
+    justify-content: end !important;
   }
   .footer .footer__text {
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
   }
   .footer .footer__here-btn {
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
   }
   .footer .social-link__icon {
-    font-size: 2.6rem;
+    font-size: 2.6rem !important;
   }
   .out-of-view-right {
-    transform: translateX(0);
+    transform: translateX(0) !important;
   }
 }
+.hidden {
+  display: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  transform: translateX(1000%) !important;
+}
+
+.overlay-hidden {
+  display: hidden !important;
+  pointer-events: none !important;
+  opacity: 0% !important;
+}
+
+.success-modal-overlay,
+.error-modal-overlay {
+  position: inherit;
+  position: absolute;
+  display: grid;
+  justify-self: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 90%;
+  background-color: rgb(37, 37, 37);
+  z-index: 1000;
+}
+
+.success-modal,
+.error-modal-email {
+  position: absolute;
+  top: 20rem;
+  left: 15%;
+  height: 20rem !important;
+  opacity: 100% !important;
+  z-index: 10000;
+}
+
+.success-close-button,
+.error-close-button {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  pointer-events: inherit;
+  visibility: visible;
+  cursor: pointer;
+  position: relative;
+  height: 1.25rem;
+  width: 1.25rem;
+  top: 1.6rem;
+  left: 1.6rem;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid black;
+  z-index: 10000;
+}
+.success-close-button:hover,
+.error-close-button:hover {
+  background-color: var(--close-button-bg-color);
+}
+
+.close-button-icon {
+  pointer-events: inherit;
+  font-size: 1rem;
+}
+
+.success-modal-text,
+.error-modal-text {
+  background-color: white;
+  padding: 2.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 1.4rem;
+}
+
 @media only screen and (min-width: 1300px) {
   html {
     font-size: 50%;
@@ -706,242 +793,249 @@ a {
     -webkit-mask-position-y: -5rem;
   }
   .grid {
-    max-width: 1500px;
+    max-width: 1500px !important;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    justify-content: end;
-    margin: 3rem;
-    margin-top: 4rem;
+    justify-content: end !important;
+    margin: 3rem !important;
   }
-  .desktop-grid-left {
-    display: flex;
+  .grid .desktop-right-grid {
+    display: grid !important;
+    grid-template-columns: fit-content(100%) auto !important;
+    align-items: end !important;
+    justify-content: center !important;
+  }
+  .grid .desktop-grid-left {
+    display: flex !important;
     margin-top: 6rem;
   }
-  .title {
-    display: block;
+  .grid .title {
+    display: block !important;
     block-size: auto;
     grid-column: 1;
     grid-row: 1;
     text-align: left;
-    font-size: clamp(6rem, 8vw, 16rem);
-    font-size: 18rem;
-    margin: 0rem 0rem;
+    font-size: clamp(6rem, 8vw, 16rem) !important;
+    font-size: 16rem !important;
+    margin: 0rem 0rem !important;
     margin-top: 0;
-    justify-self: start;
-    -webkit-text-stroke: 4px var(--hunter-even-outline-color);
+    justify-self: start !important;
+    -webkit-text-stroke: 4px var(--hunter-even-outline-color) !important;
   }
-  .theme-selector-box {
+  .grid .theme-selector-box {
     position: relative;
     grid-column: 1;
     grid-row: 1;
+    display: grid;
     grid-template-columns: 1fr;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
     margin-right: 5rem;
-    padding: 0 3rem;
-    padding-top: 4.8rem;
-    gap: 1.5rem;
+    padding: 0 3rem !important;
+    padding-top: 4rem !important;
+    gap: 1.5rem !important;
   }
-  .theme-selector-box .theme-selector-box__circle {
-    width: 3.2rem;
-    height: 3.2rem;
-    border: 2px solid var(--theme-selector-outline-color);
+  .grid .theme-selector-box .theme-selector-box__circle {
+    width: 3.2rem !important;
+    height: 3.2rem !important;
+    border: 2px solid var(--theme-selector-outline-color) !important;
   }
-  .projects-list {
+  .grid .projects-list {
     grid-column: 2;
     grid-row: 1;
     margin: 7rem 4rem;
+    display: grid;
     grid-template-columns: 1fr;
-    gap: 2.2rem;
+    gap: 2.2rem !important;
     padding-top: 3rem;
   }
-  .projects-list .projects-list__title {
-    font-size: 8rem;
-    font-weight: bold;
+  .grid .projects-list__title {
+    font-size: 6rem !important;
+    font-weight: bold !important;
   }
-  .projects-list .projects-list__project-button {
-    font-size: 6rem;
+  .grid .projects-list__project-button {
+    font-size: 4rem !important;
   }
-  .bio {
+  .grid .bio {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 1;
     max-width: 80%;
-    margin: 0 0 0 auto;
+    margin: 0 0 0 auto !important;
   }
-  .bio .bio__text {
-    font-size: 2rem;
-    line-height: 3.125rem;
+  .grid .bio__text {
+    font-size: 2rem !important;
+    line-height: 3.125rem !important;
     letter-spacing: 0.1563rem;
-    padding: 2rem 0rem;
-    margin: 10rem 0 0 0;
-    margin-left: 10rem;
-    max-width: 80%;
+    padding: 2rem 0rem !important;
+    margin-left: 0 !important;
+    max-width: none !important;
   }
-  .card-close-button {
-    display: grid;
-    height: 3.25rem;
-    width: 3.25rem;
-    top: 1.2rem;
-    left: 1.2rem;
+  .grid .card-close-button {
+    display: grid !important;
+    height: 3.25rem !important;
+    width: 3.25rem !important;
+    top: 1.2rem !important;
+    left: 1.2rem !important;
   }
-  .card-close-button__icon {
-    font-size: 1.5rem;
+  .grid .card-close-button__icon {
+    font-size: 1.5rem !important;
   }
-  .project-card, .contact-card {
-    margin-right: 0;
-    display: grid;
+  .grid .project-card, .grid .contact-card {
+    margin-right: 0 !important;
+    display: grid !important;
     grid-template-rows: auto;
-    max-width: 600px;
-    min-height: 75rem;
-    top: 9rem;
-    border: 3px solid var(--project-card-outline-color);
-    justify-content: flex-start;
-    justify-self: center;
-    align-self: center;
-    gap: 1.4rem;
-    margin-bottom: 8rem;
+    max-width: 50rem !important;
+    min-height: 75rem !important;
+    top: 9rem !important;
+    border: 3px solid var(--project-card-outline-color) !important;
+    justify-content: flex-start !important;
+    justify-self: center !important;
+    align-self: center !important;
+    gap: 1.4rem !important;
+    margin-bottom: 8rem !important;
   }
-  .project-card--desktop-grid-left, .contact-card--desktop-grid-left {
+  .grid .project-card--desktop-grid-left, .grid .contact-card--desktop-grid-left {
     grid-column: 1;
     left: 2rem;
   }
-  .project-card--desktop-grid-right, .contact-card--desktop-grid-right {
+  .grid .project-card--desktop-grid-right, .grid .contact-card--desktop-grid-right {
     grid-column: 2;
     margin-right: 0;
     right: 5rem;
   }
-  .project-card__project-logo, .contact-card__project-logo {
+  .grid .project-card__project-logo, .grid .contact-card__project-logo {
     background-repeat: no-repeat;
     background-size: contain;
-    display: block;
-    height: 8rem;
+    display: block !important;
+    height: 8rem !important;
     padding: 10rem 10rem;
-    margin: 4rem auto 0rem auto;
+    margin: 4rem auto 0rem auto !important;
   }
-  .project-card .open-fermenet-logo, .contact-card .open-fermenet-logo {
+  .grid .project-card .open-fermenet-logo, .grid .contact-card .open-fermenet-logo {
     background-image: url("./assets/hunter-even-of-logo.png");
   }
-  .project-card .shortly-logo, .contact-card .shortly-logo {
-    margin-top: 5rem;
+  .grid .project-card .shortly-logo, .grid .contact-card .shortly-logo {
+    margin-top: 5rem !important;
     background-image: url("./assets/shortly-logo.svg");
     background-position: center;
     scale: 1.5;
   }
-  .project-card .portfolio-logo, .contact-card .portfolio-logo {
+  .grid .project-card .portfolio-logo, .grid .contact-card .portfolio-logo {
     background-image: url("./assets/hunter-even-he-logo.png");
     padding: 15rem;
     background-size: auto 70%;
     background-position: center;
   }
-  .project-card__greeting, .contact-card__greeting {
-    font-size: 2rem;
+  .grid .project-card__greeting, .grid .contact-card__greeting {
+    font-size: 2rem !important;
     font-weight: 600;
-    margin: 3rem 0rem;
+    margin: 3rem 0rem !important;
     padding: 0.4rem 0rem;
-    text-align: center;
+    text-align: center !important;
   }
-  .project-card__title, .contact-card__title {
-    font-size: 3rem;
-    margin: 0;
-    margin: 2.2rem;
-    padding: 0.8125rem 3.5rem;
-    border: 3px solid var(--project-card-title-border-color);
-    border-radius: 3rem;
+  .grid .project-card__title, .grid .contact-card__title {
+    font-size: 3rem !important;
+    margin: 0 !important;
+    margin: 2.2rem !important;
+    padding: 0.8125rem 3.5rem !important;
+    border: 3px solid var(--project-card-title-border-color) !important;
+    border-radius: 3rem !important;
   }
-  .project-card .title-contact, .contact-card .title-contact {
-    font-size: clamp(1.8rem, 3vw, 6rem);
-    border: none;
-    background-color: var(--contact-title-bg-color);
+  .grid .project-card .title-contact, .grid .contact-card .title-contact {
+    font-size: clamp(1.8rem, 3vw, 6rem) !important;
+    border: none !important;
+    background-color: var(--contact-title-bg-color) !important;
   }
-  .project-card__tech-stack, .contact-card__tech-stack {
-    font-size: 2rem;
+  .grid .project-card__tech-stack, .grid .contact-card__tech-stack {
+    font-size: 2rem !important;
     margin-bottom: 0.8rem;
     font-weight: 700;
     color: var(--project-card-text-color);
     text-align: center;
     padding: 0 3rem;
   }
-  .project-card__description, .contact-card__description {
-    font-size: 1.6rem;
-    line-height: 1.5;
-    padding: 0 3rem;
+  .grid .project-card__description, .grid .contact-card__description {
+    font-size: 1.6rem !important;
+    line-height: 1.5 !important;
+    padding: 0 3rem !important;
     padding-bottom: 0.6rem;
-    margin: 0 1.25rem;
+    margin: 0 1.25rem !important;
   }
-  .project-card .github-link, .contact-card .github-link {
-    font-size: 1.6rem;
+  .grid .project-card .github-link, .grid .contact-card .github-link {
+    font-size: 1.6rem !important;
     color: var(--project-card-text-color);
     text-align: center;
     text-decoration: underline;
     margin-bottom: 0.8rem;
     transition: all 0.3s ease;
   }
-  .project-card .github-link:hover, .contact-card .github-link:hover {
+  .grid .project-card .github-link:hover, .grid .contact-card .github-link:hover {
     scale: 1.2;
   }
-  .project-card__greeting, .contact-card__greeting {
-    font-size: 1.8rem;
-    padding: 0 4rem;
+  .grid .project-card__greeting, .grid .contact-card__greeting {
+    font-size: 1.8rem !important;
+    padding: 0 4rem !important;
   }
-  .project-card__form, .contact-card__form {
-    padding: 0 4rem;
-    gap: 1.8rem;
+  .grid .project-card__form, .grid .contact-card__form {
+    padding: 0 4rem !important;
+    gap: 1.8rem !important;
   }
-  .project-card__form-input, .contact-card__form-input {
-    font-size: 1.8rem;
+  .grid .project-card__form-input, .grid .contact-card__form-input {
+    font-size: 1.8rem !important;
     margin-top: 1.2rem;
     color: var(--project-card-text-color);
   }
-  .project-card__form-message, .contact-card__form-message {
-    margin-top: 1.8rem;
-    font-size: 1.8rem;
-    padding: 0.4rem 0.6rem -2.8rem 0.6rem;
+  .grid .project-card__form-message, .grid .contact-card__form-message {
+    margin-top: 1.8rem !important;
+    font-size: 1.8rem !important;
+    padding: 0.4rem 0.6rem -2.8rem 0.6rem !important;
   }
-  .project-card__form-submit, .contact-card__form-submit {
-    font-size: 1.8rem;
-    margin: 0.8rem 0;
-    padding: 0.4125rem 4.5rem;
-    border-radius: 3.5rem;
+  .grid .project-card__form-submit, .grid .contact-card__form-submit {
+    font-size: 1.8rem !important;
+    margin: 0.8rem 0 !important;
+    padding: 0.4125rem 4.5rem !important;
+    border-radius: 3.5rem !important;
   }
-  .out-of-view-right {
+  .grid .out-of-view-right {
     transition: all 1s ease-in-out;
     transform: translateX(0vw);
   }
-  .out-of-view-right-desktop {
+  .grid .out-of-view-right-desktop {
     transition: all 1s ease-in-out;
     transform: translateX(120vw);
   }
-  .out-of-view-left {
+  .grid .out-of-view-left {
     transition: all 1s ease-in-out;
     transform: translateX(-120vw);
   }
-  .footer {
-    grid-column: 1 span 2;
-    grid-row: 2;
+  .grid .footer {
+    grid-column: 1 span 2 !important;
+    grid-row: 2 !important;
     position: relative;
-    gap: 1.6rem;
-    margin: 30% 6rem 0rem auto;
+    gap: 1.6rem !important;
+    transform: translatey(-8rem);
+    margin: 40% 6rem 0rem auto !important;
   }
-  .footer::-webkit-scrollbar {
+  .grid .footer::-webkit-scrollbar {
     display: none;
   }
-  .footer .footer__text {
-    font-size: 2rem;
+  .grid .footer .footer__text {
+    font-size: 1.6rem !important;
   }
-  .footer .footer__here-btn {
-    font-size: 2rem;
+  .grid .footer .footer__here-btn {
+    font-size: 1.6rem !important;
   }
-  .footer .footer__social-container .social-link__icon {
-    font-size: 4rem;
+  .grid .footer .social-link__icon {
+    font-size: 3.2rem !important;
   }
-  .footer--desktop-grid-right {
+  .grid .footer--desktop-grid-right {
     grid-column: 2;
     grid-row: 2;
   }
 }
 @media (prefers-reduced-motion) {
   .card-transition {
-    transition: none;
+    transition: none !important;
   }
 }/*# sourceMappingURL=style.css.map */
