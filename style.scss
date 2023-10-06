@@ -176,7 +176,7 @@ a{
     overflow: auto;
 
     &::-webkit-scrollbar {
-        display: hidden !important;
+        display: hidden;
     }
     
 }
@@ -199,7 +199,7 @@ a{
 }
 
 .hidden {
-    display: none !important;
+    display: none;
 }
 
 .main {
@@ -247,10 +247,6 @@ a{
               
                  }
 
-
-.desktop-title-break {
-                display: none !important;
- }
 
     
 
@@ -458,7 +454,7 @@ a{
 
         &:hover {
             background-color: var(--project-card-title-border-color);
-            color: var(--project-title-bg-color) !important;
+            color: var(--project-title-bg-color);
         }
 
     }
@@ -606,8 +602,8 @@ a{
             border-radius: 1.25rem; 
 
             &:hover {
-                background-color: var(--submit-button-border-color) !important;
-                color: var(--submit-button-bg-color) !important;
+                background-color: var(--submit-button-border-color);
+                color: var(--submit-button-bg-color);
             }
         }
     }
@@ -710,7 +706,7 @@ a{
 
 .out-of-view-bottom{
     transition: all 1s ease-in-out;
-    max-height: 0px !important;
+    max-height: 0px;
     block-size: 0%;
     // display: hidden;
     position: absolute;
@@ -876,13 +872,13 @@ a{
 @media only screen and (min-width: 1300px) {
    html {
     font-size: percentage(10 / 20);
-    overflow-y: auto !important;
+    overflow-y: auto ;
    }
 
     main {
         display: block;
-        margin: 0 0 0 0 !important;
-        overflow-y: auto !important;
+        margin: 0 0 0 0 ;
+        overflow-y: auto;
     }
 
 
